@@ -1,0 +1,11 @@
+@import "tailwindcss";
+ 
+@theme {
+    --color-purple:rgba(75, 1, 75, 1);
+    --color-orange:rgba(250, 136, 30, 1);
+    --color-green:rgba(27, 177, 114, 1);
+}
+
+*{
+     font-family: "Figtree";
+}
