@@ -6,7 +6,7 @@ import { Navlist } from "./Common/Helper";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isactive ,setactive]=useState(false)
+  const [isactive, setactive] = useState(false);
 
   return (
     <section className=" w-full bg-purple">
@@ -63,18 +63,20 @@ const Navbar = () => {
         </div>
 
         <ul className="pl-2  text-center  text-purple text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
-          {Navlist.map((list, index) => (
-            <li>
-              <a
-                onClick={() => setactive(true)}
-                className={`${isactive ? "underline" : null}`}
-                key={index}
-                href="#"
-              >
-                {list}
-              </a>
-            </li>
-          ))}
+          {Navlist.map((list, index) => {
+            return (
+              <li key={index}>
+                <a
+                  onClick={(() => setactive(true), () => setIsOpen(false))}
+                  className={`${isactive ? "underline" : null}`}
+                  key={index}
+                  href={list.url}
+                >
+                  {list.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="h-[1.5px] bg-white/10 w-full"></div>

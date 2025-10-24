@@ -1,4 +1,19 @@
-export const Navlist = ["HOME", "About", "Services", "Blog", "FAQs"];
+export const Navlist = [{
+  name:"HOME",
+url:"/"
+},
+ {name:"About",
+  url:"/about"
+
+ }, {name:"Services",
+  url:"#services"
+
+ },{ name:"Blog",
+  url:"/Blog"
+ },
+ { name:"FAQs",
+  url:"/FAQs"
+ }];
 
 
 export const Heading = ({head ,subhead}) => {
@@ -9,6 +24,16 @@ export const Heading = ({head ,subhead}) => {
     </div>
   );
 };
+
+export const Button =({text})=>{
+  return (
+    <div className="max-w-[1249px] m-auto flex justify-center pt-[20px]">
+      <button className="cursor-pointer bg-orange-500 py-[10px] px-[20px] lg:py-[17px] lg:px-[50px] rounded-xl max-w-fit text-white m-auto font-semibold">
+        {text}
+      </button>
+    </div>
+  );
+}
 
 
 
