@@ -1,9 +1,12 @@
-
+import Navbar from "../Common/Navbar";
 
 const About = () => {
   return (
-    <div className="h-screen w-full text-black text-[4rem]">About </div>
-  )
-}
+    <>
+      <Navbar />
+      <p className="text-[3rem] text-center"> About</p>
+    </>
+  );
+};
 
-export default About
+export default About;

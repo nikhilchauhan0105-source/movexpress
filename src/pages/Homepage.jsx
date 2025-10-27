@@ -1,22 +1,25 @@
-
-import Customer from '../components/Customer';
-import Hero from '../components/Hero';
-import Services from '../components/services';
-import Whytrust from '../components/Whytrust';
-import { Work } from '../components/Work';
-import Navbar from '../Navbar'
+import Navbar from "../Common/Navbar";
+import Customer from "../components/Customer";
+import FAQs from "../components/FAQs";
+import Hero from "../components/Hero";
+import Services from "../components/services";
+import Whytrust from "../components/Whytrust";
+import Work from "../components/Work";
+import Blogs from "./Blogs";
 
 const Homepage = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
       <Services />
       <Work />
       <Whytrust />
       <Customer />
-    </div>
+      <FAQs/>
+      <Blogs/>
+    </>
   );
-}
+};
 
-export default Homepage
+export default Homepage;

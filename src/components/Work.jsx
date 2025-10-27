@@ -1,9 +1,8 @@
-import { Heading } from "../Common/Helper"
-import { Workarry } from "../Common/Array";
+import { Heading } from "../Common/Helper";
 import { Workcard } from "../Common/Card";
+import { worklist } from "../Common/Data";
 
-
-export const Work = () => {
+const Work = () => {
   return (
     <section className="py-[30px] px-3 xl:py-[80px]">
       <div>
@@ -13,7 +12,7 @@ export const Work = () => {
         />
       </div>
       <div className="max-w-[1296px]  m-auto flex justify-center gap-3 lg:gap-[48px] mt-[58px] flex-wrap ">
-        {Workarry.map((items, index) => (
+        {worklist.map((items, index) => (
           <div className="md:max-w-[287px] w-full">
             <Workcard
               key={index}
@@ -27,4 +26,6 @@ export const Work = () => {
       </div>
     </section>
   );
-}
+};
+
+export default Work;

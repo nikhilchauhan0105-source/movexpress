@@ -1,7 +1,13 @@
-import { Halfstar, Trust, Location, Info } from "../Icons";
-import { Licensed } from "../Icons";
-import { Greenstar } from "../Icons";
-import { Whitestar } from "../Icons";
+import {
+  Greenstar,
+  Halfstar,
+  Info,
+  Licensed,
+  Location,
+  Trust,
+  Whitestar,
+} from "../Common/Icons";
+
 const Hero = () => {
   return (
     <section className=" bg-purple px-3 text-white">
