@@ -1,4 +1,5 @@
 import Navbar from "../Common/Navbar";
+import BookYourService from "../components/BookYourService";
 import Customer from "../components/Customer";
 import FAQs from "../components/FAQs";
 import Hero from "../components/Hero";
@@ -18,6 +19,7 @@ const Homepage = () => {
       <Customer />
       <FAQs/>
       <Blogs/>
+      <BookYourService/>
     </>
   );
 };
