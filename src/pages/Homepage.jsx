@@ -2,6 +2,7 @@ import Navbar from "../Common/Navbar";
 import BookYourService from "../components/BookYourService";
 import Customer from "../components/Customer";
 import FAQs from "../components/FAQs";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Services from "../components/services";
 import Whytrust from "../components/Whytrust";
@@ -20,6 +21,7 @@ const Homepage = () => {
       <FAQs/>
       <Blogs/>
       <BookYourService/>
+      <Footer/>
     </>
   );
 };

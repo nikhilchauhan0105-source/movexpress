@@ -191,3 +191,21 @@ export const blogsdetails = [
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
   },
 ];
+
+
+export const quicklinklist =
+ [
+  "Home",
+  "About",
+  "Service",
+  "Become a Driver",
+  "Blog"
+    ];
+
+    export const smallprint = [
+      "Terms Of Service",
+      "Privacy & Policies",
+      "Movers Conduct Policy",
+      "Damaged or Missing Items Policy",
+      "How Pay Works",
+    ];

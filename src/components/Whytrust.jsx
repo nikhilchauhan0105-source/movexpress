@@ -21,9 +21,9 @@ const Whytrust = () => {
           />
         ))}
       </div>
-<div className="max-w-[1249px] m-auto flex justify-center pt-[20px]">
-      <Button
-       text={"Get a Qoute"} /></div>
+      <div className="max-w-[1249px] m-auto flex justify-center pt-[20px]">
+        <Button text="Get a Qoute" />
+      </div>
     </section>
   );
 };

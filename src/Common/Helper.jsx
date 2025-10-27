@@ -16,13 +16,13 @@ export const Heading = ({ head, subhead }) => {
 export const Faqs=({ question,answer})=>{
   const [IsClicked, setIscliked] = useState(false)
   return (
-    <div className="max-w-[637px] bg-white w-full border-1 border-black/20 md:px-[32px] p-4 md:py-[26px]  rounded-2xl ">
-      <div className="flex justify-between" >
+    <div   className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl ">
+      <div className="flex justify-between " >
         <p className="md:text-[24px] ">{question}</p>
         <button onClick={()=>setIscliked(true)} className={`${IsClicked ?"hidden": "block"}`} ><Plus/></button>
         <button  onClick={()=>setIscliked(false)} className={`${IsClicked ?"block": "hidden"}`}><Minus/></button>
       </div>
-      <p className={` ${IsClicked ? "block": "hidden"} transition-all  duration-600  text-[#3D3F40] leading-[150%] mt-[32px]`}>{answer}</p>
+      <p className={` ${IsClicked ? "block": "hidden"} transition-all  duration-500  text-[#3D3F40] leading-[150%] mt-[32px]`}>{answer}</p>
     </div>
   );
 }

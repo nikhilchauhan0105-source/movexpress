@@ -22,7 +22,7 @@ export const Card = ({ icon, head, subhead }) => {
 
 export const Workcard = ({ icon, steps, head, subhead }) => {
   return (
-    <div className="p-[24px] transition-all duration-500 cursor-pointer group hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]">
+    <div className="p-[24px] transition-all duration-200 cursor-pointer group hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]">
       <span className="mb-[24px]">{icon}</span>
       <p className="group-hover:text-white text-[#6D6969]">{steps}</p>
       <div className="px-[40px]">
@@ -50,7 +50,7 @@ export const Trustcard = ({ icon, head, subhead }) => {
 export const Customercard = ({ img, name, role, text, className }) => {
 
   return (
-    <div className="flex flex-col max-w-[413px] items-center w-full p-5  md:p-[32px] rounded-2xl bg-secondry ">
+    <div className="flex flex-col hover:shadow-lg  max-w-[413px] items-center w-full p-5  md:p-[32px] rounded-2xl bg-secondry ">
       <span
         className={`${className} max-w-fit pt-1 w-full  overflow-hidden grid place-items-center  rounded-full `}
       >
