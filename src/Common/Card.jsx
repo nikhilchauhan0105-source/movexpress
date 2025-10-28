@@ -14,20 +14,20 @@ export const Card = ({ icon, head, subhead }) => {
           <Rightarrow />
         </span>
       </div>
-      <p className="text-[20px] mb-3 font-semibold ">{head}</p>
-      <p className="leading-7 text-black/60">{subhead}</p>
+      <h2 className="text-[20px] mb-3 font-semibold ">{head}</h2>
+      <h3 className="leading-7 text-black/60">{subhead}</h3>
     </div>
   );
 };
 
 export const Workcard = ({ icon, steps, head, subhead }) => {
   return (
-    <div className="p-[24px] transition-all duration-200 cursor-pointer group hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]">
+    <div className="p-[24px] transition-all duration-200 h-[265px] cursor-pointer group hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]">
       <span className="mb-[24px]">{icon}</span>
-      <p className="group-hover:text-white text-[#6D6969]">{steps}</p>
+      <h3 className="group-hover:text-white text-[#6D6969]">{steps}</h3>
       <div className="px-[40px]">
-        <p className="text-[20px] font-semibold">{head}</p>
-        <p className="mt-[12px] leading-6">{subhead}</p>
+        <h2 className="text-xl font-semibold">{head}</h2>
+        <h3 className="mt-[12px] font-light leading-6">{subhead}</h3>
       </div>
     </div>
   );
@@ -35,8 +35,8 @@ export const Workcard = ({ icon, steps, head, subhead }) => {
 
 export const Trustcard = ({ icon, head, subhead }) => {
   return (
-    <div className="md:max-w-[300px] w-full p-[30px] flex flex-col gap-[18px] hover:shadow-lg   transition-all duration-300 cursor-pointer group bg-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]">
-      <span className="mb-[24px] group-hover:scale-[1.1] transition-all duration-300 ease-in-out">
+    <div className="md:max-w-[300px] w-full px-[33px] py-8 flex flex-col gap-[18px] hover:shadow-lg   transition-all duration-300 cursor-pointer group bg-white text-center  items-center rounded-xl ">
+      <span className="mb-lg group-hover:scale-[1.1] transition-all duration-300 ease-in-out">
         {icon}
       </span>
       <p className=" text-[25px] lg:text-[32px] leading-[125%] max-w-[240px] text-purple font-semibold ">
@@ -48,7 +48,6 @@ export const Trustcard = ({ icon, head, subhead }) => {
 };
 
 export const Customercard = ({ img, name, role, text, className }) => {
-
   return (
     <div className="flex flex-col hover:shadow-lg  max-w-[413px] items-center w-full p-5  md:p-[32px] rounded-2xl bg-secondry ">
       <span
@@ -57,8 +56,8 @@ export const Customercard = ({ img, name, role, text, className }) => {
         {img}
       </span>
       <div className="max-w-[133px] py-[24px]  text-center">
-        <p className="text-sm">{name}</p>
-        <p>{role}</p>
+        <h2 className="text-sm">{name}</h2>
+        <h2>{role}</h2>
         <div className="flex justify-center mt-[14px] gap-1">
           <Star />
           <Star />
@@ -74,10 +73,9 @@ export const Customercard = ({ img, name, role, text, className }) => {
   );
 };
 
-
-export const Blogscard =({image,head,text})=>{
+export const Blogscard = ({ image, head, text }) => {
   return (
-    <div className="max-w-[415px] ">
+    <div data-aos="fade-up" className="max-w-[415px] ">
       <div className="max-w-[415px] ">
         <img className="w-full rounded-2xl" src={image} alt="card images" />
       </div>
@@ -87,8 +85,8 @@ export const Blogscard =({image,head,text})=>{
       </div>
       <div className="flex items-center gap-4">
         <p className="text-purple font-semibold cursor-pointer">learn more</p>
-        <Arrow/>
+        <Arrow />
       </div>
     </div>
   );
-}
+};

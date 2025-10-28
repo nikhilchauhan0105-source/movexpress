@@ -1,10 +1,10 @@
-const NavListItem = ({ list, isactive }) => {
+const NavListItem = ({ list,setActive}) => {
   return (
     <>
       <li>
         <a
           onClick={(() => setActive(true), () => setIsOpen(false))}
-          className={`${isactive ? "underline" : null}`}
+          
           href={list.url}
         >
           {list.name}

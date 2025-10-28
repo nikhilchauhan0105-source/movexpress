@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Greenstar,
   Halfstar,
@@ -9,15 +10,21 @@ import {
 } from "../Common/Icons";
 
 const Hero = () => {
+  const [isTyped, setIsTyped]=useState("")
+ 
+      const storeChange = (event) => {
+        setIsTyped(event.target.value); 
+      };
+  console.log(isTyped)
   return (
     <section className=" bg-purple px-3 text-white">
       <div className="max-w-[1294px] flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center gap-2 lg:flex-row flex justify-between m-auto">
-        <div className="max-w-[652px] sm:flex-row flex-col   lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
+        <div className="max-w-[652px] sm:flex-row flex-col mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
           <div>
             <h1>Move Smart. </h1>
             <p>Move Easy. </p>
             <p>MoveXpress.</p>
-            <p className="max-w-[406px] text-[14px] lg:text-[18px] font-normal leading-[150%]">
+            <p className="max-w-[406px] text-[14px] lg:text-lg font-normal leading-[150%]">
               Book reliable, stress-free removals across London today.
             </p>
           </div>
@@ -36,9 +43,9 @@ const Hero = () => {
             </div>
             <div className="md:max-w-[318px] w-full  mt-[30px] lg:mt-[82px] bg-orange px-[15px] lg:px-[31px] rounded-t-md py-[17px] ">
               <div>
-                <div className="flex items-center gap-1 lg:p-[12px] justify-center">
+                <div className="flex items-center gap-1 lg:pt-0  justify-center">
                   <Greenstar />
-                  <p className="text-[25px] lg:text-[40px]">Trustpilot</p>
+                  <p className="text-[25px] font-semibold lg:text-[40px]">Trustpilot</p>
                 </div>
 
                 <div className="flex gap-[4px] max-w-[150px] m-auto lg:max-w-[234px] my-[10px] justify-center">
@@ -55,7 +62,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[644px] w-full  p-[10px]  md:-p-[18px] lg:p-[24px] text-black bg-white rounded-2xl">
+        <div className="max-w-[644px] w-full  p-[10px]  md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-2xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-[18px] md:text-[25px] lg:text-[32px] ">
@@ -69,22 +76,22 @@ const Hero = () => {
               <p className="text-[8px] md:text-[12px]">1. General Info</p>
             </div>
           </div>
-          <div className="h-2 bg-gray-300 rounded-2xl mt-[16px]">
+          <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
             <div className="max-w-[111px] w-full bg-purple h-2 rounded-2xl"></div>
           </div>
-          <div className="mt-[24px]">
+          <div className="mt-[21px]">
             <div className="flex flex-col gap-[4px]">
               <p className="font-semibold">Pickup Address</p>
               <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
                 <Location />
-                <input type="text" placeholder="Enter pickup address" />
+                <input type="text" onChange={storeChange}  value={isTyped} placeholder="Enter pickup address" />
               </div>
             </div>
             <div className="flex flex-col gap-[4px] mt-[10px] lg:mt-[34px]">
               <p className="font-semibold">Pickup Address</p>
               <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
                 <Location />
-                <input type="text" placeholder="Enter pickup address" />
+                <input type="text" onInputCapture={storeChange}  value={isTyped} placeholder="Enter pickup address" />
               </div>
             </div>
 
@@ -94,7 +101,7 @@ const Hero = () => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div className="text-green flex justify-between gap-2 items-center bg-green/20 mt-[12px] p-[12px] rounded-2xl">
+            <div className="text-green flex justify-between gap-2 items-center bg-green-500/10 mt-[12px] p-[12px] rounded-2xl">
               <Info />
               <div className="max-w-[495px] text-[12px] lg:text-base w-full">
                 <p>Distance</p>

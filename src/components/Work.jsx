@@ -11,7 +11,7 @@ const Work = () => {
           subhead="Count on us as your dependable partner for exceptional Moving solutions that turn spaces into pristine havens. Our dedicated team offers a wide array of services tailored to your unique requirements. "
         />
       </div>
-      <div className="max-w-[1296px]  m-auto flex justify-center gap-3 lg:gap-[48px] mt-[58px] flex-wrap ">
+      <div className="max-w-[1296px]  m-auto flex justify-center gap-3 lg:gap-6 mt-[58px] flex-wrap ">
         {worklist.map((items, index) => (
           <div className="md:max-w-[287px] w-full">
             <Workcard

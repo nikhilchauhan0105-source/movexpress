@@ -1,17 +1,17 @@
 @import "tailwindcss";
- 
+
 @theme {
-    --color-purple:rgba(75, 1, 75, 1);
-    --color-orange:rgba(250, 136, 30, 1);
-    --color-green:rgba(27, 177, 114, 1);
-    --color-lightpink:rgb(246 200 246);
-    --color-secondry:rgb(246, 247, 249, 1);
-    --color-green:rgb(182, 186, 44);
-    --color-gray:rgb(170 169 169);
-    --color-lightpurple:rgba(75, 1, 75, 0.26);
+  --color-purple: rgba(75, 1, 75, 1);
+  --color-orange:rgba(250, 136, 30, 1);
+  --color-green: rgba(27, 177, 114, 1);
+  --color-lightpink: rgb(246 200 246);
+  --color-secondry: rgb(246, 247, 249, 1);
+  --color-green: rgb(27,177,114, 100);
+  --color-gray: rgb(170 169 169);
+  --color-lightpurple: rgba(75, 1, 75, 0.26);
 }
 
-*{
-     font-family: "Figtree";
-     scroll-behavior: smooth;
+* {
+  font-family: "Figtree";
+  scroll-behavior: smooth;
 }

@@ -12,7 +12,7 @@ const Blogs = () => {
 
       <div className="max-w-[1294px] mt-6 lg:mt-[72px] mb-16 justify-center m-auto flex flex-wrap gap-6">
         {blogsdetails.map((items, index) => (
-          <Blogscard
+          <Blogscard 
             key={index}
             image={items.image}
             head={items.head}

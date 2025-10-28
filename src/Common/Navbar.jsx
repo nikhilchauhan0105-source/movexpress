@@ -6,11 +6,11 @@ import NavListItem from "./NavListItem";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isactive, setActive] = useState(false);
+  
 
   return (
     <nav className=" w-full bg-purple">
-      <div className="max-w-[1294px]  justify-between px-2 py-2 lg:py-[18px] m-auto flex">
+      <div className="max-w-[1294px]  justify-between px-2 py-[18.5px] lg:py-[18px] m-auto flex">
         <div className="max-w-[285px] gap-[8px] items-center flex">
           <img
             className="max-w-[40px] md:max-w-[50px] lg:max-w-[70px] lg:max-h-[51px]"
@@ -65,11 +65,11 @@ const Navbar = () => {
 
         <ul className="pl-2  text-center  text-purple text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
           {navlist.map((list, index) => (
-            <NavListItem isactive={isactive} list={list} key={index} />
+            <NavListItem  list={list} key={index} />
           ))}
         </ul>
       </div>
-      <div className="h-[1.5px] bg-white/10 w-full"></div>
+      <div className="h-[1px] bg-white/10 w-full"></div>
     </nav>
   );
 };

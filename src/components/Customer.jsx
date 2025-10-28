@@ -25,7 +25,7 @@ const Customer = () => {
           />
         ))}
       </div>
-      <div className="max-w-[604px] m-auto flex-col flex items-center justify-center gap-2">
+      <div className="max-w-[604px] m-auto flex-col lg:flex-row flex items-center justify-center gap-2">
         <p className="md:text-lg text-[#3B3B3B]">Have you moved with us?</p>
         
         <Button text="Leave a Review" />
