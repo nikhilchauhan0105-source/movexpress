@@ -73,7 +73,7 @@ export const Customercard = ({ img, name, role, text, className }) => {
   );
 };
 
-export const Blogscard = ({ image, head, text }) => {
+export const BlogsSectioncard = ({ image, head, text }) => {
   return (
     <div data-aos="fade-up" className="max-w-[415px] ">
       <div className="max-w-[415px] ">
@@ -90,3 +90,24 @@ export const Blogscard = ({ image, head, text }) => {
     </div>
   );
 };
+
+export const AboutCard =({icon ,head,text,maxwidth ,textwidth})=>{
+  return (
+    <div
+      className={` ${maxwidth} w-full flex flex-col items-center p-6 rounded-3xl bg-secondry`}
+    >
+      <span className="mb-3">{icon}</span>
+      <h2 className="my-3 text-xl font-semibold">{head}</h2>
+      <p className={`${textwidth} text-center leading-[170%] text-black/60`}>
+        {text}
+      </p>
+    </div>
+  );
+}
+
+
+export const Loopline=(text)=>{
+  return(
+    <p className="text-2xl text-white">{text}</p>
+  )
+}

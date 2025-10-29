@@ -16,9 +16,12 @@ import {
   Customer1,
   Customer2,
   Customer3,
+  AffordablePrice,
+  Experteam,
+  Saftey,
+  Certify,
+  Houseservice,
 } from "./Icons";
-
-
 
 export const serviceslist = [
   {
@@ -146,7 +149,7 @@ export const navlist = [
   },
   { name: "About", url: "/about" },
   { name: "Services", url: "#services" },
-  { name: "Blogs", url: "#Blogs" },
+  { name: "Blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
 ];
 
@@ -173,8 +176,7 @@ export const faqslist = [
   },
 ];
 
-
-export const blogsdetails = [
+export const BlogsSectiondetails = [
   {
     image: "./src/assets/images/pacakge.jpg",
     head: "How To Pack Fragile Items for Moving?",
@@ -192,20 +194,75 @@ export const blogsdetails = [
   },
 ];
 
-
-export const quicklinklist =
- [
+export const quicklinklist = [
   "Home",
   "About",
   "Service",
   "Become a Driver",
-  "Blog"
-    ];
+  "Blog",
+];
 
-    export const smallprint = [
-      "Terms Of Service",
-      "Privacy & Policies",
-      "Movers Conduct Policy",
-      "Damaged or Missing Items Policy",
-      "How Pay Works",
-    ];
+export const smallprint = [
+  "Terms Of Service",
+  "Privacy & Policies",
+  "Movers Conduct Policy",
+  "Damaged or Missing Items Policy",
+  "How Pay Works",
+];
+
+
+export const AboutCardList = [
+  {
+    icon: <AffordablePrice />,
+    head: "Affordable Price",
+    text: "we offer competitive and transparent pricing to fit your budget. No hidden fees, no surprises — just affordable rates.",
+  },
+  {
+    icon: <Experteam />,
+    head: "Expert Team",
+    text: "From packing delicate items to lifting heavy furniture, our experts ensure every step of your move is handled flawlessly.",
+  },
+  {
+    icon: <Saftey />,
+    head: "Safety & Protection",
+    text: "We know your possessions are valuable both financially and emotionally. That’s why we take extra precautions to their safety.",
+  },
+  {
+    icon: <Certify />,
+    head: "100% Certified",
+    text: "Our certifications reflect our commitment to quality, reliability, and industry standards, so you can trust us",
+  },
+];
+
+
+export const DoBestDetails = [
+  {
+    icon: <Houseservice />,
+    head: "Residential Moves",
+    text: "Helping families relocate without stress.",
+  },
+  {
+    icon: <Officemove />,
+    head: "Office Relocations",
+    text: "Smooth transitions with minimal downtime.",
+  },
+  {
+    icon: <Furniture />,
+    head: "Furniture Handling",
+    text: "Special care for fragile, heavy, or oversized items.",
+  },
+  {
+    icon: <Houseservice />,
+    head: "Long-Distance Moves",
+    text: "Reliable transportation wherever you’re headed.",
+  },
+];
+
+export const Runningline = [
+  "Stress-Free Experience",
+  "Professional & Friendly Team",
+  "Safety First",
+  "On-Time Delivery",
+  "Transparent Pricing",
+];
+ 

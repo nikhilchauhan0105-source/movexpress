@@ -3,7 +3,8 @@ import Homepage from "./pages/Homepage";
 import About from "./components/About";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useEffectEvent } from "react";
+import { useEffect} from "react";
+import BlogsPage from "./pages/BlogsPage";
 
 const App = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogsPage" element={<BlogsPage />} />
       </Routes>
     </>
   );

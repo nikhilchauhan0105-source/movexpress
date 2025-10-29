@@ -9,6 +9,7 @@
   --color-green: rgb(27,177,114, 100);
   --color-gray: rgb(170 169 169);
   --color-lightpurple: rgba(75, 1, 75, 0.26);
+  --color-textlight:rgba(138, 138, 138, 1);
 }
 
 * {

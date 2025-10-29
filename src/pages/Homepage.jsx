@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import Services from "../components/services";
 import Whytrust from "../components/Whytrust";
 import Work from "../components/Work";
-import Blogs from "./Blogs";
+import BlogsSection from "./BlogsSection";
 
 const Homepage = () => {
   return (
@@ -18,10 +18,10 @@ const Homepage = () => {
       <Work />
       <Whytrust />
       <Customer />
-      <FAQs/>
-      <Blogs/>
-      <BookYourService/>
-      <Footer/>
+      <FAQs />
+      <BlogsSection />
+      <BookYourService />
+      <Footer />
     </>
   );
 };
