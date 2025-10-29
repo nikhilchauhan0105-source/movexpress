@@ -91,7 +91,7 @@ export const BlogsSectioncard = ({ image, head, text }) => {
   );
 };
 
-export const AboutCard =({icon ,head,text,maxwidth ,textwidth})=>{
+export const AboutCard = ({ icon, head, text, maxwidth, textwidth }) => {
   return (
     <div
       className={` ${maxwidth} w-full flex flex-col items-center p-6 rounded-3xl bg-secondry`}
@@ -103,11 +103,8 @@ export const AboutCard =({icon ,head,text,maxwidth ,textwidth})=>{
       </p>
     </div>
   );
-}
+};
 
-
-export const Loopline=(text)=>{
-  return(
-    <p className="text-2xl text-white">{text}</p>
-  )
-}
+export const Loopline = ({ text }) => {
+  return <p className="text-2xl text-white mr-25">{text}</p>;
+};

@@ -7,6 +7,7 @@ import BlogsSection from "../pages/BlogsSection";
 import BookYourService from "./BookYourService";
 import FAQs from "./FAQs";
 import Footer from "./Footer";
+import Marquee from "react-fast-marquee";
 
 const About = () => {
   return (
@@ -59,15 +60,14 @@ const About = () => {
         </div>
       </section>
       <section>
-        <div className="flex bg-purple ">
-          {Runningline.map((items ,index)=>
-          (
-          <Loopline 
-          text={items}
-           key={index}
-           />)
-           )}
-           </div>
+       
+          <Marquee className="bg-purple py-8"speed={80}>
+            
+            {Runningline.map((item, index) => (
+              <Loopline key={index} text={item} />
+            ))}
+          </Marquee>
+       
       </section>
       <FAQs />
       <BlogsSection />
