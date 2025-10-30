@@ -11,15 +11,20 @@ import {
 
 const Hero = () => {
   const [isTyped, setIsTyped]=useState("")
+  const [isDestinationTyped, setIsDestinationTyped]=useState("")
  
       const storeChange = (event) => {
         setIsTyped(event.target.value); 
       };
+      const storeDestination = (event) => {
+        setIsDestinationTyped(event.target.value); 
+      };
   console.log(isTyped)
+  console.log(isDestinationTyped)
   return (
     <section className=" bg-purple px-3 text-white">
       <div className="max-w-[1294px] flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center gap-2 lg:flex-row flex justify-between m-auto">
-        <div className="max-w-[652px] sm:flex-row flex-col mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
+        <div className="max-w-[652px] sm:flex-row flex-col  lg:mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
           <div>
             <h1>Move Smart. </h1>
             <p>Move Easy. </p>
@@ -45,7 +50,9 @@ const Hero = () => {
               <div>
                 <div className="flex items-center gap-1 lg:pt-0  justify-center">
                   <Greenstar />
-                  <p className="text-[25px] font-semibold lg:text-[40px]">Trustpilot</p>
+                  <p className="text-[25px] font-semibold lg:text-[40px]">
+                    Trustpilot
+                  </p>
                 </div>
 
                 <div className="flex gap-[4px] max-w-[150px] m-auto lg:max-w-[234px] my-[10px] justify-center">
@@ -84,14 +91,24 @@ const Hero = () => {
               <p className="font-semibold">Pickup Address</p>
               <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
                 <Location />
-                <input type="text" onChange={storeChange}  value={isTyped} placeholder="Enter pickup address" />
+                <input
+                  type="text"
+                  onChange={storeChange}
+                  value={isTyped}
+                  placeholder="Enter pickup address"
+                />
               </div>
             </div>
             <div className="flex flex-col gap-[4px] mt-[10px] lg:mt-[34px]">
               <p className="font-semibold">Pickup Address</p>
               <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
                 <Location />
-                <input type="text" onInputCapture={storeChange}  value={isTyped} placeholder="Enter pickup address" />
+                <input
+                  type="text"
+                  onInputCapture={storeDestination}
+                  value={isDestinationTyped}
+                  placeholder="Enter pickup address"
+                />
               </div>
             </div>
 

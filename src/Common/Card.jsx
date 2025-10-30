@@ -1,18 +1,21 @@
 import { Arrow, Rightarrow, Star } from "./Icons";
+import { useNavigate } from "react-router";
 
-export const Card = ({ icon, head, subhead }) => {
+export const Card = ({ icon, head, subhead, url }) => {
+  const navigate = useNavigate();
   return (
-    <div className="group  ">
+    <div className="group " onClick={() => navigate("manvanservices")}>
       <div className="flex justify-between mb-[24px] ">
         <span className="group-hover:translate-x-[20px] duration-300 transition-all">
           {icon}
         </span>
-
-        <span
-          className={`group-hover:rotate-[45deg] duration-300 h-fit transition-all `}
-        >
-          <Rightarrow />
-        </span>
+        <a href={url}>
+          <span
+            className={`group-hover:rotate-[45deg] duration-300 h-fit transition-all `}
+          >
+            <Rightarrow />
+          </span>
+        </a>
       </div>
       <h2 className="text-[20px] mb-3 font-semibold ">{head}</h2>
       <h3 className="leading-7 text-black/60">{subhead}</h3>
@@ -106,5 +109,26 @@ export const AboutCard = ({ icon, head, text, maxwidth, textwidth }) => {
 };
 
 export const Loopline = ({ text }) => {
-  return <p className="text-2xl text-white mr-25">{text}</p>;
+  return <p className=" xl:text-2xl text-white mr-25">{text}</p>;
 };
+
+export const WhyChooseOurServicesCard = ({ head, text, icon }) => {
+  return (
+    <div className="w-full md:max-w-[239px] flex flex-col items-center text-center p-6 bg-secondry rounded-2xl">
+      {icon}
+      <h2 className="text-xl font-semibold mb-2">{head}</h2>
+      <p className="text-textlight ">{text}</p>
+    </div>
+  );
+};
+
+export const IncludeServices =({icon,head,text})=>{
+ return(
+  <div className="w-full md:max-w-[308px] p-6 bg-white rounded-2xl">
+    {icon}
+    <h2 className="mt-6 mb-3 text-xl font-semibold leading-[160%]">{head}</h2>
+    <p>{text}</p>
+
+  </div>
+ )
+}

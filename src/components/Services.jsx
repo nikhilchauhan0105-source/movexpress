@@ -18,7 +18,8 @@ const Services = () => {
       </div>
       <div className="max-w-[1294px] flex  flex-wrap justify-center   mt-[56px]  gap-6 lg:gap-7 m-auto">
         {serviceslist.map((i, indx) => (
-          <div className="md:max-w-[310px] w-full rounded-2xl hover:shadow-md p-6 bg-white">
+          
+          <div className={` md:max-w-[310px] w-full rounded-2xl hover:shadow-md p-6 bg-white`}>
             <Card
               icon={i.icon}
               arrow={i.arrow}

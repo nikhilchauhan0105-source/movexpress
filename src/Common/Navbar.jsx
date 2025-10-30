@@ -63,7 +63,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul className="pl-2  text-center  text-purple text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
+        <ul className="pl-2  text-center  text-purple text-4xl md:text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
           {navlist.map((list, index) => (
             <NavListItem  list={list} key={index} />
           ))}

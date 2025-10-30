@@ -1,32 +1,33 @@
 import {
-  Rightarrow,
-  Vanservice,
-  Furniture,
-  Pianotransport,
-  Storagetransport,
-  Officemove,
-  Handbag,
+  AffordablePrice,
   Calendar,
-  Delivery,
-  Like,
-  Trusticon,
+  Certify,
   Coin,
-  Handshake,
-  Likestare,
   Customer1,
   Customer2,
   Customer3,
-  AffordablePrice,
+  Delivery,
   Experteam,
-  Saftey,
-  Certify,
+  Furniture,
+  Handbag,
+  Handshake,
   Houseservice,
+  Like,
+  Likestare,
+  Officemove,
+  Pianotransport,
+  Rightarrow,
+  Saftey,
+  Storagetransport,
+  Trusticon,
+  Vanservice,
 } from "./Icons";
 
 export const serviceslist = [
   {
     icon: <Vanservice />,
     arrow: <Rightarrow />,
+    url: "manvanservices",
     head: "Man & Van Services",
     subhead:
       "A convenient and flexible moving solution typically offered by a single professional or a small team with a van",
@@ -148,7 +149,7 @@ export const navlist = [
     url: "/",
   },
   { name: "About", url: "/about" },
-  { name: "Services", url: "#services" },
+  { name: "ServicePage", url: "/servicepage" },
   { name: "Blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
 ];
@@ -210,7 +211,6 @@ export const smallprint = [
   "How Pay Works",
 ];
 
-
 export const AboutCardList = [
   {
     icon: <AffordablePrice />,
@@ -233,7 +233,6 @@ export const AboutCardList = [
     text: "Our certifications reflect our commitment to quality, reliability, and industry standards, so you can trust us",
   },
 ];
-
 
 export const DoBestDetails = [
   {
@@ -265,4 +264,59 @@ export const Runningline = [
   "On-Time Delivery",
   "Transparent Pricing",
 ];
- 
+
+export const WhyChooseOurSevicesDetails = [
+  {
+    icon: <AffordablePrice />,
+    head: "Affordable & Transparent Pricing",
+    text: "Moving services starting from just £25.",
+  },
+  {
+    icon: <Experteam />,
+    head: "Professional Movers & Drivers",
+    text: "Experienced teams handle every item",
+  },
+  {
+    icon: <Saftey />,
+    head: "Hassle-Free Experience",
+    text: "We load, transport, and unload you do nothing.",
+  },
+  {
+    icon: <AffordablePrice />,
+    head: "Local & Nationwide Coverage",
+    text: "Whether around the corner or across the UK",
+  },
+  {
+    icon: <Calendar />,
+    head: "Flexible Booking Options",
+    text: "Service to suit your schedule.",
+  },
+];
+
+export const servicesIncludelist = [
+  {
+    icon: <Houseservice />,
+    head: "Home & Office Removals",
+    subhead:
+      "Relocating your home or workspace? We ensure a smooth, secure, and organized move with minimal disruption.",
+  },
+  {
+    icon: <Vanservice />,
+    head: "Student Moves",
+    subhead:
+      "Perfect for students relocating between accommodations. Budget-friendly and convenient solutions for smaller moves.",
+  },
+  {
+    icon: <Furniture />,
+    head: "Furniture & Large Itemss",
+    subhead:
+      "Need to transport bulky furniture or oversized parcels? Our vans are fully equipped to handle heavy and delicate items safely.",
+  },
+  {
+    icon: <Furniture />,
+    head: "Single-Item & Bulk Transport",
+    subhead:
+      "From a single sofa to an entire flat, we provide customized transport solutions based on your needs.",
+  },
+  
+];

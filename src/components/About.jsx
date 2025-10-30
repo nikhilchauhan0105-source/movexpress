@@ -1,5 +1,6 @@
-import { AboutCard, Loopline } from "../Common/Card";
-import { AboutCardList, DoBestDetails, Runningline } from "../Common/Data";
+
+import { AboutCard } from "../Common/Card";
+import { AboutCardList, DoBestDetails } from "../Common/Data";
 import { Heading } from "../Common/Helper";
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
@@ -7,7 +8,8 @@ import BlogsSection from "../pages/BlogsSection";
 import BookYourService from "./BookYourService";
 import FAQs from "./FAQs";
 import Footer from "./Footer";
-import Marquee from "react-fast-marquee";
+import MarqueeLine from "../Common/MarqueeLine";
+
 
 const About = () => {
   return (
@@ -17,21 +19,21 @@ const About = () => {
         heading=" About Us"
         subheading="Your Trusted Partner for Stress-Free Moving"
       />
-      <div className="max-w-[1296px] px-3 my-20 flex-wrap justify-center gap-3 md:gap-6 m-auto flex ">
+      <div className="max-w-[1296px] px-3  my-10 lg:my-20 flex-wrap justify-center gap-3 md:gap-6 m-auto flex ">
         {AboutCardList.map((items, index) => (
           <AboutCard
             icon={items.icon}
             head={items.head}
             text={items.text}
             maxwidth="w-full md:max-w-[305px]"
-            textwidth="max-w-[257px]"
+            textwidth="w-full md:max-w-[257px]"
             key={index}
           />
         ))}
       </div>
 
       <section>
-        <p className="max-w-[1296px] text-5xl text-textlight leading-[130%] m-auto font-medium py-20 tracking-[-1px]">
+        <p className="max-w-[1296px] text-2xl xl:text-5xl px-3 text-textlight leading-[130%] m-auto font-medium py-10 xl:py-20 tracking-[-1px]">
           <span className="text-black">MoveXpress</span> is more than a moving
           company — we’re your transition partners. We manage everything from
           packing your valuables to transporting and unloading them at your new
@@ -41,7 +43,7 @@ const About = () => {
         </p>
       </section>
 
-      <section className="py-20">
+      <section className="py-10 lg:py-20">
         <Heading
           head="What We Do Best"
           subhead="We offer a complete range of moving services designed to suit your needs"
@@ -53,7 +55,7 @@ const About = () => {
               head={items.head}
               text={items.text}
               maxwidth="w-full md:max-w-[287px]"
-              textwidth="max-w-[181px]"
+              textwidth="w-full md:max-w-[181px]"
               key={index}
             />
           ))}
@@ -61,12 +63,7 @@ const About = () => {
       </section>
       <section>
        
-          <Marquee className="bg-purple py-8"speed={80}>
-            
-            {Runningline.map((item, index) => (
-              <Loopline key={index} text={item} />
-            ))}
-          </Marquee>
+         <MarqueeLine/>
        
       </section>
       <FAQs />

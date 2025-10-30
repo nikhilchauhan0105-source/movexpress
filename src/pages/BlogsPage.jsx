@@ -9,13 +9,14 @@ import Footer from "../components/Footer";
 
 const BlogsPage = () => {
   return (
-    <section>
+  <>
       <Navbar />
       <PagesHeading
         heading =" Our Blog and News"
         subheading="Whether you're looking for practical advice on maintaining a Smooth
           Moving"
-      />
+      /> 
+       <section className="px-3 sm:px-0 ">
       <BlogsCardSection />
       <BlogsCardSection />
 
@@ -24,7 +25,6 @@ const BlogsPage = () => {
           if (index === 0) {
             return (
               <BlogsSectioncard
-                index={0}
                 image={items.image}
                 head={items.head}
                 text={items.text}
@@ -36,6 +36,7 @@ const BlogsPage = () => {
       <BookYourService rounded="rounded-xl" />
       <Footer />
     </section>
+    </>
   );
 };
 
