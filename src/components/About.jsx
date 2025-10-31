@@ -19,7 +19,7 @@ const About = () => {
         heading=" About Us"
         subheading="Your Trusted Partner for Stress-Free Moving"
       />
-      <div className="max-w-[1296px] px-3  my-10 lg:my-20 flex-wrap justify-center gap-3 md:gap-6 m-auto flex ">
+      <div className="max-w-[1294px] px-3  my-10 lg:my-20 flex-wrap justify-center gap-3  m-auto flex ">
         {AboutCardList.map((items, index) => (
           <AboutCard
             icon={items.icon}

@@ -27,8 +27,8 @@ const Hero = () => {
         <div className="max-w-[652px] sm:flex-row flex-col  lg:mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
           <div>
             <h1>Move Smart. </h1>
-            <p>Move Easy. </p>
-            <p>MoveXpress.</p>
+            <h1>Move Easy. </h1>
+            <h1>MoveXpress.</h1>
             <p className="max-w-[406px] text-[14px] lg:text-lg font-normal leading-[150%]">
               Book reliable, stress-free removals across London today.
             </p>

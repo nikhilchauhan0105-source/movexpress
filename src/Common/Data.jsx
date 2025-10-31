@@ -196,11 +196,30 @@ export const BlogsSectiondetails = [
 ];
 
 export const quicklinklist = [
-  "Home",
-  "About",
-  "Service",
-  "Become a Driver",
-  "Blog",
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "About",
+  },
+
+  {
+    name: "Service",
+    url: "About",
+  },
+
+  {
+    name: "Become a Driver",
+    url: "BookYourServices",
+  },
+
+  {
+    name: "Blog",
+    url: "#Blogs",
+  },
+  
 ];
 
 export const smallprint = [
@@ -319,4 +338,42 @@ export const servicesIncludelist = [
       "From a single sofa to an entire flat, we provide customized transport solutions based on your needs.",
   },
   
+];
+
+export const signupinputdeatails = [
+  {
+    lable: "First Name",
+    type: "text",
+  },
+
+  {
+    lable: "Surname *",
+    type: "text",
+  },
+  {
+    lable: "Phone No ",
+    type: "number",
+  },
+  {
+    lable: "E-mail *",
+    type: "email",
+  },
+  {
+    lable: "Date of Birth *",
+    type: "date",
+  },
+
+  {
+    lable: "Language of preference in english *",
+    type: "text",
+  },
+  {
+    lable: "Address *",
+    type: "text",
+  },
+
+  {
+    lable: "Postcode *",
+    type: "number",
+  },
 ];

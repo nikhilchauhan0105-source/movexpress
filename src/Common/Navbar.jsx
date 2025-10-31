@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       <div
         onClick={() => setIsOpen(false)}
-        className={` fixed top-0   py-3 flex  flex-col duration-500 transition-all h-screen w-full  m-auto backdrop-blur-xs  px-2 bg-lightpink   ${
+        className={` fixed top-0   py-3 flex  z-3 flex-col duration-500 transition-all h-screen w-full  m-auto backdrop-blur-xs  px-2 bg-lightpink   ${
           isOpen ? "top-0" : "top-[-150%]"
         } `}
       >

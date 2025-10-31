@@ -38,11 +38,11 @@ export const Footer = () => {
           <ul className="flex flex-col gap-1 lg:gap-1.5">
             <h2 className=" text-lg md:text-xl font-medium  md:mb-3 text-purple">Quick Link</h2>
             {quicklinklist.map((link, index) => (
-              <li
+              <li 
                 key={index}
                 className="text-sm  md:text-base lg:text-lg font-medium"
               >
-                <a href=""> {link}</a>
+                <a href={link.url}> {link.name}</a>
               </li>
             ))}
           </ul>
