@@ -8,6 +8,7 @@ import BlogsSection from "./BlogsSection";
 import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import MarqueeLine from "../Common/MarqueeLine";
+import Work from "../components/Work";
 
 
 const ServicePage = () => {
@@ -20,8 +21,9 @@ const ServicePage = () => {
         button={<Button text="Get a Qoute" mt="mt-6" />}
       />
       <Services />
+      <Work />
 
-    <MarqueeLine/>
+      <MarqueeLine />
 
       <FAQs />
       <BlogsSection />

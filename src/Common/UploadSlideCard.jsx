@@ -14,7 +14,7 @@ function UploadSlideCard({ width, height, label }) {
             Click to Upload Front Side of Card
           </p>
         </div>
-        <input type="file" className=" w-full h-full " accept="image/*" />
+        <input type="file" className=" w-full h-full  opacity-1" accept="image/*" />
       </div>
       <FormButton 
       text="Next"/>
