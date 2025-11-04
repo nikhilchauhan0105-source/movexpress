@@ -1,6 +1,7 @@
 import signupbg from "../assets/images/Signupbg.png";
 import { signupinputdeatails } from "../Common/Data";
-import { AppleLogo, PlayStore } from "../Common/Icons";
+import FormButton from "../Common/FormButton";
+import FormDescription from "../Common/FormDescription";
 import UploadSlideCard from "../Common/UploadSlideCard";
 import Input from "../components/Input";
 
@@ -9,7 +10,7 @@ const SignUpAsDriver = () => {
     <>
       <div className=" -z-1 w-full bg-[url(./src/assets/images/Signupbg.png)] bg-no-repeat bg-center -mt-80 bg-fit h-[450px] md:h-[450px]  lg:h-[650px] "></div>
       <div className="max-w-[1296px]   xl:flex-row flex flex-col justify-between mb-34  m-auto">
-        <div className="max-w-[745px] z-5 -mt-52 xl:p-12 p-4 mx-3 bg-white ">
+        <div className="max-w-[745px] z-5 -mt-15  md:-mt-52 xl:p-12 p-4 mx-3 bg-white ">
           <div className="flex  justify-between flex-col   gap-3 lg:flex-row  items-start">
             <div className="max-w-[501px]">
               <h1 className="text-2xl lg:text-5xl text-purple font-semibold">
@@ -51,32 +52,10 @@ const SignUpAsDriver = () => {
             height="h-[187px]"
             label="Photo of your selfie *"
           />
+          <FormButton text="Next"
+          url="/nextpage" />
         </div>
-
-        <div className="max-w-[495px] mt-10 mx-3 lg:mt-14 text-sm md:text-[18px] font-normal text-textlight">
-          <div className="flex flex-col  text-center leading-[170%] gap-2 md:gap-8">
-            <p>
-              Earn as you drive The more you drive, the more you earn! You get
-              paid weekly.
-            </p>
-            <p>
-              Drive when you want, based on where you are, we simply provide the
-              jobs.
-            </p>
-            <p>
-              No more quoting or bidding for jobs-Movexpress offers transparent
-              pricing with great rates of pay. The pay you see on the job alerts
-              is the exact amount that will be paid into your account.
-            </p>
-          </div>
-          <div className="mt-10 text-center">
-            <p>Get the apps for a better experience</p>
-            <div className="flex max-w-[406px] mt-6 m-auto justify-between">
-              <AppleLogo />
-              <PlayStore />
-            </div>
-          </div>
-        </div>
+        <FormDescription />
       </div>
     </>
   );

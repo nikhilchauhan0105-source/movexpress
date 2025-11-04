@@ -212,7 +212,7 @@ export const quicklinklist = [
 
   {
     name: "Become a Driver",
-    url: "BookYourServices",
+    url: "becomedriver",
   },
 
   {
