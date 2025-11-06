@@ -1,7 +1,6 @@
-
 import { Button } from "../Common/Button";
-import Navbar from "../Common/Navbar"
-import PagesHeading from "../Common/PagesHeading"
+import Navbar from "../Common/Navbar";
+import PagesHeading from "../Common/PagesHeading";
 import Services from "../components/services";
 import FAQs from "../components/FAQs";
 import BlogsSection from "./BlogsSection";
@@ -9,7 +8,6 @@ import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import MarqueeLine from "../Common/MarqueeLine";
 import Work from "../components/Work";
-
 
 const ServicePage = () => {
   return (
@@ -22,15 +20,13 @@ const ServicePage = () => {
       />
       <Services />
       <Work />
-
       <MarqueeLine />
-
       <FAQs />
       <BlogsSection />
       <BookYourService />
       <Footer />
     </>
   );
-}
+};
 
-export default ServicePage
+export default ServicePage;

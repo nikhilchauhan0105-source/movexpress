@@ -193,6 +193,41 @@ export const BlogsSectiondetails = [
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
   },
+  {
+    image: "./src/assets/images/pacakge.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
+  },
+  {
+    image: "./src/assets/images/place-order.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+  },
+  {
+    image: "./src/assets/images/decultter.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
+  },
+  {
+    image: "./src/assets/images/pacakge.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
+  },
+  {
+    image: "./src/assets/images/place-order.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+  },
+  {
+    image: "./src/assets/images/decultter.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
+  },
+  {
+    image: "./src/assets/images/decultter.jpg",
+    head: "How To Pack Fragile Items for Moving?",
+    text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
+  },
 ];
 
 export const quicklinklist = [
@@ -219,7 +254,6 @@ export const quicklinklist = [
     name: "Blog",
     url: "#Blogs",
   },
-  
 ];
 
 export const smallprint = [
@@ -337,7 +371,6 @@ export const servicesIncludelist = [
     subhead:
       "From a single sofa to an entire flat, we provide customized transport solutions based on your needs.",
   },
-  
 ];
 
 export const signupinputdeatails = [
@@ -377,3 +410,5 @@ export const signupinputdeatails = [
     type: "number",
   },
 ];
+
+

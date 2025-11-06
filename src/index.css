@@ -11,6 +11,7 @@
   --color-lightpurple: rgba(75, 1, 75, 0.26);
   --color-textlight:rgba(138, 138, 138, 1);
   --color-fadepurple:rgba(75, 1, 75, 0.72);
+  --color-neutral:rgba(13, 36, 64, 1);
 }
 
 * {

@@ -29,7 +29,11 @@ const NextFormPage = () => {
           </div>
           <div className="flex  flex-wrap justify-between  lg:flex-nowrap max-w-[649px] mt-4 gap-x-4 gap-y-6  m-auto">
             <div className="flex flex-col w-full gap-6">
-              <Input label="Vechicle type" placeholder="Select Vehicle type " />
+              <Input
+                value="veichletype"
+                label="Vechicle type"
+                placeholder="Select Vehicle type "
+              />
               <UploadSlideCard
                 label="Front Of Driving Licence *"
                 width=" w-full xl:max-w-[316px]"
