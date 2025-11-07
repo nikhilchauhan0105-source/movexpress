@@ -8,6 +8,7 @@ import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import MarqueeLine from "../Common/MarqueeLine";
 import Work from "../components/Work";
+import { Topbutton } from "../Common/Helper";
 
 const ServicePage = () => {
   return (
@@ -25,6 +26,7 @@ const ServicePage = () => {
       <BlogsSection />
       <BookYourService />
       <Footer />
+       <Topbutton/>
     </>
   );
 };

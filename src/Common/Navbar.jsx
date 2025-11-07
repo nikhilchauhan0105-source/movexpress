@@ -3,6 +3,7 @@ import logo from "../assets/images/movexpress-logo.png";
 import { navlist } from "./Data";
 import { Cross, MenuIcon } from "./Icons";
 import NavListItem from "./NavListItem";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,15 @@ const Navbar = () => {
     <nav className=" w-full z-6 sticky top-0 bg-purple">
       <div className="max-w-[1294px]  justify-between px-2 py-[18.5px] lg:py-[18px] m-auto flex">
         <div className="max-w-[285px] gap-[8px] items-center flex">
-          <img
-            className="max-w-[40px] md:max-w-[50px] lg:max-w-[70px] lg:max-h-[51px]"
-            src={logo}
-            alt="logo image"
-          />
+          <Link to="/">
+            <button>
+              <img
+                className="max-w-[40px] md:max-w-[50px] lg:max-w-[70px] lg:max-h-[51px]"
+                src={logo}
+                alt="logo image"
+              />
+            </button>
+          </Link>
           <div className="text-white ">
             <p className="text-base md:text-[20px] lg:text-[32px] font-bold italic  md:leading-6 leading-4 lg:leading-8">
               MOVEXPRESS

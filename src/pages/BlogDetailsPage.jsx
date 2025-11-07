@@ -6,6 +6,7 @@ import ReviewBooking from "../Common/ReviewBooking";
 import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import HowToMakeABookingCard from "../Common/HowToMakeABookingCard";
+import { Topbutton } from "../Common/Helper";
 
 const BlogDetailsPage = () => {
   return (
@@ -180,6 +181,7 @@ const BlogDetailsPage = () => {
       </div>
       <BookYourService />
       <Footer />
+      <Topbutton/>
     </section>
   );
 };

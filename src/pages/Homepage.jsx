@@ -1,3 +1,5 @@
+import { Topbutton } from "../Common/Helper";
+import { Upwardarrow } from "../Common/Icons";
 import Navbar from "../Common/Navbar";
 import BookYourService from "../components/BookYourService";
 import Customer from "../components/Customer";
@@ -22,6 +24,7 @@ const Homepage = () => {
       <BlogsSection />
       <BookYourService />
       <Footer />
+       <Topbutton/>
     </>
   );
 };

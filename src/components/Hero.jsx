@@ -23,6 +23,9 @@ const Hero = () => {
   console.log(isDestinationTyped)
   return (
     <section className=" bg-purple px-3 text-white">
+      <button>
+        
+      </button>
       <div className="max-w-[1294px] flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center gap-2 lg:flex-row flex justify-between m-auto">
         <div className="max-w-[652px] sm:flex-row flex-col  lg:mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
           <div>

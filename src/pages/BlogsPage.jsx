@@ -1,7 +1,4 @@
 import BlogsCardSection from "../Common/BlogsCardSection";
-import { BlogsSectioncard } from "../Common/Card";
-import { blogsSectiondetails } from "../Common/Data";
-
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
 import BookYourService from "../components/BookYourService";
@@ -16,11 +13,12 @@ const BlogsPage = () => {
         subheading="Whether you're looking for practical advice on maintaining a Smooth
           Moving"
       />
-      <section className="px-3 sm:px-0 ">
+      <section className="px-3">
         <BlogsCardSection />
-        <BookYourService rounded="rounded-xl" />
-        <Footer />
       </section>
+
+      <BookYourService rounded="rounded-xl" />
+      <Footer />
     </>
   );
 };

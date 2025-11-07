@@ -5,6 +5,7 @@ import {
   whychooseoursevicesdetails,
 } from "../Common/Data";
 import { Heading } from "../Common/Heading";
+import { Topbutton } from "../Common/Helper";
 import MarqueeLine from "../Common/MarqueeLine";
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
@@ -71,6 +72,7 @@ const ManVanService = () => {
       <FAQs />
       <BookYourService />
       <Footer />
+       <Topbutton/>
     </>
   );
 };
