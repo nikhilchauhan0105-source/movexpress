@@ -8,8 +8,12 @@ const BookYourService = ( {rounded}) => {
         <p className="text-3xl lg:text-5xl leading-[120%] text-white">
           Ready to book your Man & Van Service ?
         </p>
-        <Link to="/makeabooking">
-        <button  className={` ${rounded} bg-orange py-4 px-8 lg:px-16 text-white mt-6`}>Get Instant Quote Now</button>
+        <Link to="/blogs/:blogid">
+          <button
+            className={` ${rounded} bg-orange py-4 px-8 lg:px-16 text-white mt-6`}
+          >
+            Get Instant Quote Now
+          </button>
         </Link>
       </div>
     </section>

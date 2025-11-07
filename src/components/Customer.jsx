@@ -1,7 +1,7 @@
 import { Button } from "../Common/Button";
 import { Customercard } from "../Common/Card";
 import { customerlist } from "../Common/Data";
-import { Heading } from "../Common/Helper";
+import { Heading } from "../Common/Heading";
 
 const Customer = () => {
   return (

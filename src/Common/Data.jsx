@@ -149,7 +149,7 @@ export const navlist = [
     url: "/",
   },
   { name: "About", url: "/about" },
-  { name: "ServicePage", url: "/servicepage" },
+  { name: "ServicePage", url: "/services" },
   { name: "Blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
 ];
@@ -177,53 +177,63 @@ export const faqslist = [
   },
 ];
 
-export const BlogsSectiondetails = [
+export const blogsSectiondetails = [
   {
+    slug: "how-to-track",
     image: "./src/assets/images/pacakge.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/place-order.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/decultter.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/pacakge.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/place-order.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/decultter.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/pacakge.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/place-order.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/decultter.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
   },
   {
+    slug: "know-that-chage",
     image: "./src/assets/images/decultter.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
@@ -264,7 +274,7 @@ export const smallprint = [
   "How Pay Works",
 ];
 
-export const AboutCardList = [
+export const aboutcardList = [
   {
     icon: <AffordablePrice />,
     head: "Affordable Price",
@@ -287,7 +297,7 @@ export const AboutCardList = [
   },
 ];
 
-export const DoBestDetails = [
+export const dobestdetails = [
   {
     icon: <Houseservice />,
     head: "Residential Moves",
@@ -310,7 +320,7 @@ export const DoBestDetails = [
   },
 ];
 
-export const Runningline = [
+export const runningline = [
   "Stress-Free Experience",
   "Professional & Friendly Team",
   "Safety First",
@@ -318,7 +328,7 @@ export const Runningline = [
   "Transparent Pricing",
 ];
 
-export const WhyChooseOurSevicesDetails = [
+export const whychooseoursevicesdetails = [
   {
     icon: <AffordablePrice />,
     head: "Affordable & Transparent Pricing",
@@ -410,5 +420,3 @@ export const signupinputdeatails = [
     type: "number",
   },
 ];
-
-

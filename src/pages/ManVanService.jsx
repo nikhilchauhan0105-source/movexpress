@@ -1,8 +1,10 @@
 import { Button } from "../Common/Button";
 import { IncludeServices, WhyChooseOurServicesCard } from "../Common/Card";
-import { servicesIncludelist, WhyChooseOurSevicesDetails } from "../Common/Data";
-import { Heading } from "../Common/Helper";
-import { Trust } from "../Common/Icons";
+import {
+  servicesIncludelist,
+  whychooseoursevicesdetails,
+} from "../Common/Data";
+import { Heading } from "../Common/Heading";
 import MarqueeLine from "../Common/MarqueeLine";
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
@@ -36,7 +38,7 @@ const ManVanService = () => {
           subhead="We offer a complete range of moving services designed to suit your needs"
         />
         <div className="max-w-[1294px] flex justify-center flex-wrap mt-20 gap-6 m-auto">
-          {WhyChooseOurSevicesDetails.map((items, index) => (
+          {whychooseoursevicesdetails.map((items, index) => (
             <WhyChooseOurServicesCard
               icon={items.icon}
               head={items.head}
@@ -55,20 +57,20 @@ const ManVanService = () => {
         />
 
         <div className="max-w-[1440px] m-auto flex flex-wrap gap-6  mt-5 lg:mt-20 justify-center">
-{servicesIncludelist.map((items,index)=>(
-     <IncludeServices
-     key={index}
-     icon={items.icon}
-     head={items.head}
-     text={items.subhead}
-     />
-)) }
+          {servicesIncludelist.map((items, index) => (
+            <IncludeServices
+              key={index}
+              icon={items.icon}
+              head={items.head}
+              text={items.subhead}
+            />
+          ))}
         </div>
       </section>
-      <Whytrust/>
-      <FAQs/>
-      <BookYourService/>
-      <Footer/>
+      <Whytrust />
+      <FAQs />
+      <BookYourService />
+      <Footer />
     </>
   );
 };

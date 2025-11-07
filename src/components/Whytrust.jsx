@@ -1,6 +1,6 @@
 import { trustarrylist } from "../Common/Data";
 import { Trustcard } from "../Common/Card";
-import { Heading } from "../Common/Helper";
+import { Heading } from "../Common/Heading";
 import { Button } from "../Common/Button";
 
 const Whytrust = () => {

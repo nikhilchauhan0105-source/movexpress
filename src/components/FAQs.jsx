@@ -1,5 +1,6 @@
 import { faqslist } from "../Common/Data";
-import { Faqs, Heading } from "../Common/Helper";
+import { Faqs } from "../Common/Helper";
+import { Heading } from "../Common/Heading";
 
 function FAQs() {
   return (

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { signupinputdeatails } from "../Common/Data";
 import FormButton from "../Common/FormButton";
 import FormDescription from "../Common/FormDescription";
 import Navbar from "../Common/Navbar";
@@ -53,6 +52,8 @@ const SignUpAsDriver = () => {
       setPostCodeTyped(e.target.value);
     };
     console.log(postcodeTyped)
+
+   
   return (
     <>
       <div className="bg-purple">
@@ -71,7 +72,7 @@ const SignUpAsDriver = () => {
               </p>
             </div>
             <div className="max-w-fit bg-gray-100 p-2 rounded-3xl">
-              <p className="text-[8px] md:text-[12px]">1. General Info</p>
+              <p className="text-[8px] md:text-[12px]">1. Personal Info</p>
             </div>
           </div>
           <div className="h-2 max-w-[654px] w-full rounded-2xl bg-lightpink my-8 ">
@@ -148,7 +149,6 @@ const SignUpAsDriver = () => {
                 type="text"
                 className=" p-2 md:p-4 border-1  w-full  border-purple rounded-[8px]"
               />
-            
             </div>
             <div className="flex   flex-col gap-y-1 w-full lg:max-w-[316px]   ">
               <label className="text-purple leading-6  sm:text-base font-medium">
@@ -196,7 +196,7 @@ const SignUpAsDriver = () => {
             height="h-[187px]"
             label="Photo of your selfie *"
           />
-          <FormButton text="Next" url="/nextpage" />
+          <FormButton text="Next" url="/VechcleInfo" />
         </div>
         <FormDescription />
       </div>

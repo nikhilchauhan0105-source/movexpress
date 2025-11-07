@@ -2,7 +2,7 @@
 
 const Input = ({ label, type, placeholder, value,onchange }) => {
   return (
-    <div className="flex shrink-0  flex-col gap-y-1 w-full lg:max-w-[316px]   ">
+    <div className="flex shrink-0  flex-col gap-y-1 w-full lg:max-w-[319px]   ">
       <label className="text-purple leading-6  sm:text-base font-medium">
         {" "}
         {label}

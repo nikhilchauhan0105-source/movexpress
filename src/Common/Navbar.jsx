@@ -9,7 +9,7 @@ const Navbar = () => {
   
 
   return (
-    <nav className=" w-full z-6 bg-purple">
+    <nav className=" w-full z-6 sticky top-0 bg-purple">
       <div className="max-w-[1294px]  justify-between px-2 py-[18.5px] lg:py-[18px] m-auto flex">
         <div className="max-w-[285px] gap-[8px] items-center flex">
           <img

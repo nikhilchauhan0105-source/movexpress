@@ -1,5 +1,5 @@
 import { Card } from "../Common/Card";
-import {  Heading } from "../Common/Helper";
+import { Heading } from "../Common/Heading";
 
 import { serviceslist } from "../Common/Data";
 import { Button } from "../Common/Button";

@@ -1,6 +1,6 @@
 import BlogsCardSection from "../Common/BlogsCardSection";
 import { BlogsSectioncard } from "../Common/Card";
-import { BlogsSectiondetails } from "../Common/Data";
+import { blogsSectiondetails } from "../Common/Data";
 
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";

@@ -1,6 +1,6 @@
 import { BlogsSectioncard } from "../Common/Card";
-import { BlogsSectiondetails } from "../Common/Data";
-import { Heading } from "../Common/Helper";
+import { blogsSectiondetails } from "../Common/Data";
+import { Heading } from "../Common/Heading";
 
 const BlogsSection = () => {
   return (
@@ -11,12 +11,13 @@ const BlogsSection = () => {
       />
 
       <div className="max-w-[1294px] mt-6 lg:mt-[72px] mb-16 justify-center m-auto flex flex-wrap gap-6">
-        {BlogsSectiondetails.slice(0, 3).map((items, index) => (
+        {blogsSectiondetails.slice(0, 3).map((items, index) => (
           <BlogsSectioncard
             key={index}
             image={items.image}
             head={items.head}
             text={items.text}
+            slug={items.slug}
           />
         ))}
       </div>

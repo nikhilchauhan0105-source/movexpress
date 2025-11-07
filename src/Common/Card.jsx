@@ -1,5 +1,5 @@
 import { Arrow, Rightarrow, Star } from "./Icons";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export const Card = ({ icon, head, subhead, url }) => {
   const navigate = useNavigate();
@@ -76,7 +76,7 @@ export const Customercard = ({ img, name, role, text, className }) => {
   );
 };
 
-export const BlogsSectioncard = ({ image, head, text }) => {
+export const BlogsSectioncard = ({ image, head, text, slug }) => {
   return (
     <div data-aos="fade-up" className="max-w-[415px] ">
       <div className="max-w-[415px] ">
@@ -86,10 +86,10 @@ export const BlogsSectioncard = ({ image, head, text }) => {
         <p className=" text-base md:text-[24px] ">{head}</p>
         <p className="text-sm md:text-[18px] max-w-[379px]">{text}</p>
       </div>
-      <div className="flex items-center gap-4">
+      <Link to={`/blogs/${slug}`} className="flex items-center gap-4">
         <p className="text-purple font-semibold cursor-pointer">learn more</p>
         <Arrow />
-      </div>
+      </Link>
     </div>
   );
 };
@@ -122,13 +122,12 @@ export const WhyChooseOurServicesCard = ({ head, text, icon }) => {
   );
 };
 
-export const IncludeServices =({icon,head,text})=>{
- return(
-  <div className="w-full md:max-w-[308px] p-6 bg-white rounded-2xl">
-    {icon}
-    <h2 className="mt-6 mb-3 text-xl font-semibold leading-[160%]">{head}</h2>
-    <p>{text}</p>
-
-  </div>
- )
-}
+export const IncludeServices = ({ icon, head, text }) => {
+  return (
+    <div className="w-full md:max-w-[308px] p-6 bg-white rounded-2xl">
+      {icon}
+      <h2 className="mt-6 mb-3 text-xl font-semibold leading-[160%]">{head}</h2>
+      <p>{text}</p>
+    </div>
+  );
+};

@@ -3,7 +3,7 @@ import { AppleLogo, PlayStore } from "./Icons";
 
 const FormDescription = () => {
   return (
-    <div className="max-w-[495px] h-fit sticky top-20 mt-8 mx-3 lg:mt-14 text-sm md:text-[18px] font-normal text-textlight">
+    <div className="max-w-[495px] h-fit sticky top-40 mt-8 mx-3 lg:mt-14 text-sm md:text-[18px] font-normal text-textlight">
       <div className="flex flex-col  text-center leading-[170%] gap-2 md:gap-5">
         <p>
           Earn as you drive The more you drive, the more you earn! You get paid

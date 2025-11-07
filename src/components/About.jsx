@@ -1,7 +1,6 @@
-
 import { AboutCard } from "../Common/Card";
-import { AboutCardList, DoBestDetails } from "../Common/Data";
-import { Heading } from "../Common/Helper";
+import { aboutcardList, dobestdetails } from "../Common/Data";
+import { Heading } from "../Common/Heading";
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
 import BlogsSection from "../pages/BlogsSection";
@@ -9,7 +8,6 @@ import BookYourService from "./BookYourService";
 import FAQs from "./FAQs";
 import Footer from "./Footer";
 import MarqueeLine from "../Common/MarqueeLine";
-
 
 const About = () => {
   return (
@@ -20,7 +18,7 @@ const About = () => {
         subheading="Your Trusted Partner for Stress-Free Moving"
       />
       <div className="max-w-[1294px] px-3  my-10 lg:my-20 flex-wrap justify-center gap-3  m-auto flex ">
-        {AboutCardList.map((items, index) => (
+        {aboutcardList.map((items, index) => (
           <AboutCard
             icon={items.icon}
             head={items.head}
@@ -49,7 +47,7 @@ const About = () => {
           subhead="We offer a complete range of moving services designed to suit your needs"
         />
         <div className="max-w-[1296px] m-auto mt-14 px-3 flex-wrap flex justify-center gap-3 md:gap-6">
-          {DoBestDetails.map((items, index) => (
+          {dobestdetails.map((items, index) => (
             <AboutCard
               icon={items.icon}
               head={items.head}
@@ -62,9 +60,7 @@ const About = () => {
         </div>
       </section>
       <section>
-       
-         <MarqueeLine/>
-       
+        <MarqueeLine />
       </section>
       <FAQs />
       <BlogsSection />
