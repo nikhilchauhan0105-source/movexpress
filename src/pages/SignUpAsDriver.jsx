@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useEffect } from "react";
 import FormButton from "../Common/FormButton";
 import { FormDescription, Topbutton } from "../Common/Helper";
 import Navbar from "../Common/Navbar";
@@ -6,6 +7,9 @@ import UploadSlideCard from "../Common/UploadSlideCard";
 import useSignUp from "../hooks/useSignUp";
 
 const SignUpAsDriver = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const {
     nameTyped,
     storename,

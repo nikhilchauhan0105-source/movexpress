@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "../Common/Button";
 import { IncludeServices, WhyChooseOurServicesCard } from "../Common/Card";
 import {
@@ -16,7 +17,9 @@ import Footer from "../components/Footer";
 import Whytrust from "../components/Whytrust";
 
 const ManVanService = () => {
- 
+  useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
   return (
     <>
       <Navbar />

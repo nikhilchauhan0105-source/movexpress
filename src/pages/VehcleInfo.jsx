@@ -1,14 +1,16 @@
 
-import { useState } from "react";
+import { useEffect } from "react";
 
 import FormButton from "../Common/FormButton";
-import {FormDescription, Topbutton} from "../Common/Helper";
-import UploadSlideCard from "../Common/UploadSlideCard";
+import { DividerLine, FormDescription, Topbutton } from "../Common/Helper";
 import Navbar from "../Common/Navbar";
-import { DividerLine } from "../Common/Helper";
+import UploadSlideCard from "../Common/UploadSlideCard";
 import useSignUp from "../hooks/useSignUp";
 
 const VechcleInfo = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const {
     VehicleType,
     storevehciletype,

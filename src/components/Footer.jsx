@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="bg-lightpurple px-3">
       <div className="lg:flex-row flex-col lg:items-start  flex gap-2 lg:gap-8 justify-between  max-w-[1296px] pt-10 lg:pt-32 m-auto">
-        <div className="max-w-[428px]">
+        <div data-aos="fade-right" className="max-w-[428px]">
           <div className="max-w-[285px] gap-[8px] items-center flex">
             <img
               className="max-w-[40px] md:max-w-[50px] lg:max-w-[70px] lg:max-h-[51px]"
@@ -34,11 +34,16 @@ export const Footer = () => {
             <X />
           </div>
         </div>
-        <div className="flex lg:flex-row  lg:flex-nowrap flex-wrap gap-5 lg:gap-[72px]">
+        <div
+          data-aos="fade-left"
+          className="flex lg:flex-row  lg:flex-nowrap flex-wrap gap-5 lg:gap-[72px]"
+        >
           <ul className="flex flex-col gap-1 lg:gap-1.5">
-            <h2 className=" text-lg md:text-xl font-medium  md:mb-3 text-purple">Quick Link</h2>
+            <h2 className=" text-lg md:text-xl font-medium  md:mb-3 text-purple">
+              Quick Link
+            </h2>
             {quicklinklist.map((link, index) => (
-              <li 
+              <li
                 key={index}
                 className="text-sm  md:text-base lg:text-lg font-medium"
               >
@@ -78,7 +83,9 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" text-xs lg:text-base border-t-1 text-purple border-purple py-2.5 lg:py-10 max-w-[1295px] m-auto mt-5 lg:mt-32">
+      <div
+        className=" text-xs lg:text-base border-t-1 text-purple border-purple py-2.5 lg:py-10 max-w-[1295px] m-auto mt-5 lg:mt-32"
+      >
         <p>© Copyright 2024, All Rights Reserved by MoveXpress.</p>
       </div>
     </footer>

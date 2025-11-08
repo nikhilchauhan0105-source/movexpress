@@ -3,11 +3,13 @@ import { Minus, Plus, Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
 
-
 export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
   return (
-    <div className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl ">
+    <div
+      data-aos="fade-down"
+      className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl "
+    >
       <div className="flex justify-between ">
         <p className="md:text-[24px] ">{question}</p>
         <button
@@ -26,7 +28,7 @@ export const Faqs = ({ question, answer, index }) => {
 
       <div
         className={` ${
-          IsClicked ===  index ? "h-26" : "h-0"
+          IsClicked === index ? "h-26" : "h-0"
         } overflow-hidden  transition-all  duration-300`}
       >
         <p className={`text-[#3D3F40] leading-[150%] mt-[32px]`}>{answer}</p>
@@ -35,9 +37,7 @@ export const Faqs = ({ question, answer, index }) => {
   );
 };
 
-
-
- export const DividerLine = ({ text, maxwidth }) => {
+export const DividerLine = ({ text, maxwidth }) => {
   return (
     <div className="flex  items-center justify-between my-6">
       <div className={`h-[1px] w-full bg-purple ${maxwidth}`}></div>
@@ -48,7 +48,6 @@ export const Faqs = ({ question, answer, index }) => {
     </div>
   );
 };
-
 
 export const FormDescription = () => {
   return (
@@ -77,17 +76,22 @@ export const FormDescription = () => {
       </div>
     </div>
   );
-}
+};
 
+export const Topbutton = () => {
+  const [visible, setVisible] = useState();
 
-
-
-export const Topbutton  =()=>{
+  window.addEventListener("scroll", () => {
+    setVisible(window.scrollY);
+  });
   return (
-    <button className="p-2 lg:p-4 z-10 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed lg:bottom-10 bottom-5 right-5 lg:right-10 ">
-      <a href="#">
-        <Upwardarrow />
-      </a>
+    <button
+      onClick={() => window.scroll(0, 0)}
+      className={` ${
+        visible > 300 ? "flex" : "hidden"
+      } p-2 lg:p-4 z-10 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed bottom-2 right-5 `}
+    >
+      <Upwardarrow />
     </button>
   );
-}
+};

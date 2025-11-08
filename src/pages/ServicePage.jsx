@@ -9,8 +9,12 @@ import Footer from "../components/Footer";
 import MarqueeLine from "../Common/MarqueeLine";
 import Work from "../components/Work";
 import { Topbutton } from "../Common/Helper";
+import { useEffect } from "react";
 
 const ServicePage = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

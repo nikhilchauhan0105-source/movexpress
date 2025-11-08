@@ -9,8 +9,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   
 
+
   return (
-    <nav className=" w-full z-6 sticky top-0 bg-purple">
+    <nav
+      className=" w-full z-6 sticky top-0 bg-purple"
+    >
       <div className="max-w-[1294px]  justify-between px-2 py-[18.5px] lg:py-[18px] m-auto flex">
         <Link to="/">
           <div className="max-w-[285px] gap-[8px] items-center flex">
@@ -69,7 +72,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul className="pl-2  text-center  text-purple text-4xl md:text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
+        <ul className="pl-2  text-center  text-purple text-4xl md:text-[4rem] mt-20 font-semibold flex flex-col gap-6 ">
           {navlist.map((list, index) => (
             <NavListItem list={list} key={index} />
           ))}
