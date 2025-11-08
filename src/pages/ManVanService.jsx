@@ -9,12 +9,14 @@ import { Topbutton } from "../Common/Helper";
 import MarqueeLine from "../Common/MarqueeLine";
 import Navbar from "../Common/Navbar";
 import PagesHeading from "../Common/PagesHeading";
+import { ColorScroll } from "../Common/TextScroolGsap";
 import BookYourService from "../components/BookYourService";
 import FAQs from "../components/FAQs";
 import Footer from "../components/Footer";
 import Whytrust from "../components/Whytrust";
 
 const ManVanService = () => {
+ 
   return (
     <>
       <Navbar />
@@ -24,13 +26,9 @@ const ManVanService = () => {
         button={<Button text="Get a Qoute" mt="mt-6" />}
       />
       <div className="max-w-[1296px]  m-auto px-3 py-10 lg:py-20">
-        <p className="text-2xl lg:text-5xl text-textlight">
-          Looking for professional man and van services near you? At MoveXpress,
-          we make moving simple, stress-free, and cost-effective. Whether you’re
-          relocating your home, shifting your office, delivering furniture, or
-          transporting large parcels, our expert movers and well-equipped vans
-          are here to handle everything for you.
-        </p>
+        <ColorScroll
+        content= "Looking for professional man and van services near you? AtMoveXpress,wemake moving simple, stress-freeandcost-effectiveWhetheryou’r relocating your home, shifting your office, delivering furniture, ortransporting large parcels, our expert movers and well-equipped vansarehere to handle everything for you." 
+        />
       </div>
 
       <section className="py-10 lg:py-20 px-3">
@@ -72,7 +70,7 @@ const ManVanService = () => {
       <FAQs />
       <BookYourService />
       <Footer />
-       <Topbutton/>
+      <Topbutton />
     </>
   );
 };

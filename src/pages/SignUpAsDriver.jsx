@@ -1,67 +1,38 @@
 import { useState } from "react";
 import FormButton from "../Common/FormButton";
-import {FormDescription, Topbutton} from "../Common/Helper";
+import { FormDescription, Topbutton } from "../Common/Helper";
 import Navbar from "../Common/Navbar";
 import UploadSlideCard from "../Common/UploadSlideCard";
-
+import useSignUp from "../hooks/useSignUp";
 
 const SignUpAsDriver = () => {
-  
-    const [nameTyped ,setNameTyped] = useState("")
-    const storename = (e) => {
-      setNameTyped(e.target.value);
-    };
-    console.log(nameTyped)
+  const {
+    nameTyped,
+    storename,
+    surnameTyped,
+    storesurname,
+    numberTyped,
+    storenumber,
+    emailTyped,
+    storeemail,
+    dateTyped,
+    storedate,
+    languageTyped,
+    storelanguage,
+    addressTyped,
+    storeaddress,
+    postcodeTyped,
+    storepostcode,
+  } = useSignUp();
 
-    const [surnameTyped ,setSurnameTyped] = useState("")
-    const storesurname = (e) => {
-      setSurnameTyped(e.target.value);
-    };
-    console.log(surnameTyped)
-
-    const [numberTyped ,setnumberTyped] = useState("")
-    const storenumber = (e) => {
-      setnumberTyped(e.target.value);
-    };
-    console.log(numberTyped)
-    
-    const [emailTyped ,setemailTyped] = useState("")
-    const storeemail = (e) => {
-      setemailTyped(e.target.value);
-    };
-    console.log(emailTyped)
-    const [dateTyped ,setdateTyped] = useState("")
-    const storedate = (e) => {
-      setdateTyped(e.target.value);
-    };
-    console.log(dateTyped)
-    const [languageTyped ,setlanguageTyped] = useState("")
-    const storelanguage = (e) => {
-      setlanguageTyped(e.target.value);
-    };
-    console.log(languageTyped)
-
-    const [addressTyped ,setaddressTyped] = useState("")
-    const storeaddress = (e) => {
-      setaddressTyped(e.target.value);
-    };
-    console.log(addressTyped)
-
-    const [postcodeTyped ,setPostCodeTyped] = useState("")
-    const storepostcode = (e) => {
-      setPostCodeTyped(e.target.value);
-    };
-    console.log(postcodeTyped)
-
-   
   return (
     <>
       <div className="bg-purple">
         <Navbar />
       </div>
       <div className=" overflow-hidden  w-full bg-[url(./src/assets/images/Signupbg.png)] bg-no-repeat bg-center -mt-80 bg-fit h-[450px] md:h-[450px]  lg:h-[650px] "></div>
-      <div className="max-w-[1296px]   xl:flex-row flex flex-col justify-between mb-34  m-auto">
-        <div className="max-w-[745px] z-5 -mt-15  md:-mt-52 xl:p-12 p-4 mx-3 bg-white ">
+      <div className="max-w-[1296px]  items-center lg:items-start  xl:flex-row flex flex-col justify-between mb-34  m-auto">
+        <div className="max-w-[745px] z-5 -mt-15  lg:-mt-52 xl:p-12 p-4 mx-3 bg-white ">
           <div className="flex  justify-between flex-col   gap-3 lg:flex-row  items-start">
             <div className="max-w-[501px]">
               <h1 className="text-2xl lg:text-5xl text-purple font-semibold">
@@ -175,7 +146,7 @@ const SignUpAsDriver = () => {
             </div>
           </div>
           <p className=" text-purple font-medium leading-6 mt-6">
-            Do you have any previous criminal convictions? *{" "}
+            Do you have any previous criminal convictions? *
           </p>
           <div className="flex gap-14 mt-3 mb-6">
             <input
@@ -199,7 +170,7 @@ const SignUpAsDriver = () => {
           <FormButton text="Next" url="/VechcleInfo" />
         </div>
         <FormDescription />
-         <Topbutton/>
+        <Topbutton />
       </div>
     </>
   );

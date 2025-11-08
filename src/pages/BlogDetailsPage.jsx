@@ -7,8 +7,13 @@ import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import HowToMakeABookingCard from "../Common/HowToMakeABookingCard";
 import { Topbutton } from "../Common/Helper";
+import { useEffect } from "react";
 
 const BlogDetailsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <Navbar />
@@ -181,7 +186,7 @@ const BlogDetailsPage = () => {
       </div>
       <BookYourService />
       <Footer />
-      <Topbutton/>
+      <Topbutton />
     </section>
   );
 };

@@ -6,50 +6,25 @@ import {FormDescription, Topbutton} from "../Common/Helper";
 import UploadSlideCard from "../Common/UploadSlideCard";
 import Navbar from "../Common/Navbar";
 import { DividerLine } from "../Common/Helper";
+import useSignUp from "../hooks/useSignUp";
 
 const VechcleInfo = () => {
-  const [VehicleType ,setVehicleType] =useState("")
-  const storevehciletype =(e)=> {
-     setVehicleType(e.target.value)
-  }
-  console.log(VehicleType);
-
-  const [Vehicleregistration, setVehicleRegistration] = useState("");
-  const storeVehicleRegistration = (e) => {
-    setVehicleRegistration(e.target.value);
-  };
-  console.log(Vehicleregistration);
-  
-  const [vaninsurancestartdate, setVanInsurance] = useState("");
-  const storevaninsurancestartdate = (e) => {
-    setVanInsurance(e.target.value);
-  };
-  console.log(vaninsurancestartdate);
-  
-  const [vaninsuranceenddate, setVanInsuranceEndDate] = useState("");
-  const storevaninsuranceenddate = (e) => {
-    setVanInsuranceEndDate(e.target.value);
-  };
-  console.log(vaninsuranceenddate);
-  
-  const [goodsintransitstartdate, setGoodsInTransitstartdate] = useState("");
-  const storeGoodsInTransitDate = (e) => {
-    setGoodsInTransitstartdate(e.target.value);
-  };
-  console.log(goodsintransitstartdate);
-  
-  const [goodsintransitenddate, setGoodsInTransitenddate] = useState("");
-  const storeGoodsInTransitEndDate = (e) => {
-    setGoodsInTransitenddate(e.target.value);
-  };
-  console.log(goodsintransitenddate);
-  
-  const [publicliabilitystartdate, setPublicLiabilityStartDate] = useState("");
-  const storePublicLiabilityStartDate = (e) => {
-    setPublicLiabilityStartDate(e.target.value);
-  };
-  console.log(publicliabilitystartdate);
-  
+  const {
+    VehicleType,
+    storevehciletype,
+    Vehicleregistration,
+    storeVehicleRegistration,
+    vaninsurancestartdate,
+    storevaninsurancestartdate,
+    vaninsuranceenddate,
+    storevaninsuranceenddate,
+    goodsintransitstartdate,
+    storeGoodsInTransitDate,
+    goodsintransitenddate,
+    storeGoodsInTransitEndDate,
+    publicliabilitystartdate,
+    storePublicLiabilityStartDate,
+  } = useSignUp();
 
   return (
     <>

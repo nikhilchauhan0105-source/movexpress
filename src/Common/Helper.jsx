@@ -84,7 +84,7 @@ export const FormDescription = () => {
 
 export const Topbutton  =()=>{
   return (
-    <button className="p-4 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed bottom-10 right-10 ">
+    <button className="p-2 lg:p-4 z-10 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed lg:bottom-10 bottom-5 right-5 lg:right-10 ">
       <a href="#">
         <Upwardarrow />
       </a>

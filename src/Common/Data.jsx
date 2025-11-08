@@ -220,7 +220,6 @@ export const blogsSectiondetails = [
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
   },
-  
 ];
 
 export const quicklinklist = [
@@ -403,3 +402,5 @@ export const signupinputdeatails = [
     type: "number",
   },
 ];
+
+ 

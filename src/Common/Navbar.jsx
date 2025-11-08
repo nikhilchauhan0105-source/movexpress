@@ -12,8 +12,8 @@ const Navbar = () => {
   return (
     <nav className=" w-full z-6 sticky top-0 bg-purple">
       <div className="max-w-[1294px]  justify-between px-2 py-[18.5px] lg:py-[18px] m-auto flex">
-        <div className="max-w-[285px] gap-[8px] items-center flex">
-          <Link to="/">
+        <Link to="/">
+          <div className="max-w-[285px] gap-[8px] items-center flex">
             <button>
               <img
                 className="max-w-[40px] md:max-w-[50px] lg:max-w-[70px] lg:max-h-[51px]"
@@ -21,19 +21,20 @@ const Navbar = () => {
                 alt="logo image"
               />
             </button>
-          </Link>
-          <div className="text-white ">
-            <p className="text-base md:text-[20px] lg:text-[32px] font-bold italic  md:leading-6 leading-4 lg:leading-8">
-              MOVEXPRESS
-            </p>
-            <p className="text-[12px] lg:text-[14px] italic">
-              Expressly Delivered
-            </p>
+
+            <div className="text-white ">
+              <p className="text-base md:text-[20px] lg:text-[32px] font-bold italic  md:leading-6 leading-4 lg:leading-8">
+                MOVEXPRESS
+              </p>
+              <p className="text-[12px] lg:text-[14px] italic">
+                Expressly Delivered
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#F6C8F6] p-[6px] lg:p-[12px] rounded-md lg:rounded-xl"
+          className="bg-[#F6C8F6] p-[6px] lg:p-3 rounded-md lg:rounded-xl"
         >
           <MenuIcon />
         </button>
@@ -70,7 +71,7 @@ const Navbar = () => {
 
         <ul className="pl-2  text-center  text-purple text-4xl md:text-[4rem] mt-20 font-semibold flex flex-col gap-1 ">
           {navlist.map((list, index) => (
-            <NavListItem  list={list} key={index} />
+            <NavListItem list={list} key={index} />
           ))}
         </ul>
       </div>
