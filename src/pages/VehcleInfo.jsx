@@ -44,7 +44,7 @@ const VechcleInfo = () => {
               </p>
             </div>
             <div className="max-w-fit bg-gray-100 p-2 rounded-3xl">
-              <p className="text-[8px] md:text-[12px]">1. General Info</p>
+              <p className="text-[8px] md:text-[12px]">1. Vehicle Info</p>
             </div>
           </div>
           <div className="h-2 max-w-[654px] w-full rounded-2xl bg-lightpink my-8 ">

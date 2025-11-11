@@ -7,15 +7,15 @@ export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
   return (
     <div
+    onClick={() => setIscliked(IsClicked === index ? null : index)}
       data-aos="fade-down"
       className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl "
     >
-      <div className="flex justify-between ">
+      <div
+        className="flex justify-between "
+      >
         <p className="md:text-[24px] ">{question}</p>
-        <button
-          onClick={() => setIscliked(IsClicked === index ? null : index)}
-          className={`${IsClicked === index ? "hidden" : "block"}`}
-        >
+        <button className={`${IsClicked === index ? "hidden" : "block"}`}>
           <Plus />
         </button>
         <button
@@ -89,7 +89,7 @@ export const Topbutton = () => {
       onClick={() => window.scroll(0, 0)}
       className={` ${
         visible > 300 ? "flex" : "hidden"
-      } p-2 lg:p-4 z-10 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed bottom-2 right-5 `}
+      } p-2 lg:p-2 z-10 animate-bounce hover:bg-purple transition-all duration-200 rounded-full bg-orange fixed bottom-5 right-7 `}
     >
       <Upwardarrow />
     </button>

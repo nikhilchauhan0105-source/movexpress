@@ -25,9 +25,11 @@ const Hero = () => {
     <section className=" bg-purple px-3 text-white relative">
       <div className="w-[393px] h-[393px] rounded-full bg-orange blur-[120px] absolute top-20 right-25 z-1 "></div>
 
-      <div className="max-w-[1294px] flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center relative gap-2 z-2 lg:flex-row flex justify-between m-auto">
+      <div
+      data-aos="fade-up"
+      className="max-w-[1294px] flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center relative gap-2 z-2 lg:flex-row flex justify-between m-auto">
         <div
-          data-aos="fade-right"
+          
           className="max-w-[652px] sm:flex-row flex-col  lg:mb-[-22px]  lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold"
         >
           <div>
@@ -75,7 +77,7 @@ const Hero = () => {
           </div>
         </div>
         <div
-          data-aos="fade-left"
+         
           className="max-w-[644px] w-full  p-[10px]  md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-2xl"
         >
           <div className="flex items-center justify-between">
