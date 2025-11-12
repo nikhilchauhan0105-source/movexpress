@@ -30,7 +30,7 @@ export const Workcard = ({ icon, steps, head, subhead }) => {
   return (
     <div
       data-aos="zoom-in"
-      className="p-[24px] transition-all duration-200 h-[265px] cursor-pointer group hover:shadow-xl/60 hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]"
+      className="p-[24px] transition-all duration-200 h-[265px] cursor-pointer group hover:shadow-md/60 hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]"
     >
       <span className="mb-[24px]">{icon}</span>
       <h3 className="group-hover:text-white text-[#6D6969]">{steps}</h3>

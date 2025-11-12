@@ -149,7 +149,7 @@ export const navlist = [
     url: "/",
   },
   { name: "About", url: "/about" },
-  { name: "ServicePage", url: "/servicepage" },
+  { name: "Service", url: "/servicepage" },
   { name: "blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
 ];

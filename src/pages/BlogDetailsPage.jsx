@@ -8,6 +8,8 @@ import Footer from "../components/Footer";
 import HowToMakeABookingCard from "../Common/HowToMakeABookingCard";
 import { Topbutton } from "../Common/Helper";
 import { useEffect } from "react";
+import { Calender, Clock } from "../Common/Icons";
+
 
 const BlogDetailsPage = () => {
   useEffect(() => {
@@ -17,7 +19,13 @@ const BlogDetailsPage = () => {
   return (
     <section>
       <Navbar />
-      <PagesHeading heading="How to Make a Booking with Us?" />
+      <PagesHeading
+        calender={<Calender/>}
+        clock={<Clock/>}
+        date="05 May, 2023"
+        time="Read 10 Min"
+        heading="How to Make a Booking with Us?"
+      />
       <div className="max-w-[1296px] px-3 pb-20 gap-6 xl:gap-0 flex-col mb-16  flex xl:flex-row justify-between mt-20 m-auto">
         <div className="max-w-[728px] m-auto">
           <p className="text-textlight leading-[170%]">
@@ -179,7 +187,7 @@ const BlogDetailsPage = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[414px] flex flex-col sticky top-40 h-fit  gap-4">
+        <div className="max-w-[414px] flex flex-col sticky top-25 h-fit  gap-4">
           <HowToMakeABookingCard />
           <HowToMakeABookingCard />
         </div>
