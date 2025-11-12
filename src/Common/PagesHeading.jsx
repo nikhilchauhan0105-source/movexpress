@@ -3,7 +3,7 @@
 
 const PagesHeading = ({heading ,subheading ,button ,calender,clock ,date,time}) => {
   return (
-    <div className="bg-purple flex flex-col items-center">
+    <div className="bg-purple px-3 flex flex-col items-center">
       <div className="max-w-[706px] text-white pt-8 pb-11 lg:pt-[116px] lg:pb-[161px] text-center m-auto">
         <div className="max-w-[328px] items-center w-full mb-6 justify-between text-white flex m-auto">
           <div className="group flex gap-1 items-center">

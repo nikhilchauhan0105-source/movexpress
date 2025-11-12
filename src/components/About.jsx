@@ -8,6 +8,7 @@ import BookYourService from "./BookYourService";
 import FAQs from "./FAQs";
 import Footer from "./Footer";
 import MarqueeLine from "../Common/MarqueeLine";
+import { ColorScroll } from "../Common/TextScroolGsap";
 
 const About = () => {
   return (
@@ -31,14 +32,7 @@ const About = () => {
       </div>
 
       <section>
-        <p className="max-w-[1296px] text-2xl xl:text-5xl px-3 text-textlight leading-[130%] m-auto font-medium py-10 xl:py-20 tracking-[-1px]">
-          <span className="text-black">MoveXpress</span> is more than a moving
-          company — we’re your transition partners. We manage everything from
-          packing your valuables to transporting and unloading them at your new
-          place. Our skilled team treats your belongings with care, ensuring
-          that everything, from delicate antiques to bulky furniture, arrives
-          safely and on time.
-        </p>
+        <ColorScroll content="MoveXpress is more than a moving company — we’re your transition partners. We manage everything from packing your valuables to transporting and unloading them at your new place. Our skilled team treats your belongings with care, ensuring that everything, from delicate antiques to bulky furniture, arrives safely and on time." />
       </section>
 
       <section className="py-10 lg:py-20">
