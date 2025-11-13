@@ -1,5 +1,5 @@
 import { BlogsSectioncard } from "../Common/Card";
-import { blogsSectiondetails } from "../Common/Data";
+import { blogcarddetail } from "../Common/Data";
 import { Heading } from "../Common/Heading";
 
 const BlogsSection = () => {
@@ -10,11 +10,8 @@ const BlogsSection = () => {
         subhead="Whether you're looking for practical advice on maintaining a Smooth Moving"
       />
 
-      <div 
-    
-        className="max-w-[1294px]  mt-6 lg:mt-[72px] mb-16 justify-center m-auto flex flex-wrap gap-6"
-      >
-        {blogsSectiondetails.slice(0, 3).map((items, index) => (
+      <div className="max-w-[1294px]  mt-6 lg:mt-[72px] mb-16  m-auto grid gap-6 grid-cols-3 ">
+        {blogcarddetail.slice(0, 3).map((items, index) => (
           <BlogsSectioncard
             key={index}
             image={items.image}

@@ -28,10 +28,7 @@ export const Card = ({ icon, head, subhead, url }) => {
 
 export const Workcard = ({ icon, steps, head, subhead }) => {
   return (
-    <div
-      data-aos="zoom-in"
-      className="p-[24px] transition-all duration-200 h-[265px] cursor-pointer group hover:shadow-md/60 hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9]"
-    >
+    <div data-aos="zoom-in" className="workcardstyle group">
       <span className="mb-[24px]">{icon}</span>
       <h3 className="group-hover:text-white text-[#6D6969]">{steps}</h3>
       <div className="px-[40px]">
@@ -44,10 +41,7 @@ export const Workcard = ({ icon, steps, head, subhead }) => {
 
 export const Trustcard = ({ icon, head, subhead }) => {
   return (
-    <div
-      data-aos="fade-right"
-      className="md:max-w-[300px] w-full px-[33px] py-8 flex flex-col gap-[18px] hover:shadow-lg   transition-all duration-300 cursor-pointer group bg-white text-center  items-center rounded-xl "
-    >
+    <div data-aos="fade-right" className="trustcardstyle group ">
       <span className="mb-lg group-hover:scale-[1.1] transition-all duration-300 ease-in-out">
         {icon}
       </span>
@@ -61,9 +55,7 @@ export const Trustcard = ({ icon, head, subhead }) => {
 
 export const Customercard = ({ img, name, role, text, className }) => {
   return (
-    <div
-    data-aos="zoom-in"
-    className="flex flex-col hover:shadow-lg  max-w-[413px] items-center w-full p-5  md:p-[32px] rounded-2xl bg-secondry ">
+    <div data-aos="zoom-in" className="customercardstyle">
       <span
         className={`${className} max-w-fit pt-1 w-full  overflow-hidden grid place-items-center  rounded-full `}
       >
@@ -89,7 +81,7 @@ export const Customercard = ({ img, name, role, text, className }) => {
 
 export const BlogsSectioncard = ({ image, head, text, slug }) => {
   return (
-    <div data-aos="fade-up" className="max-w-[415px] ">
+    <div data-aos="fade-up" className="max-w-[415px] m-auto ">
       <div className="max-w-[415px] ">
         <img className="w-full rounded-2xl" src={image} alt="card images" />
       </div>

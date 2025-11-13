@@ -18,3 +18,20 @@
   font-family: "Figtree";
   scroll-behavior: smooth;
 }
+
+
+ .workcardstyle {
+  @apply p-[24px] transition-all duration-200 h-[265px] cursor-pointer  hover:shadow-md/60 hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9];
+ }
+
+ .trustcardstyle {
+  @apply md:max-w-[300px] w-full px-[33px] py-8 flex flex-col gap-[18px] hover:shadow-lg   transition-all duration-300 cursor-pointer  bg-white text-center  items-center rounded-xl;
+ }
+
+ .customercardstyle {
+  @apply flex flex-col hover:shadow-lg  max-w-[413px] items-center w-full p-5  md:p-[32px] rounded-2xl bg-secondry;
+ }
+
+ .buttonstyle {
+  @apply  hover:bg-purple hover:shadow-md/30 duration-150  cursor-pointer flex bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-[50px] rounded-xl m-auto max-w-fit text-white  font-semibold;
+ }

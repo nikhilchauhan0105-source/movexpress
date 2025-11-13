@@ -7,24 +7,34 @@ import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
 import HowToMakeABookingCard from "../Common/HowToMakeABookingCard";
 import { Topbutton } from "../Common/Helper";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Calender, Clock } from "../Common/Icons";
-
+import { useParams } from "react-router";
+import { blogcarddetail } from "../Common/Data";
 
 const BlogDetailsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [blogsDetails, setblogsDetails] = useState(null);
+
+  let params = useParams();
+
+  useEffect(() => {
+    const filterblog = blogcarddetail.find((obj) => obj.slug === params.blogid);
+    setblogsDetails(filterblog);
+    console.log(filterblog);
+  }, [params.blogid]);
 
   return (
     <section>
       <Navbar />
       <PagesHeading
-        calender={<Calender/>}
-        clock={<Clock/>}
+        calender={<Calender />}
+        clock={<Clock />}
         date="05 May, 2023"
         time="Read 10 Min"
-        heading="How to Make a Booking with Us?"
+        heading={blogsDetails?.data?.head}
       />
       <div className="max-w-[1296px] px-3 pb-20 gap-6 xl:gap-0 flex-col mb-16  flex xl:flex-row justify-between mt-20 m-auto">
         <div className="max-w-[728px] m-auto">

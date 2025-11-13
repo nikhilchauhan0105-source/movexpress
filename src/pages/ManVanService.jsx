@@ -29,9 +29,7 @@ const ManVanService = () => {
         button={<Button text="Get a Qoute" mt="mt-6" />}
       />
       <div className="max-w-[1296px]  m-auto px-3 py-10 lg:py-20">
-        <ColorScroll
-        content= "Looking for professional man and van services near you? AtMoveXpress,wemake moving simple, stress-freeandcost-effectiveWhetheryou’r relocating your home, shifting your office, delivering furniture, ortransporting large parcels, our expert movers and well-equipped vansarehere to handle everything for you." 
-        />
+        <ColorScroll content="Looking for professional man and van services near you? AtMoveXpress,wemake moving simple, stress-freeandcost-effectiveWhetheryou’r relocating your home, shifting your office, delivering furniture, ortransporting large parcels, our expert movers and well-equipped vansarehere to handle everything for you." />
       </div>
 
       <section className="py-10 lg:py-20 px-3">

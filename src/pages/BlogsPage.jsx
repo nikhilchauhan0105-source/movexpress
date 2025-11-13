@@ -18,7 +18,7 @@ const BlogsPage = () => {
         subheading="Whether you're looking for practical advice on maintaining a Smooth
           Moving"
       />
-      <section className="px-3">
+      <section className=" px-3">
         <BlogsCardSection />
       </section>
 
