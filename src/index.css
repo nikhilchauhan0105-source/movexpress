@@ -12,6 +12,7 @@
   --color-textlight:rgba(138, 138, 138, 1);
   --color-fadepurple:rgba(75, 1, 75, 0.72);
   --color-neutral:rgba(13, 36, 64, 1);
+  --font-inter:"Inter" "san-serif";
 }
 
 * {
@@ -33,5 +34,5 @@
  }
 
  .buttonstyle {
-  @apply  hover:bg-purple hover:shadow-md/30 duration-150  cursor-pointer flex bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-[50px] rounded-xl m-auto max-w-fit text-white  font-semibold;
+  @apply  hover:bg-purple hover:shadow-md/30 duration-150 mt-2 cursor-pointer flex bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-[50px] rounded-xl m-auto max-w-fit text-white  font-semibold;
  }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function useSignUp() {
   const [nameTyped, setNameTyped] = useState("");
@@ -126,3 +126,4 @@ export default function useSignUp() {
     storePublicLiabilityStartDate,
   };
 }
+

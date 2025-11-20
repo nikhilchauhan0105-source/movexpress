@@ -5,11 +5,10 @@ import {
   servicesIncludelist,
   whychooseoursevicesdetails,
 } from "../Common/Data";
-import { Heading } from "../Common/Heading";
+import { Heading, PagesHeading } from "../Common/Heading";
 import { Topbutton } from "../Common/Helper";
 import MarqueeLine from "../Common/MarqueeLine";
 import Navbar from "../Common/Navbar";
-import PagesHeading from "../Common/PagesHeading";
 import { ColorScroll } from "../Common/TextScroolGsap";
 import BookYourService from "../components/BookYourService";
 import FAQs from "../components/FAQs";

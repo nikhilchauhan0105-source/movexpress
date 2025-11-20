@@ -1,8 +1,7 @@
 import { AboutCard } from "../Common/Card";
 import { aboutcardList, dobestdetails } from "../Common/Data";
-import { Heading } from "../Common/Heading";
+import { Heading, PagesHeading } from "../Common/Heading";
 import Navbar from "../Common/Navbar";
-import PagesHeading from "../Common/PagesHeading";
 import BlogsSection from "../pages/BlogsSection";
 import BookYourService from "./BookYourService";
 import FAQs from "./FAQs";

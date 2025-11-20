@@ -81,7 +81,7 @@ export const Customercard = ({ img, name, role, text, className }) => {
 
 export const BlogsSectioncard = ({ image, head, text, slug }) => {
   return (
-    <div data-aos="fade-up" className="max-w-[415px] m-auto ">
+    <div  className="max-w-[415px] m-auto ">
       <div className="max-w-[415px] ">
         <img className="w-full rounded-2xl" src={image} alt="card images" />
       </div>
@@ -135,3 +135,17 @@ export const IncludeServices = ({ icon, head, text }) => {
     </div>
   );
 };
+
+
+
+
+export const MakeABookingCard = ({ head, subhead, subheadwidth }) => {
+  return (
+    <div className="p-6 bg-secondry rounded-2xl max-w-[352px]  w-full">
+      <h3 className="text-xl font-semibold">{head}</h3>
+      <p className={`${subheadwidth} text-textlight mt-3`}>{subhead}</p>
+    </div>
+  );
+};
+
+

@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import BlogsCardSection from "../Common/BlogsCardSection";
 import { Topbutton } from "../Common/Helper";
 import Navbar from "../Common/Navbar";
-import PagesHeading from "../Common/PagesHeading";
+
 import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
+import { PagesHeading } from "../Common/Heading";
 
 const BlogsPage = () => {
    useEffect(() => {

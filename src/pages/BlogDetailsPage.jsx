@@ -1,7 +1,7 @@
 import Navbar from "../Common/Navbar";
-import PagesHeading from "../Common/PagesHeading";
+
 import MakeABookingSub from "../Common/MakeABookingSub";
-import MakeABookingCard from "../Common/MakeABookingCard";
+
 import ReviewBooking from "../Common/ReviewBooking";
 import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import { Calender, Clock } from "../Common/Icons";
 import { useParams } from "react-router";
 import { blogcarddetail } from "../Common/Data";
+import { MakeABookingCard } from "../Common/Card";
+import { PagesHeading } from "../Common/Heading";
 
 const BlogDetailsPage = () => {
   useEffect(() => {

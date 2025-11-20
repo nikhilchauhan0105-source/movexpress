@@ -10,7 +10,10 @@ const BlogsSection = () => {
         subhead="Whether you're looking for practical advice on maintaining a Smooth Moving"
       />
 
-      <div className="max-w-[1294px]  mt-6 lg:mt-[72px] mb-16  m-auto grid gap-6 grid-cols-3 ">
+      <div
+        data-aos="fade-up"
+        className="max-w-[1294px]  mt-6 lg:mt-[72px] mb-16  m-auto grid gap-6  grid-col-1 md:grid-cols-3 "
+      >
         {blogcarddetail.slice(0, 3).map((items, index) => (
           <BlogsSectioncard
             key={index}

@@ -27,11 +27,11 @@ export const ColorScroll = ({ content }) => {
   return (
     <section
       
-      className="py-20 px-5 bg-commonbg flex flex-col items-center justify-center"
+      className=" py-1 md:py-20 px-3 bg-commonbg flex flex-col items-center justify-center"
     >
       <p
         ref={containerRef}
-        className=" font-medium text-3xl md:text-4xl text-textlight xl:text-5xl leading-[132%] tracking-[-0.1%] max-w-310"
+        className=" font-medium text-lg text-center md:text-left sm:text-2xl md:text-4xl text-textlight xl:text-5xl leading-[132%] tracking-[-0.1%] max-w-310"
       >
         {content.split(" ").map((word, i) => (
           <span key={i} className="word  inline-block w-fit mr-2 ">

@@ -1,6 +1,5 @@
 import { Button } from "../Common/Button";
 import Navbar from "../Common/Navbar";
-import PagesHeading from "../Common/PagesHeading";
 import Services from "../components/services";
 import FAQs from "../components/FAQs";
 import BlogsSection from "./BlogsSection";
@@ -10,6 +9,7 @@ import MarqueeLine from "../Common/MarqueeLine";
 import Work from "../components/Work";
 import { Topbutton } from "../Common/Helper";
 import { useEffect } from "react";
+import { PagesHeading } from "../Common/Heading";
 
 const ServicePage = () => {
    useEffect(() => {
