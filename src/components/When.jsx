@@ -1,32 +1,132 @@
-import { Truck } from "lucide-react";
-import { FormHeading, FormSubHeading } from "../Common/Heading"
-import { useEffect } from "react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Box,
+  Calendar,
+  Clock,
+  Truck,
+} from "lucide-react";
+import { FormHeading, FormSubHeading } from "../Common/Heading";
+import { selectedvanContext } from "../context/context";
+import { useContext } from "react";
 
-const When = ({whichvan}) => {
-    useEffect(() => {
-       console.log(whichvan)
-    }, [])
-    
+const When = ({ backtab, changetab }) => {
+ const { vanvalue } = useContext(selectedvanContext);
   return (
-    <div>
-      <FormHeading head="when ?" subhead="Pick your preferred date and time" />
-      <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
-        <div className="max-w-[181px] w-full bg-purple h-2 rounded-2xl"></div>
-      </div>
-      <FormSubHeading
-        head="When do you need us?"
-        subhead="Select your preferred date and time for your move"
-      />
+    <>
       <div>
-        <div>
-          <Truck />
-          <p >
-            {whichvan}
-             </p>
+        <FormHeading
+          head="when ?"
+          subhead="Pick your preferred date and time"
+        />
+        <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
+          <div className="max-w-[181px] w-full bg-purple h-2 rounded-2xl"></div>
+        </div>
+        <FormSubHeading
+          head="When do you need us?"
+          subhead="Select your preferred date and time for your move"
+        />
+        <div className=" p-6 shadow-sm/20 rounded-2xl">
+          <div className="flex text-2xl gap-2">
+            <span className="bg-purple/10 p-1 px-2 flex justify-center items-center rounded-lg">
+              <Truck size={20} className="text-purple " />
+            </span>
+            <p className="font-medium">{vanvalue}- Time Estimation</p>
+          </div>
+          <div className="px-3 flex justify-between mt-4">
+            <div className="flex items-center gap-2">
+              <span>
+                <Clock size={16} className="text-black/50" />
+              </span>
+              <p>Travel Time:</p>
+            </div>
+            <div className="bg-purple/10 px-3 py-0.5 text-sm rounded-lg text-purple font-semibold">
+              <p>7h 57m</p>
+            </div>
+          </div>
+          <div className="px-3 flex justify-between mt-4">
+            <div className="flex items-center gap-2">
+              <span>
+                <Box size={16} className="text-black/50" />
+              </span>
+              <p>Loading/Unloading:</p>
+            </div>
+            <div className="bg-purple/10 px-3 py-0.5 text-sm rounded-lg text-purple font-semibold">
+              <p>2h 0m</p>
+            </div>
+          </div>
+          <div className="bg-purple text-white flex items-center justify-between font-bold py-3 px-4 rounded-xl mt-3 ">
+            <p className="text-sm">Estimated Total Time:</p>
+            <p className="text-lg ">9h 57m</p>
+          </div>
+          <div className="border-1 font-light border-amber-500 p-3 rounded-lg bg-amber-500/20 mt-2 text-sm ">
+            <p className="">
+              Based on aluton van, we estimate it will take 9h 57m to complete
+              your move. Please adjust this to reflect the exact time you need
+              to load and unload.
+            </p>
+          </div>
+        </div>
+
+        <div className="shadow-xs/30 p-6 rounded-xl mt-6">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="p-1.5 bg-amber-500/10 rounded-lg ">
+              <Box size={18} className="text-amber-500" />
+            </span>
+            <p className="font-bold text-lg">Loading & Unloading Time</p>
+          </div>
+          <p className="mb-2 font-bold text-black/80  ">
+            How much time do you need to load and unload?
+          </p>
+          <input
+            className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10"
+            type="number"
+          />
+        </div>
+        <div className="mt-6 shadow-xs/30 rounded-xl p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="p-1.5 bg-purple/10 rounded-lg ">
+              <Calendar size={18} className="text-purple" />
+            </span>
+            <p className="font-bold text-lg">Select Date & Time</p>
+          </div>
+          <div className=" flex flex-col gap-4">
+            <div>
+              <p className=" font-semibold">Choose your moving date</p>
+              <input
+                className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10 mt-2"
+                type="date"
+              />
+            </div>
+            <div>
+              <p className=" font-semibold ">Preferred start time</p>
+              <div>
+                <input
+                  className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10 mt-2"
+                  type="time"
+                  placeholder="select time"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+      <button
+        onClick={backtab}
+        className="bg-purple text-white  px-8 py-4 rounded-4xl text-lg flex gap-1 items-center mt-4"
+      >
+        <ArrowLeft /> Back
+      </button>
 
-export default When
+      <button
+        type="submit"
+        onClick={changetab}
+        className="cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
+      >
+        Next : Select items <ArrowRight size={20} />
+      </button>
+    </>
+  );
+};
+
+export default When;

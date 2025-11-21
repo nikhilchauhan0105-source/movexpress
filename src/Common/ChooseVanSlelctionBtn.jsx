@@ -4,7 +4,7 @@ import mediumvanimage from "../assets/images/medium_van.jpg";
 import largevanimage from "../assets/images/large_van.jpg";
 import lutonvanimage from "../assets/images/luton_van.jpg";
 import lutonboxvanimage from "../assets/images/luton_boxVan.jpg";
-import { useContext, useEffect, useState } from "react";
+import { useContext,useState } from "react";
 import { selectedvanContext } from "../context/context";
 
 const ChooseVanSlelctionBtn = () => {
@@ -13,8 +13,8 @@ const ChooseVanSlelctionBtn = () => {
   const [largevan, setLargeVan] = useState(false);
   const [lutonvan, setlutonVan] = useState(false);
   const [boxvan, setBoxVan] = useState(false);
-
-  const {setVanvalue} = useContext(selectedvanContext);
+  
+  const { vanvalue, setVanValue } = useContext(selectedvanContext);
     
 
 
@@ -31,7 +31,7 @@ const ChooseVanSlelctionBtn = () => {
             name="criminal"
             required
             onChange={(e) => {
-              setVanvalue(e.target.value);
+              setVanValue(e.target.value);
             }}
             onInput={() => {
               setMediumVan(false);
@@ -86,7 +86,7 @@ const ChooseVanSlelctionBtn = () => {
             name="criminal"
             required
             onChange={(e) => {
-              setVanvalue(e.target.value);
+              setVanValue(e.target.value);
             }}
             onClick={() => {
               setMediumVan(true);
@@ -141,7 +141,7 @@ const ChooseVanSlelctionBtn = () => {
             name="criminal"
             required
             onChange={(e) => {
-              setVanvalue(e.target.value);
+              setVanValue(e.target.value);
             }}
             onInput={() => {
               setMediumVan(false);
@@ -196,7 +196,7 @@ const ChooseVanSlelctionBtn = () => {
             name="criminal"
             required
             onChange={(e) => {
-              setVanvalue(e.target.value);
+              setVanValue(e.target.value);
             }}
             onInput={() => {
               setMediumVan(false);
@@ -251,7 +251,7 @@ const ChooseVanSlelctionBtn = () => {
             name="criminal"
             required
             onChange={(e) => {
-              setVanvalue(e.target.value);
+              setVanValue(e.target.value);
             }}
             onInput={() => {
               setMediumVan(false);

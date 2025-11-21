@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Info, Location } from "../Common/Icons";
 import { FormHeading } from "../Common/Heading";
 
-const ChooseDestinationForm = ({pageno1,changetab}) => {
+const ChooseDestinationForm = ({changetab}) => {
     const [isTyped, setIsTyped] = useState("");
     const [isDestinationTyped, setIsDestinationTyped] = useState("");
 
@@ -17,7 +17,7 @@ const ChooseDestinationForm = ({pageno1,changetab}) => {
   return (
     <>
       <FormHeading
-        pageno={pageno1}
+
         head="Where to"
         subhead="Tell us your pickup and destination"
       />

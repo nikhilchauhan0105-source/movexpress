@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { selectedvanContext, tabnoContext } from "../context/context";
+
 export const Heading = ({ head, subhead }) => {
   return (
     <div className="max-w-[898px] px-3 m-auto">
@@ -9,10 +12,7 @@ export const Heading = ({ head, subhead }) => {
   );
 };
 
-
-
-
- export const PagesHeading = ({
+export const PagesHeading = ({
   heading,
   subheading,
   button,
@@ -44,31 +44,30 @@ export const Heading = ({ head, subhead }) => {
   );
 };
 
-
-export const FormHeading =({pageno ,head ,subhead})=>{
+export const FormHeading = ({ head, subhead }) => {
+  const formtabno = useContext(tabnoContext);
   return (
     <div className="flex items-center justify-between">
       <div>
         <p className=" text-[25px] lg:text-[32px] ">{head}</p>
-        <p className="text-sm md:text-base ">
-         {subhead}
-        </p>
+        <p className="text-sm md:text-base ">{subhead}</p>
       </div>
       <div className="max-w-fit bg-purple/10 p-2 px-6 rounded-3xl">
         <p className="text-[10px] md:text-[12px] text-purple font-semibold">
-          {pageno} of 5 </p>
+          {formtabno} of 5
+        </p>
       </div>
     </div>
   );
-}
+};
 
-export const FormSubHeading =({head,subhead})=> {
+export const FormSubHeading = ({ head, subhead }) => {
   return (
-      <div className='mt-6'>
-        <div className='text-center mb-4'>
-            <h2 className='text-xl font-medium font-inter  mb-1'>{head}</h2>
-            <p className='text-sm font-light '>{subhead}</p>
-        </div>
-        </div>)
-}
-
+    <div className="mt-6">
+      <div className="text-center mb-4">
+        <h2 className="text-xl font-medium font-inter  mb-1">{head}</h2>
+        <p className="text-sm font-light ">{subhead}</p>
+      </div>
+    </div>
+  );
+};

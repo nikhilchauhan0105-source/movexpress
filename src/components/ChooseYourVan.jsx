@@ -1,15 +1,15 @@
 
-import { useEffect, useState } from 'react';
+
 import ChooseVanSlelctionBtn from '../Common/ChooseVanSlelctionBtn';
 import { FormHeading, FormSubHeading } from '../Common/Heading';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-const ChooseYourVan = ({ pageno2, changetab, backtab }) => {
+const ChooseYourVan = ({ changetab, backtab }) => {
      
   return (
     <>
       <FormHeading
-        pageno={pageno2}
+       
         head="Choose your Van"
         subhead="Select your perfect vehicle"
       />
