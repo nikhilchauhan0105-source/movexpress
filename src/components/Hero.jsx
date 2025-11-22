@@ -12,6 +12,7 @@ import { useNavigate, useSearchParams } from "react-router";
 import { selectedvanContext } from "../context/context";
 import { tabnoContext } from "../context/context";
 import When from "./When";
+import WhatsMoving from "./WhatsMoving";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -123,12 +124,15 @@ const Hero = () => {
                       setFormStepsNo((prev) => prev - 1);
                     }}
                     changetab={() => {
-                      navigate("?tab=when-moves");
-                      setFormSteps("when-moves");
+                      navigate("?tab=Whats-moving");
+                      setFormSteps("Whats-moving");
                       setFormStepsNo((prev) => prev + 1);
                     }}
                   />
                 )}
+
+                {formStpes === "Whats-moving" && <WhatsMoving
+                />}
               </div>
             </div>
           </section>

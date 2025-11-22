@@ -3,19 +3,17 @@
 import ChooseVanSlelctionBtn from '../Common/ChooseVanSlelctionBtn';
 import { FormHeading, FormSubHeading } from '../Common/Heading';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ProgressBar } from '../Common/Helper';
 
 const ChooseYourVan = ({ changetab, backtab }) => {
      
   return (
     <>
       <FormHeading
-       
         head="Choose your Van"
         subhead="Select your perfect vehicle"
       />
-      <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
-        <div className="max-w-[181px] w-full bg-purple h-2 rounded-2xl"></div>
-      </div>
+        <ProgressBar/>
       <FormSubHeading
         head="Choose Your Perfect Van"
         subhead="Select the right size for your move"

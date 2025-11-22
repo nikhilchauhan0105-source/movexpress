@@ -4,14 +4,23 @@ import {
   Box,
   Calendar,
   Clock,
+  Triangle,
   Truck,
 } from "lucide-react";
 import { FormHeading, FormSubHeading } from "../Common/Heading";
 import { selectedvanContext } from "../context/context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { PlacholderParagraph, ProgressBar } from "../Common/Helper";
 
 const When = ({ backtab, changetab }) => {
- const { vanvalue } = useContext(selectedvanContext);
+  const { vanvalue } = useContext(selectedvanContext);
+  const [loadingunloadingTime, setLoadingUnloadingTime] = useState(null);
+  const [startDate, setStartDate] = useState(null);
+  const [startTime, setStartTime] = useState(null);
+  
+  const [inputActiveSecondary ,setInputActiveSecondary] =useState(false)
+  const [inputActiveprimery ,setInputActivePrimery] =useState(false)
+
   return (
     <>
       <div>
@@ -19,9 +28,7 @@ const When = ({ backtab, changetab }) => {
           head="when ?"
           subhead="Pick your preferred date and time"
         />
-        <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
-          <div className="max-w-[181px] w-full bg-purple h-2 rounded-2xl"></div>
-        </div>
+            <ProgressBar/>
         <FormSubHeading
           head="When do you need us?"
           subhead="Select your preferred date and time for your move"
@@ -78,10 +85,35 @@ const When = ({ backtab, changetab }) => {
           <p className="mb-2 font-bold text-black/80  ">
             How much time do you need to load and unload?
           </p>
-          <input
-            className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10"
-            type="number"
-          />
+          <div className="flex items-center border-1 border-purple p-3 py-4 rounded-lg justify-between relative input-style-primary">
+            <PlacholderParagraph
+              content="Select How much time"
+              className={startTime ? "opacity-0" : "opacity-100"}
+            />
+            <Triangle
+              size={16}
+              fill={" #4b014b"}
+              className={`transition-all duration-300 ease-linear  ${
+                inputActiveprimery ? "!rotate-0" : "rotate-180"
+              }`}
+            />
+            <select
+              onChange={(e) => setStartTime(e.target.value)}
+              required
+              onClick={() => setInputActivePrimery(!inputActiveprimery)}
+              onBlur={() => setInputActivePrimery(false)}
+              className={`${
+                startTime ? "opacity-100" : "opacity-0"
+              } outline-none w-[97%] h-full absolute px-3 left-0 text-violetprimary/50 top-0`}
+            >
+              <option>08:00</option>
+              <option>08:30</option>
+              <option>09:00</option>
+              <option>09:30</option>
+              <option>10:00</option>
+              <option>10:30</option>
+            </select>
+          </div>
         </div>
         <div className="mt-6 shadow-xs/30 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-3">
@@ -94,6 +126,9 @@ const When = ({ backtab, changetab }) => {
             <div>
               <p className=" font-semibold">Choose your moving date</p>
               <input
+                onChange={(e) => {
+                  setStartDate(e.target.value);
+                }}
                 className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10 mt-2"
                 type="date"
               />
@@ -101,11 +136,37 @@ const When = ({ backtab, changetab }) => {
             <div>
               <p className=" font-semibold ">Preferred start time</p>
               <div>
-                <input
-                  className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10 mt-2"
-                  type="time"
-                  placeholder="select time"
-                />
+                <div className="flex items-center border-1 border-purple p-3 py-4 rounded-lg justify-between relative input-style-primary">
+                  <PlacholderParagraph
+                    content="Select How much time"
+                    className={loadingunloadingTime ? "opacity-0" : "opacity-100"}
+                  />
+                  <Triangle
+                    size={16}
+                    fill={" #4b014b"}
+                    className={`transition-all duration-300 ease-linear  ${
+                      inputActiveSecondary ? "!rotate-0" : "rotate-180"
+                    }`}
+                  />
+                  <select
+                    onChange={(e) => setLoadingUnloadingTime(e.target.value)}
+                    required
+                    onClick={() =>
+                      setInputActiveSecondary(!inputActiveSecondary)
+                    }
+                    onBlur={() => setInputActiveSecondary(false)}
+                    className={`${
+                      loadingunloadingTime ? "opacity-100" : "opacity-0"
+                    } outline-none w-[97%] h-full absolute px-3 left-0 text-violetprimary/50 top-0`}
+                  >
+                    <option>08:00</option>
+                    <option>08:30</option>
+                    <option>09:00</option>
+                    <option>09:30</option>
+                    <option>10:00</option>
+                    <option>10:30</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>

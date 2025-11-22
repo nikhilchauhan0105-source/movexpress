@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Info, Location } from "../Common/Icons";
 import { FormHeading } from "../Common/Heading";
+import { ProgressBar } from "../Common/Helper";
 
 const ChooseDestinationForm = ({changetab}) => {
     const [isTyped, setIsTyped] = useState("");
@@ -17,20 +18,17 @@ const ChooseDestinationForm = ({changetab}) => {
   return (
     <>
       <FormHeading
-
         head="Where to"
         subhead="Tell us your pickup and destination"
       />
-      <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
-        <div className="max-w-[111px] w-full bg-purple h-2 rounded-2xl"></div>
-      </div>
+    <ProgressBar/>
       <div className="mt-[21px]">
         <div className="flex flex-col gap-[4px]">
           <p className="font-semibold">Pickup Address</p>
           <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
             <Location />
             <input
-              className="focus:outline-hidden"
+              className="w-full focus:outline-hidden"
               type="text"
               onChange={storeChange}
               value={isTyped}
@@ -44,7 +42,7 @@ const ChooseDestinationForm = ({changetab}) => {
           <div className="flex gap-[12px] py-3 md:py-[18px] px-2 md:px-[16px]  border-1 border-gray-200 rounded-xl">
             <Location />
             <input
-              className="focus:outline-hidden"
+              className="w-full focus:outline-hidden"
               type="text"
               onInputCapture={storeDestination}
               value={isDestinationTyped}

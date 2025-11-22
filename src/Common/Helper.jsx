@@ -95,3 +95,21 @@ export const Topbutton = () => {
     </button>
   );
 };
+
+export const PlacholderParagraph = ({ content, className }) => {
+  return (
+    <p
+      className={`${className} text-violetprimary/50 font-inter text-sm md:text-base`}
+    >
+      {content}
+    </p>
+  );
+};
+
+export const ProgressBar = ()=>{
+  return (
+    <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
+      <div className="max-w-[111px] w-full bg-purple h-2 rounded-2xl"></div>
+    </div>
+  );
+}
