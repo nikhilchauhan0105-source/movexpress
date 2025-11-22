@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Minus, Plus, Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
+import { tabnoContext } from "../context/context";
 
 export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
@@ -107,9 +108,13 @@ export const PlacholderParagraph = ({ content, className }) => {
 };
 
 export const ProgressBar = ()=>{
+    const formtabno = useContext(tabnoContext);
   return (
-    <div className="h-2 bg-gray-300 rounded-2xl mt-[10px]">
-      <div className="max-w-[111px] w-full bg-purple h-2 rounded-2xl"></div>
+    <div className="h-2 w-full bg-gray-300 rounded-2xl mt-[10px]">
+      <div
+        style={{ width: `calc(${formtabno} * 20%)` }}
+        className=" bg-purple h-2 rounded-2xl"
+      ></div>
     </div>
   );
 }

@@ -22,13 +22,13 @@ const When = ({ backtab, changetab }) => {
   const [inputActiveprimery ,setInputActivePrimery] =useState(false)
 
   return (
-    <>
+    <form onSubmit={changetab}>
       <div>
         <FormHeading
           head="when ?"
           subhead="Pick your preferred date and time"
         />
-            <ProgressBar/>
+        <ProgressBar />
         <FormSubHeading
           head="When do you need us?"
           subhead="Select your preferred date and time for your move"
@@ -139,7 +139,9 @@ const When = ({ backtab, changetab }) => {
                 <div className="flex items-center border-1 border-purple p-3 py-4 rounded-lg justify-between relative input-style-primary">
                   <PlacholderParagraph
                     content="Select How much time"
-                    className={loadingunloadingTime ? "opacity-0" : "opacity-100"}
+                    className={
+                      loadingunloadingTime ? "opacity-0" : "opacity-100"
+                    }
                   />
                   <Triangle
                     size={16}
@@ -181,12 +183,11 @@ const When = ({ backtab, changetab }) => {
 
       <button
         type="submit"
-        onClick={changetab}
         className="cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
       >
         Next : Select items <ArrowRight size={20} />
       </button>
-    </>
+    </form>
   );
 };
 

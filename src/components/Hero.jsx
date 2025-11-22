@@ -91,7 +91,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="max-w-[644px] w-full  p-[22px]  md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-2xl">
+              <div className="max-w-[644px] w-full  p-[22px]  md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-3xl">
                 {formStpes === "pickup-address" && (
                   <ChooseDestinationForm
                     changetab={() => {
@@ -131,8 +131,15 @@ const Hero = () => {
                   />
                 )}
 
-                {formStpes === "Whats-moving" && <WhatsMoving
-                />}
+                {formStpes === "Whats-moving" && (
+                  <WhatsMoving
+                    backtab={() => {
+                      navigate("?tab=when-moves");
+                      setFormSteps("when-moves");
+                      setFormStepsNo((prev) => prev - 1);
+                    }}
+                  />
+                )}
               </div>
             </div>
           </section>

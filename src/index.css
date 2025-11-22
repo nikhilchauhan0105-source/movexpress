@@ -36,3 +36,7 @@
  .buttonstyle {
   @apply  hover:bg-purple hover:shadow-md/30 duration-150 mt-2 cursor-pointer flex bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-[50px] rounded-xl m-auto max-w-fit text-white  font-semibold;
  }
+
+ .whatsmovingbtn {
+  @apply  border-1 text-xs  transition-all duration-350   text-center rounded-xl py-3 
+ }
