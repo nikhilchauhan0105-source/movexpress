@@ -1,11 +1,5 @@
-import { useEffect, useState } from "react";
-import {
-  Greenstar,
-  Halfstar,
-  Licensed,
-  Trust,
-  Whitestar,
-} from "../Common/Icons";
+import { useEffect,useState} from "react";
+import {Greenstar,Halfstar,Licensed,Trust,Whitestar,} from "../Common/Icons";
 import ChooseDestinationForm from "./ChooseDestinationForm";
 import ChooseYourVan from "./ChooseYourVan";
 import { useNavigate, useSearchParams } from "react-router";
@@ -28,6 +22,15 @@ const Hero = () => {
   useEffect(() => {
     if (params) {
       setFormSteps(params);
+    }
+
+    if (params === "choose-your-van") {
+      setFormStepsNo(2);
+    } else if (params === "when-moves") {
+      setFormStepsNo(3);
+    }
+    else if (params==="Whats-moving"){
+      setFormStepsNo(4);
     }
   }, []);
 

@@ -5,7 +5,7 @@ const TakePicture = () => {
     <div className="p-4 shadow-sm/20 rounded-xl">
       <div className="flex mb-2 items-center gap-2">
         <Camera size={16} className="text-purple" />
-        <p className="font-semibold">Take Picture/Video</p>
+        <p className="font-semibold  ">Take Picture/Video</p>
       </div>
       <div className="w-full rounded-xl p-4  bg-[#f6f7f9] ">
         <div className="py-[72px]">

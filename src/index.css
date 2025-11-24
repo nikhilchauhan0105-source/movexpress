@@ -20,6 +20,20 @@
   scroll-behavior: smooth;
 }
 
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background:white; 
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: purple; 
+        border-radius: 30px;
+    }
+
 
  .workcardstyle {
   @apply p-[24px] transition-all duration-200 h-[265px] cursor-pointer  hover:shadow-md/60 hover:bg-purple hover:text-white text-center flex flex-col items-center rounded-xl bg-[#F6F7F9];

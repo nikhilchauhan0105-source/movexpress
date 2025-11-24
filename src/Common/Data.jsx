@@ -423,3 +423,22 @@ export const signupinputdeatails = [
     type: "number",
   },
 ];
+
+export const additemslist = [
+  "Bags",
+  "Bathroom",
+  "Bedroom Items",
+  "Computer Parts",
+  "Dining Room",
+  "Garage & Garden",
+  "Kitchen & Hall",
+  "Living Room",
+  "Moving Boxes",
+  "Piano",
+  "Rucksacks",
+  "Sofas",
+  "Special Items",
+  "Suitcases",
+  "Tables",
+  "Wardrobes",
+];

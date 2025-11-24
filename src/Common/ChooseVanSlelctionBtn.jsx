@@ -176,13 +176,13 @@ const ChooseVanSlelctionBtn = () => {
             <p className="text-xs">Up to 30 cubic feet </p>
             <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Comapct size</p>
+                <p>Spacious</p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Easy parking </p>
+                <p>Heavy items </p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>City friendly</p>
+                <p>Long distance</p>
               </div>
             </div>
           </div>
@@ -231,13 +231,13 @@ const ChooseVanSlelctionBtn = () => {
             <p className="text-xs">Up to 10 cubic feet </p>
             <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Comapct size</p>
+                <p>Maximum space</p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Easy parking </p>
+                <p>Commercial grade  </p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>City friendly</p>
+                <p>Heavy duty</p>
               </div>
             </div>
           </div>
@@ -286,13 +286,13 @@ const ChooseVanSlelctionBtn = () => {
             <p className="text-xs">Up to 10 cubic feet </p>
             <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Comapct size</p>
+                <p>Tail lift </p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Easy parking </p>
+                <p>Heavy items</p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>City friendly</p>
+                <p>Commercial grade</p>
               </div>
             </div>
           </div>

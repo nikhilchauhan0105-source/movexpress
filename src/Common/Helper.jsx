@@ -3,6 +3,7 @@ import { Minus, Plus, Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
 import { tabnoContext } from "../context/context";
+import { ChevronRight } from "lucide-react";
 
 export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
@@ -115,6 +116,15 @@ export const ProgressBar = ()=>{
         style={{ width: `calc(${formtabno} * 20%)` }}
         className=" bg-purple h-2 rounded-2xl"
       ></div>
+    </div>
+  );
+}
+
+export const AddItemsList = ({item})=> {
+  return (
+    <div className="flex text-sm  text-black/80 shadow-sm/10 font-semibold justify-between hover:bg-blue-300/10 hover:shadow-sm/30 rounded-xl p-3 ">
+      <h3>{item}</h3>
+      <ChevronRight/>
     </div>
   );
 }
