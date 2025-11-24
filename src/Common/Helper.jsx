@@ -9,13 +9,11 @@ export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
   return (
     <div
-    onClick={() => setIscliked(IsClicked === index ? null : index)}
+      onClick={() => setIscliked(IsClicked === index ? null : index)}
       data-aos="fade-down"
       className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl "
     >
-      <div
-        className="flex justify-between "
-      >
+      <div className="flex justify-between ">
         <p className="md:text-[24px] ">{question}</p>
         <button className={`${IsClicked === index ? "hidden" : "block"}`}>
           <Plus />
@@ -108,8 +106,8 @@ export const PlacholderParagraph = ({ content, className }) => {
   );
 };
 
-export const ProgressBar = ()=>{
-    const formtabno = useContext(tabnoContext);
+export const ProgressBar = () => {
+  const formtabno = useContext(tabnoContext);
   return (
     <div className="h-2 w-full bg-gray-300 rounded-2xl mt-[10px]">
       <div
@@ -118,13 +116,53 @@ export const ProgressBar = ()=>{
       ></div>
     </div>
   );
-}
+};
 
-export const AddItemsList = ({item})=> {
+export const AddItemsList = ({ item }) => {
+  const [isopen, setIsOpen] = useState(false);
+  const [count, setCount] = useState(0)
+  
   return (
-    <div className="flex text-sm  text-black/80 shadow-sm/10 font-semibold justify-between hover:bg-blue-300/10 hover:shadow-sm/30 rounded-xl p-3 ">
-      <h3>{item}</h3>
-      <ChevronRight/>
+    <div>
+      <div
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="flex text-sm  text-black/80 shadow-sm/10 font-semibold justify-between hover:bg-blue-300/10 hover:shadow-sm/30 rounded-xl p-3 "
+      >
+        <h3>{item}</h3>
+        <span
+          className={`${
+            isopen ? "rotate-90" : "rotate-0"
+          } transtion-all duration-300`}
+        >
+          <ChevronRight />
+        </span>
+      </div>
+      <div
+        className={`${
+          isopen ? "block" : "hidden"
+        }  transition-all duration-500  px-3 py-2 `}
+      >
+        <div className="flex justify-between text-xs items-center  bg-blue-50 rounded-lg p-2">
+          <p>Large Clothes Storage Bag 90 Litres</p>
+          <div className="flex gap-2  items-center">
+            <button
+              onClick={() => {
+                setCount((prev) => (prev > 0 ? prev - 1 : 0)); 
+              }}
+            >
+              <Minus size={5} />
+            </button>
+            {count}
+            <button
+              onClick={() => {
+                setCount((prev) => prev + 1);
+              }}
+            >
+              <Plus />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};

@@ -425,20 +425,52 @@ export const signupinputdeatails = [
 ];
 
 export const additemslist = [
-  "Bags",
-  "Bathroom",
-  "Bedroom Items",
-  "Computer Parts",
-  "Dining Room",
-  "Garage & Garden",
-  "Kitchen & Hall",
-  "Living Room",
-  "Moving Boxes",
-  "Piano",
-  "Rucksacks",
-  "Sofas",
-  "Special Items",
-  "Suitcases",
-  "Tables",
-  "Wardrobes",
+  {
+    name: "Bags",
+  },
+  {
+    name: "Bathroom",
+  },
+  {
+    name: "Bedroom Items",
+  },
+  {
+    name: "Computer Parts",
+  },
+  {
+    name: "Dining Room",
+  },
+  {
+    name: "Garage & Garden",
+  },
+  {
+    name: "Kitchen & Hall",
+  },
+  {
+    name: "Living Room",
+  },
+  {
+    name: "Moving Boxes",
+  },
+  {
+    name: "Piano",
+  },
+  {
+    name: "Rucksacks",
+  },
+  {
+    name: "Sofas",
+  },
+  {
+    name: "Special Items",
+  },
+  {
+    name: "Suitcases",
+  },
+  {
+    name: "Tables",
+  },
+  {
+    name: "Wardrobes",
+  },
 ];
