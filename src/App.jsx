@@ -10,7 +10,8 @@ import ManVanService from "./pages/ManVanService";
 import ServicePage from "./pages/ServicePage";
 import SignUpAsDriver from "./pages/SignUpAsDriver";
 import VechcleInfo from "./pages/VehcleInfo";
-import { selectedvanContext } from "./context/context";
+import { QuantitiesContext } from "./context/context";
+
 
 const App = () => {
   useEffect(() => {
@@ -18,22 +19,24 @@ const App = () => {
   }, []);
 
 
-
   return (
     <>
-    
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blogsPage" element={<BlogsPage />} />
-        <Route path="/blogs/:123" element={<BlogDetailsPage />} />
-        <Route path="/servicepage/manvanservices" element={<ManVanService />} />
-        <Route path="/servicepage" element={<ServicePage />} />
-        <Route path="/manvanservices" element={<ManVanService />} />
-        <Route path="/becomedriver" element={<SignUpAsDriver />} />
-        <Route path="/VechcleInfo" element={<VechcleInfo />} />
-      </Routes>
-    
+      <QuantitiesContext.Provider>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blogsPage" element={<BlogsPage />} />
+          <Route path="/blogs/:123" element={<BlogDetailsPage />} />
+          <Route
+            path="/servicepage/manvanservices"
+            element={<ManVanService />}
+          />
+          <Route path="/servicepage" element={<ServicePage />} />
+          <Route path="/manvanservices" element={<ManVanService />} />
+          <Route path="/becomedriver" element={<SignUpAsDriver />} />
+          <Route path="/VechcleInfo" element={<VechcleInfo />} />
+        </Routes>
+      </QuantitiesContext.Provider>
     </>
   );
 };

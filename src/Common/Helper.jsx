@@ -118,51 +118,68 @@ export const ProgressBar = () => {
   );
 };
 
-export const AddItemsList = ({ item }) => {
-  const [isopen, setIsOpen] = useState(false);
-  const [count, setCount] = useState(0)
-  
+
+export const AddItemsList = ({ item, quantity }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [quantities, setQuantities] = useState({});
+
+  console.log(quantities)
+
+  const handleChange = (index, value) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [index]: value,
+    }));
+  };
+
   return (
     <div>
+      
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex text-sm  text-black/80 shadow-sm/10 font-semibold justify-between hover:bg-blue-300/10 hover:shadow-sm/30 rounded-xl p-3 "
+        className="flex text-sm text-black/80 font-semibold justify-between rounded-xl p-3 hover:bg-blue-300/10"
       >
         <h3>{item}</h3>
         <span
-          className={`${
-            isopen ? "rotate-90" : "rotate-0"
-          } transtion-all duration-300`}
+          className={`transition-all duration-300 ${
+            isOpen ? "rotate-90" : "rotate-0"
+          }`}
         >
           <ChevronRight />
         </span>
       </div>
-      <div
-        className={`${
-          isopen ? "block" : "hidden"
-        }  transition-all duration-500  px-3 py-2 `}
-      >
-        <div className="flex justify-between text-xs items-center  bg-blue-50 rounded-lg p-2">
-          <p>Large Clothes Storage Bag 90 Litres</p>
-          <div className="flex gap-2  items-center">
-            <button
-              onClick={() => {
-                setCount((prev) => (prev > 0 ? prev - 1 : 0)); 
-              }}
+  
+      {isOpen && (
+        <div className="px-3 py-2 flex flex-col gap-2 transition-all duration-500">
+          {quantity.map((list, i) => (
+            <div
+              key={i}
+              className="flex justify-between text-xs items-center bg-blue-50 rounded-lg p-2"
             >
-              <Minus size={5} />
-            </button>
-            {count}
-            <button
-              onClick={() => {
-                setCount((prev) => prev + 1);
-              }}
-            >
-              <Plus />
-            </button>
-          </div>
+              <p>{list}</p>
+
+              <div className="flex gap-2 items-center">
+                <button
+                  onClick={() =>
+                    handleChange(i, Math.max((quantities[i] || 0) - 1, 0))
+                  }
+                >
+                  <Minus size={10} />
+                </button>
+
+                {quantities[i] || 0}
+
+                <button
+                  onClick={() => handleChange(i, (quantities[i] || 0) + 1)}
+                >
+                  <Plus size={10} />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      )}
+      
     </div>
   );
 };
