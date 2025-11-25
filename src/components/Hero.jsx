@@ -1,5 +1,11 @@
-import { useEffect,useState} from "react";
-import {Greenstar,Halfstar,Licensed,Trust,Whitestar,} from "../Common/Icons";
+import { useEffect, useState } from "react";
+import {
+  Greenstar,
+  Halfstar,
+  Licensed,
+  Trust,
+  Whitestar,
+} from "../Common/Icons";
 import ChooseDestinationForm from "./ChooseDestinationForm";
 import ChooseYourVan from "./ChooseYourVan";
 import { useNavigate, useSearchParams } from "react-router";
@@ -15,6 +21,8 @@ const Hero = () => {
   const [formStpes, setFormSteps] = useState("pickup-address");
   const [formStpesno, setFormStepsNo] = useState(1);
   const [vanvalue, setVanValue] = useState("");
+   
+   
 
   const handleselectvan = (e) => {
     setVanValue(e);
@@ -28,15 +36,15 @@ const Hero = () => {
       setFormStepsNo(2);
     } else if (params === "when-moves") {
       setFormStepsNo(3);
-    }
-    else if (params==="Whats-moving"){
+    } else if (params === "Whats-moving") {
       setFormStepsNo(4);
     }
   }, []);
+ 
 
   return (
     <>
-      <tabnoContext.Provider value={formStpesno}>
+      <tabnoContext.Provider value={ formStpesno}>
         <selectedvanContext.Provider
           value={{ vanvalue, setVanValue: handleselectvan }}
         >

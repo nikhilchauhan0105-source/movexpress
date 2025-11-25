@@ -1,6 +1,6 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect ,useState} from "react";
+import {  useEffect, useState} from "react";
 import { Route, Routes } from "react-router";
 import About from "./components/About";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
@@ -10,18 +10,24 @@ import ManVanService from "./pages/ManVanService";
 import ServicePage from "./pages/ServicePage";
 import SignUpAsDriver from "./pages/SignUpAsDriver";
 import VechcleInfo from "./pages/VehcleInfo";
-import { QuantitiesContext } from "./context/context";
+import { ItemsqauntitesContext } from "./context/context";
+
 
 
 const App = () => {
   useEffect(() => {
-    Aos.init({ duration: 1500 });
+    Aos.init({ duration: 1000 });
+
   }, []);
+ const [quantities, setQuantities] = useState({}); 
+ useEffect(() => {
+   console.log("Updated quantities: ", quantities);
+ }, [quantities]);
 
 
   return (
     <>
-      <QuantitiesContext.Provider>
+      <ItemsqauntitesContext.Provider value={{quantities, setQuantities}}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
@@ -36,7 +42,7 @@ const App = () => {
           <Route path="/becomedriver" element={<SignUpAsDriver />} />
           <Route path="/VechcleInfo" element={<VechcleInfo />} />
         </Routes>
-      </QuantitiesContext.Provider>
+      </ItemsqauntitesContext.Provider>
     </>
   );
 };

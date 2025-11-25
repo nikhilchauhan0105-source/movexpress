@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Minus, Plus, Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
-import { tabnoContext } from "../context/context";
+import { ItemsqauntitesContext, tabnoContext } from "../context/context";
 import { ChevronRight } from "lucide-react";
 
 export const Faqs = ({ question, answer, index }) => {
@@ -118,23 +118,22 @@ export const ProgressBar = () => {
   );
 };
 
-
 export const AddItemsList = ({ item, quantity }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [quantities, setQuantities] = useState({});
+const {quantities,  setQuantities} = useContext(ItemsqauntitesContext);
 
-  console.log(quantities)
-
-  const handleChange = (index, value) => {
-    setQuantities((prev) => ({
-      ...prev,
-      [index]: value,
-    }));
-  };
+const handleChange = (index, value, list) => {
+  setQuantities((prev) => ({
+    ...prev,
+    [item]: {
+      ...(prev[item] || {}),
+      [list]: value,
+    },
+  }));
+};
 
   return (
     <div>
-      
       <div
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex text-sm text-black/80 font-semibold justify-between rounded-xl p-3 hover:bg-blue-300/10"
@@ -148,29 +147,33 @@ export const AddItemsList = ({ item, quantity }) => {
           <ChevronRight />
         </span>
       </div>
-  
+
       {isOpen && (
         <div className="px-3 py-2 flex flex-col gap-2 transition-all duration-500">
           {quantity.map((list, i) => (
             <div
               key={i}
-              className="flex justify-between text-xs items-center bg-blue-50 rounded-lg p-2"
+              className="flex justify-between hover:bg-white text-xs items-center bg-blue-50/50 rounded-lg p-2"
             >
               <p>{list}</p>
 
               <div className="flex gap-2 items-center">
                 <button
                   onClick={() =>
-                    handleChange(i, Math.max((quantities[i] || 0) - 1, 0))
+                    handleChange(
+                      i,
+                      Math.max((quantities[item]?.[list] || 0) - 1, 0),
+                      list
+                    )
                   }
                 >
                   <Minus size={10} />
                 </button>
-
-                {quantities[i] || 0}
-
+                {quantities[item]?.[list] || 0}
                 <button
-                  onClick={() => handleChange(i, (quantities[i] || 0) + 1)}
+                  onClick={() =>
+                    handleChange(i, (quantities[item]?.[list] || 0) + 1, list)
+                  }
                 >
                   <Plus size={10} />
                 </button>
@@ -179,7 +182,6 @@ export const AddItemsList = ({ item, quantity }) => {
           ))}
         </div>
       )}
-      
     </div>
   );
 };

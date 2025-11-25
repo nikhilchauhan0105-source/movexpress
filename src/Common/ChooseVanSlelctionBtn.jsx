@@ -4,7 +4,7 @@ import mediumvanimage from "../assets/images/medium_van.jpg";
 import largevanimage from "../assets/images/large_van.jpg";
 import lutonvanimage from "../assets/images/luton_van.jpg";
 import lutonboxvanimage from "../assets/images/luton_boxVan.jpg";
-import { useContext,useState } from "react";
+import { useContext, useState } from "react";
 import { selectedvanContext } from "../context/context";
 
 const ChooseVanSlelctionBtn = () => {
@@ -13,11 +13,8 @@ const ChooseVanSlelctionBtn = () => {
   const [largevan, setLargeVan] = useState(false);
   const [lutonvan, setlutonVan] = useState(false);
   const [boxvan, setBoxVan] = useState(false);
-  
+
   const { vanvalue, setVanValue } = useContext(selectedvanContext);
-    
-
-
 
   return (
     <section>
@@ -64,7 +61,7 @@ const ChooseVanSlelctionBtn = () => {
             <h2 className="font-semibold">Small Van</h2>
             <p className="text-xs font-light mb-1">Perfect for small moves</p>
             <p className="text-xs">Up to 10 cubic feet </p>
-            <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
+            <div className="flex gap-2 text-[6px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Comapct size</p>
               </div>
@@ -119,7 +116,7 @@ const ChooseVanSlelctionBtn = () => {
             <h2 className="font-semibold">Medium Van</h2>
             <p className="text-xs font-light mb-1">Perfect for small moves</p>
             <p className="text-xs">Up to 20 cubic feet </p>
-            <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
+            <div className="flex gap-2 text-[6px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Good storage</p>
               </div>
@@ -174,7 +171,7 @@ const ChooseVanSlelctionBtn = () => {
             <h2 className="font-semibold">Large Van</h2>
             <p className="text-xs font-light mb-1">Perfect for small moves</p>
             <p className="text-xs">Up to 30 cubic feet </p>
-            <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
+            <div className="flex gap-2 text-[6px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Spacious</p>
               </div>
@@ -229,12 +226,12 @@ const ChooseVanSlelctionBtn = () => {
             <h2 className="font-semibold">Luton Van</h2>
             <p className="text-xs font-light mb-1">Perfect for small moves</p>
             <p className="text-xs">Up to 10 cubic feet </p>
-            <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
+            <div className="flex gap-2 text-[6px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Maximum space</p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
-                <p>Commercial grade  </p>
+                <p>Commercial grade </p>
               </div>
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Heavy duty</p>
@@ -284,7 +281,7 @@ const ChooseVanSlelctionBtn = () => {
             <h2 className="font-semibold">Luton Box Van</h2>
             <p className="text-xs font-light mb-1">Perfect for small moves</p>
             <p className="text-xs">Up to 10 cubic feet </p>
-            <div className="flex gap-2 text-[9px] md:text-xs mt-1.5">
+            <div className="flex gap-2 text-[6px] md:text-xs mt-1.5">
               <div className="bg-purple/10 px-2 rounded-2xl py-1">
                 <p>Tail lift </p>
               </div>
