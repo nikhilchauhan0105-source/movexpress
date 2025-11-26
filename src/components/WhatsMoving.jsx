@@ -94,6 +94,7 @@ const WhatsMoving = ({backtab}) => {
         >
             <ArrowLeft/> Back
         </button>
+        
         </div>
   );
 };
