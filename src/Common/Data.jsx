@@ -449,7 +449,7 @@ export const additemslist = [
   },
   {
     name: "Computer Parts",
-    items: ["Desktop Pcs", "Laptop", ""],
+    items: ["Desktop Pcs", "Laptop", "PC cabinate"],
   },
   {
     name: "Dining Room",

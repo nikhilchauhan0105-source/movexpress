@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { Minus, Plus, Upwardarrow } from "./Icons";
+import { Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
 import { ItemsqauntitesContext, tabnoContext } from "../context/context";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Minus, Plus } from "lucide-react";
 
 export const Faqs = ({ question, answer, index }) => {
   const [IsClicked, setIscliked] = useState(0);
@@ -120,23 +120,23 @@ export const ProgressBar = () => {
 
 export const AddItemsList = ({ item, quantity }) => {
   const [isOpen, setIsOpen] = useState(false);
-const {quantities,  setQuantities} = useContext(ItemsqauntitesContext);
+  const { quantities, setQuantities } = useContext(ItemsqauntitesContext);
 
-const handleChange = (index, value, list) => {
-  setQuantities((prev) => ({
-    ...prev,
-    [item]: {
-      ...(prev[item] || {}),
-      [list]: value,
-    },
-  }));
-};
+  const handleChange = (index, value, list) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [item]: {
+        ...(prev[item] || {}),
+        [list]: value,
+      },
+    }));
+  };
 
   return (
     <div>
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex text-sm text-black/80 font-semibold justify-between rounded-xl p-3 hover:bg-blue-300/10"
+        className="flex text-sm text-black/80 shadow-xs/20 font-semibold justify-between rounded-xl p-2 sm:p-3 hover:bg-blue-300/10"
       >
         <h3>{item}</h3>
         <span
@@ -153,7 +153,7 @@ const handleChange = (index, value, list) => {
           {quantity.map((list, i) => (
             <div
               key={i}
-              className="flex justify-between hover:bg-white text-xs items-center bg-blue-50/50 rounded-lg p-2"
+              className="flex justify-between  hover:bg-white text-xs items-center bg-blue-50/50 rounded-lg p-2"
             >
               <p>{list}</p>
 

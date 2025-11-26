@@ -90,9 +90,9 @@ const WhatsMoving = ({backtab}) => {
         </div>
         <button
             onClick={backtab}
-            className="bg-purple text-white  px-8 py-4 rounded-4xl text-lg flex gap-1 items-center mt-4"
+            className="bg-purple text-white px-4 py-1  md:px-8 md:py-4 rounded-4xl text-sm md:text-lg flex gap-1 items-center mt-4"
         >
-            <ArrowLeft /> Back
+            <ArrowLeft/> Back
         </button>
         </div>
   );
