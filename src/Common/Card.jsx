@@ -157,7 +157,7 @@ export const FinalSelectedItemsCard = ({ onClick }) => {
   } = useContext(informationContext);
   return (
     <div className="w-full fixed top-0 h-screen z-10 bg-white/10 backdrop-blur-3xl">
-      <div className="relative top-[50%] left-[50%] flex flex-col gap-5 p-5 -translate-[50%] bg-white max-w-[450px] w-full h-[600px]  rounded-2xl">
+      <div className="relative top-[50%] left-[50%] flex flex-col gap-5 p-3 px-4 -translate-[50%] bg-white max-w-[500px] w-full   rounded-2xl">
         <button
           type="button"
           className="bg-orange -top-6 -right-6 absolute p-1 hover:bg-purple rounded-lg "
@@ -169,8 +169,8 @@ export const FinalSelectedItemsCard = ({ onClick }) => {
           />
         </button>
         <div className="text-black font-inter flex flex-col gap-2">
-          <h2 className="text-2xl">Selcted information</h2>
-          <div className="text-sm bg-slate-200 p-2 rounded-xl ">
+          <h2 className="text-2xl font-medium">Selcted Information</h2>
+          <div className="text-sm bg-slate-300 p-2 rounded-xl ">
             <h3 className="text-xl">where to ?</h3>
             <div className="pl-2 font-medium ">
               <p>
@@ -182,13 +182,13 @@ export const FinalSelectedItemsCard = ({ onClick }) => {
               </p>
             </div>
           </div>
-          <div className="text-sm  font-inter bg-slate-200 p-2 rounded-xl">
+          <div className="text-sm  font-inter bg-slate-300 p-2 rounded-xl">
             <h3 className="text-xl">Choosen Van</h3>
             <p className="pl-2 font-medium">
               Selected Van : <span className="font-normal">{vanvalue}</span>
             </p>
           </div>
-          <div className="text-sm bg-slate-200 p-2 rounded-xl ">
+          <div className="text-sm bg-slate-300 p-2 rounded-xl ">
             <h3 className="text-xl">when</h3>
             <div className="pl-2 font-medium">
               <p>
@@ -204,14 +204,14 @@ export const FinalSelectedItemsCard = ({ onClick }) => {
               </p>
             </div>
           </div>
-          <div className="text-sm bg-slate-200 p-2 rounded-xl">
+          <div className="text-sm bg-slate-300 p-2 rounded-xl">
             <h3 className="text-xl">what's moving ?</h3>
-            <div className="pl-2 max-h-[200px]">
-              <h4 className="text-lg">Add items</h4>
+            <div className="pl-2 ">
+              <h4 className="text-[17px] font-medium">Add items</h4>
               <div className="max-h-[200px] py-1 overflow-y-scroll custom-scrollbar">
                 {Object.keys(quantities).map((category) => (
                   <div
-                    className="bg-slate-300 my-1 p-1 px-2 rounded-lg"
+                    className="bg-slate-200 my-1 p-1 px-2 rounded-lg"
                     key={category}
                   >
                     <p className="font-medium">{category}</p>
