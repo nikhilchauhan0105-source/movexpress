@@ -1,27 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Info, Location } from "../Common/Icons";
 import { FormHeading } from "../Common/Heading";
 import { ProgressBar } from "../Common/Helper";
+import { informationContext } from "../context/context";
 
-const ChooseDestinationForm = ({changetab}) => {
-    const [isTyped, setIsTyped] = useState("");
-    const [isDestinationTyped, setIsDestinationTyped] = useState("");
+const ChooseDestinationForm = ({ changetab }) => {
+  const { isTyped, setIsTyped } = useContext(informationContext);
+  const { isDestinationTyped, setIsDestinationTyped } =
+    useContext(informationContext);
 
-    const storeChange = (event) => {
-      setIsTyped(event.target.value);
-    };
-    const storeDestination = (event) => {
-      setIsDestinationTyped(event.target.value);
-    };
-    console.log(isTyped);
-    console.log(isDestinationTyped);
+  const storeChange = (event) => {
+    setIsTyped(event.target.value);
+  };
+  const storeDestination = (event) => {
+    setIsDestinationTyped(event.target.value);
+  };
+  console.log(isTyped);
+  console.log(isDestinationTyped);
   return (
     <>
       <FormHeading
         head="Where to"
         subhead="Tell us your pickup and destination"
       />
-    <ProgressBar/>
+      <ProgressBar />
       <div className="mt-[21px]">
         <div className="flex flex-col gap-[4px]">
           <p className="font-semibold">Pickup Address</p>
@@ -77,6 +79,6 @@ const ChooseDestinationForm = ({changetab}) => {
       </button>
     </>
   );
-}
+};
 
-export default ChooseDestinationForm
+export default ChooseDestinationForm;

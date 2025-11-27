@@ -1,13 +1,13 @@
+import { Circle, Dot, X } from "lucide-react";
 import { Arrow, Rightarrow, Star } from "./Icons";
 import { Link, useNavigate } from "react-router";
+import { useContext } from "react";
+import { informationContext, selectedvanContext } from "../context/context";
 
 export const Card = ({ icon, head, subhead, url }) => {
   const navigate = useNavigate();
   return (
-    <div
-      className="group  "
-      onClick={() => navigate("manvanservices")}
-    >
+    <div className="group  " onClick={() => navigate("manvanservices")}>
       <div className="flex justify-between mb-[24px] ">
         <span className="group-hover:translate-x-[20px] duration-300 transition-all">
           {icon}
@@ -81,7 +81,7 @@ export const Customercard = ({ img, name, role, text, className }) => {
 
 export const BlogsSectioncard = ({ image, head, text, slug }) => {
   return (
-    <div  className="max-w-[415px] m-auto ">
+    <div className="max-w-[415px] m-auto ">
       <div className="max-w-[415px] ">
         <img className="w-full rounded-2xl" src={image} alt="card images" />
       </div>
@@ -136,9 +136,6 @@ export const IncludeServices = ({ icon, head, text }) => {
   );
 };
 
-
-
-
 export const MakeABookingCard = ({ head, subhead, subheadwidth }) => {
   return (
     <div className="p-6 bg-secondry rounded-2xl max-w-[352px]  w-full">
@@ -148,4 +145,93 @@ export const MakeABookingCard = ({ head, subhead, subheadwidth }) => {
   );
 };
 
-
+export const FinalSelectedItemsCard = ({ onClick }) => {
+  const { vanvalue } = useContext(selectedvanContext);
+  const {
+    isTyped,
+    isDestinationTyped,
+    loadingunloadingTime,
+    startDate,
+    startTime,
+    quantities,
+  } = useContext(informationContext);
+  return (
+    <div className="w-full fixed top-0 h-screen z-10 bg-white/10 backdrop-blur-3xl">
+      <div className="relative top-[50%] left-[50%] flex flex-col gap-5 p-5 -translate-[50%] bg-white max-w-[450px] w-full h-[600px]  rounded-2xl">
+        <button
+          type="button"
+          className="bg-orange -top-6 -right-6 absolute p-1 hover:bg-purple rounded-lg "
+          onClick={onClick}
+        >
+          <X
+            size={20}
+            className="cursor-pointer text-lightpink transition-all duration-300 ease-in-out top-3 right-3"
+          />
+        </button>
+        <div className="text-black font-inter flex flex-col gap-2">
+          <h2 className="text-2xl">Selcted information</h2>
+          <div className="text-sm bg-slate-200 p-2 rounded-xl ">
+            <h3 className="text-xl">where to ?</h3>
+            <div className="pl-2 font-medium ">
+              <p>
+                Pickup Address : <span className="font-normal">{isTyped}</span>
+              </p>
+              <p>
+                Destination Address :
+                <span className="font-normal"> {isDestinationTyped}</span>
+              </p>
+            </div>
+          </div>
+          <div className="text-sm  font-inter bg-slate-200 p-2 rounded-xl">
+            <h3 className="text-xl">Choosen Van</h3>
+            <p className="pl-2 font-medium">
+              Selected Van : <span className="font-normal">{vanvalue}</span>
+            </p>
+          </div>
+          <div className="text-sm bg-slate-200 p-2 rounded-xl ">
+            <h3 className="text-xl">when</h3>
+            <div className="pl-2 font-medium">
+              <p>
+                Loading & Unloading time :{" "}
+                <span className="font-normal">{loadingunloadingTime}</span>
+              </p>
+              <p>
+                Moving Date : <span className="font-normal">{startDate}</span>
+              </p>
+              <p>
+                {" "}
+                Moving Time : <span className="font-normal">{startTime}</span>
+              </p>
+            </div>
+          </div>
+          <div className="text-sm bg-slate-200 p-2 rounded-xl">
+            <h3 className="text-xl">what's moving ?</h3>
+            <div className="pl-2 max-h-[200px]">
+              <h4 className="text-lg">Add items</h4>
+              <div className="max-h-[200px] py-1 overflow-y-scroll custom-scrollbar">
+                {Object.keys(quantities).map((category) => (
+                  <div
+                    className="bg-slate-300 my-1 p-1 px-2 rounded-lg"
+                    key={category}
+                  >
+                    <p className="font-medium">{category}</p>
+                    {Object.keys(quantities[category]).map((item) => (
+                      <div className="flex justify-between pr-3">
+                        <p className="text-textlight pl-2" key={item}>
+                          {item}
+                        </p>
+                        <span className="text-[7px] sm:text-xs   ">
+                          {quantities[category][item]}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

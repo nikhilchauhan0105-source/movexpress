@@ -8,18 +8,19 @@ import {
   Truck,
 } from "lucide-react";
 import { FormHeading, FormSubHeading } from "../Common/Heading";
-import { selectedvanContext } from "../context/context";
+import { informationContext, selectedvanContext } from "../context/context";
 import { useContext, useState } from "react";
 import { PlacholderParagraph, ProgressBar } from "../Common/Helper";
 
 const When = ({ backtab, changetab }) => {
   const { vanvalue } = useContext(selectedvanContext);
-  const [loadingunloadingTime, setLoadingUnloadingTime] = useState(null);
-  const [startDate, setStartDate] = useState(null);
-  const [startTime, setStartTime] = useState(null);
-  
-  const [inputActiveSecondary ,setInputActiveSecondary] =useState(false)
-  const [inputActiveprimery ,setInputActivePrimery] =useState(false)
+  const { loadingunloadingTime, setLoadingUnloadingTime } =
+    useContext(informationContext);
+  const { startDate, setStartDate } = useContext(informationContext);
+  const { startTime, setStartTime } = useContext(informationContext);
+
+  const [inputActiveSecondary, setInputActiveSecondary] = useState(false);
+  const [inputActiveprimery, setInputActivePrimery] = useState(false);
 
   return (
     <form onSubmit={changetab}>

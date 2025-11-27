@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Upwardarrow } from "./Icons";
 
 import { AppleLogo, PlayStore } from "./Icons";
-import { ItemsqauntitesContext, tabnoContext } from "../context/context";
+import { informationContext, tabnoContext } from "../context/context";
 import { ChevronRight, Minus, Plus } from "lucide-react";
 
 export const Faqs = ({ question, answer, index }) => {
@@ -120,7 +120,7 @@ export const ProgressBar = () => {
 
 export const AddItemsList = ({ item, quantity }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { quantities, setQuantities } = useContext(ItemsqauntitesContext);
+  const { quantities, setQuantities } = useContext(informationContext);
 
   const handleChange = (index, value, list) => {
     setQuantities((prev) => ({
@@ -153,7 +153,7 @@ export const AddItemsList = ({ item, quantity }) => {
           {quantity.map((list, i) => (
             <div
               key={i}
-              className="flex justify-between  hover:bg-white text-xs items-center bg-blue-50/50 rounded-lg p-2"
+              className="flex justify-between shadow-sm/10  hover:bg-white text-xs items-center bg-blue-50/50 rounded-lg p-2"
             >
               <p>{list}</p>
 

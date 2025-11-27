@@ -13,6 +13,7 @@ import { selectedvanContext } from "../context/context";
 import { tabnoContext } from "../context/context";
 import When from "./When";
 import WhatsMoving from "./WhatsMoving";
+import { FinalSelectedItemsCard } from "../Common/Card";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -21,8 +22,6 @@ const Hero = () => {
   const [formStpes, setFormSteps] = useState("pickup-address");
   const [formStpesno, setFormStepsNo] = useState(1);
   const [vanvalue, setVanValue] = useState("");
-   
-   
 
   const handleselectvan = (e) => {
     setVanValue(e);
@@ -40,16 +39,24 @@ const Hero = () => {
       setFormStepsNo(4);
     }
   }, []);
- 
 
   return (
     <>
-      <tabnoContext.Provider value={ formStpesno}>
+      <tabnoContext.Provider value={formStpesno}>
         <selectedvanContext.Provider
           value={{ vanvalue, setVanValue: handleselectvan }}
         >
-          <section className=" bg-purple px-3 text-white relative">
+          <section className=" bg-purple px-3 lg:px-0 text-white relative">
             <div className="w-[393px] h-[393px] rounded-full bg-orange blur-[120px] absolute top-20 right-25 z-1 "></div>
+            {formStpes == "final-ouput" ? (
+              <FinalSelectedItemsCard
+                onClick={() => {
+                  navigate("?tab=pickup-address");
+                  setFormSteps("pickup-address");
+                  setFormStepsNo((prev) => prev=1);
+                }}
+              />
+            ) : null}
 
             <div
               data-aos="fade-up"
@@ -148,6 +155,11 @@ const Hero = () => {
                       navigate("?tab=when-moves");
                       setFormSteps("when-moves");
                       setFormStepsNo((prev) => prev - 1);
+                    }}
+                    onClick={() => {
+                      navigate("?tab=final-ouput");
+                      setFormSteps("final-ouput");
+                      setFormStepsNo((prev) => prev + 1);
                     }}
                   />
                 )}

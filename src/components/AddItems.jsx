@@ -1,16 +1,14 @@
 import { Box, Plus, X } from "lucide-react";
 import { additemslist } from "../Common/Data";
 import { AddItemsList } from "../Common/Helper";
-import { useContext } from "react";
-import { ItemsqauntitesContext } from "../context/context";
+import { useContext, useState } from "react";
+import { informationContext } from "../context/context";
 
 const AddItems = () => {
-  const { quantities } = useContext(ItemsqauntitesContext);
-  const { setQuantities } = useContext(ItemsqauntitesContext);
+  const { quantities, setQuantities } = useContext(informationContext);
 
-  
-
-
+  const [search, setSearch] = useState("");
+  console.log(search);
   return (
     <div>
       <div className="flex gap-2 items-center border-1  border-black/20 p-3 rounded-xl ">
@@ -18,6 +16,9 @@ const AddItems = () => {
           <Box size={18} className="text-white" />
         </div>
         <input
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
           type="text"
           placeholder="search for items ...."
           className="w-full outline-none"
@@ -36,9 +37,12 @@ const AddItems = () => {
       </button>
 
       <div className="w-full shadow-sm/30 rounded-xl max-h-[200px] custom-scrollbar overflow-y-scroll  bg-blue-300/10 mt-4 py-2 px-2 ">
-        {Object.keys(quantities).map((category) => {const hasQuantity = Object.values(quantities[category]).some((qty) => qty > 0)
+        {Object.keys(quantities).map((category) => {
+          const hasQuantity = Object.values(quantities[category]).some(
+            (qty) => qty > 0
+          );
 
-        if (!hasQuantity) return null; 
+          if (!hasQuantity) return null;
           return (
             <div
               className="max-w-[510px] relative  rounded-xl p-2  sm:p-2 sm:px-4 m-auto bg-white shadow-sm/30 my-2"
@@ -62,7 +66,7 @@ const AddItems = () => {
 
                 return (
                   <div
-                    className="flex  my-1 items-center justify-between pr-6"
+                    className="flex  my-1 items-center  justify-between pr-6"
                     key={item}
                   >
                     <p className="text-xs sm:text-xs">{item}</p>
