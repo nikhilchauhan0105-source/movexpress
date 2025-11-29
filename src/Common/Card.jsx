@@ -156,11 +156,11 @@ export const FinalSelectedItemsCard = ({ onClick }) => {
     quantities,
   } = useContext(informationContext);
   return (
-    <div className="w-full fixed top-0 h-screen z-10 bg-white/10 backdrop-blur-3xl">
+    <div className="w-full fixed top-0 h-screen px-3 z-10 bg-white/10 backdrop-blur-3xl">
       <div className="relative top-[50%] left-[50%] flex flex-col gap-5 p-3 px-4 -translate-[50%] bg-white max-w-[500px] w-full   rounded-2xl">
         <button
           type="button"
-          className="bg-orange -top-6 -right-6 absolute p-1 hover:bg-purple rounded-lg "
+          className="bg-orange top-1.5 right-1.5 md:-top-6 md:-right-6 absolute p-1 hover:bg-purple rounded-lg "
           onClick={onClick}
         >
           <X

@@ -46,17 +46,18 @@ const Hero = () => {
         <selectedvanContext.Provider
           value={{ vanvalue, setVanValue: handleselectvan }}
         >
-          <section className=" bg-purple px-3 lg:px-0 text-white relative">
+          {formStpes == "final-ouput" ? (
+            <FinalSelectedItemsCard
+              onClick={() => {
+                navigate("?tab=pickup-address");
+                setFormSteps("pickup-address");
+                setFormStepsNo((prev) => (prev = 1));
+              }}
+            />
+          ) : null}
+
+          <section className=" bg-purple px-2 xl:px-0 text-white relative">
             <div className="w-[393px] h-[393px] rounded-full bg-orange blur-[120px] absolute top-20 right-25 z-1 "></div>
-            {formStpes == "final-ouput" ? (
-              <FinalSelectedItemsCard
-                onClick={() => {
-                  navigate("?tab=pickup-address");
-                  setFormSteps("pickup-address");
-                  setFormStepsNo((prev) => prev=1);
-                }}
-              />
-            ) : null}
 
             <div
               data-aos="fade-up"
@@ -109,7 +110,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="max-w-[644px] w-full  p-4   md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-3xl">
+              <div className="max-w-[644px] w-full p-4 md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-3xl">
                 {formStpes === "pickup-address" && (
                   <ChooseDestinationForm
                     changetab={() => {

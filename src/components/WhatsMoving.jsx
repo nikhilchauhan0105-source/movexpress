@@ -96,7 +96,7 @@ const WhatsMoving = ({ backtab, onClick }) => {
 
       <button
         onClick={onClick}
-        className="w-full bg-orange rounded-2xl py-3 text-white "
+        className="w-full mt-3 bg-orange rounded-2xl py-3 text-white "
       >
         show my quote
       </button>
