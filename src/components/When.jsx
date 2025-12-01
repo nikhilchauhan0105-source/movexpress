@@ -11,6 +11,7 @@ import { FormHeading, FormSubHeading } from "../Common/Heading";
 import { informationContext, selectedvanContext } from "../context/context";
 import { useContext, useState } from "react";
 import { PlacholderParagraph, ProgressBar } from "../Common/Helper";
+import { loadingtime } from "../Common/Data";
 
 const When = ({ backtab, changetab }) => {
   const { vanvalue } = useContext(selectedvanContext);
@@ -107,12 +108,9 @@ const When = ({ backtab, changetab }) => {
                 startTime ? "opacity-100" : "opacity-0"
               } outline-none w-[97%] h-full absolute px-3 left-0 text-violetprimary/50 top-0`}
             >
-              <option>08:00</option>
-              <option>08:30</option>
-              <option>09:00</option>
-              <option>09:30</option>
-              <option>10:00</option>
-              <option>10:30</option>
+              {loadingtime.map((obj, index) => (
+                <option key={index}>{obj}</option>
+              ))}
             </select>
           </div>
         </div>
@@ -130,6 +128,7 @@ const When = ({ backtab, changetab }) => {
                 onChange={(e) => {
                   setStartDate(e.target.value);
                 }}
+                required
                 className="border-1 border-purple w-full rounded-xl h-[60px] px-6 outline-0 hover:bg-purple/10 mt-2"
                 type="date"
               />
@@ -162,12 +161,9 @@ const When = ({ backtab, changetab }) => {
                       loadingunloadingTime ? "opacity-100" : "opacity-0"
                     } outline-none w-[97%] h-full absolute px-3 left-0 text-violetprimary/50 top-0`}
                   >
-                    <option>08:00</option>
-                    <option>08:30</option>
-                    <option>09:00</option>
-                    <option>09:30</option>
-                    <option>10:00</option>
-                    <option>10:30</option>
+                    {loadingtime.map((obj, index) => (
+                      <option key={index}>{obj}</option>
+                    ))}
                   </select>
                 </div>
               </div>

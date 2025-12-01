@@ -18,7 +18,7 @@ const ChooseVanSlelctionBtn = () => {
 
   return (
     <section>
-      <form action="" className="flex flex-col gap-3">
+      <form className="flex flex-col gap-3">
         <div
           className={`flex  gap-3 border-1  ${
             smallvan ? "bg-purple/10 border-purple " : " hover:border-amber-600"

@@ -77,8 +77,10 @@ export const Footer = () => {
               <p className="text-xs md:text-base lg:text-lg ">(555) 123-4567</p>
             </div>
 
-            <button className="cursor-pointer mt-6 gap-1.5 flex bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-5 rounded-xl max-w-fit text-white  font-semibold">
-              Chat with us <Chat />
+            <button className="cursor-pointer mt-6 gap-1.5  bg-orange py-[10px] px-[20px] lg:py-[17px] lg:px-5 rounded-xl max-w-fit text-white  font-semibold">
+              <a className="flex gap-2" href="#">
+                Chat with us <Chat />
+              </a>
             </button>
           </div>
         </div>

@@ -14,7 +14,7 @@ import { informationContext } from "./context/context";
 
 const App = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 400 });
   }, []);
   const [quantities, setQuantities] = useState({});
   const [isTyped, setIsTyped] = useState("");
@@ -22,9 +22,7 @@ const App = () => {
   const [loadingunloadingTime, setLoadingUnloadingTime] = useState("");
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("");
-  useEffect(() => {
-    console.log("Updated quantities: ", quantities);
-  }, [quantities]);
+
 
   return (
     <>
@@ -49,11 +47,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blogsPage" element={<BlogsPage />} />
           <Route path="/blogs/:blogid" element={<BlogDetailsPage />} />
-          <Route
-            path="/servicepage/manvanservices"
-            element={<ManVanService />}
-          />
-          <Route path="/servicepage" element={<ServicePage />} />
+          <Route path="/servicepage/manvanservices"element={<ManVanService />}/>
+          <Route path="/service" element={<ServicePage />} />
           <Route path="/manvanservices" element={<ManVanService />} />
           <Route path="/becomedriver" element={<SignUpAsDriver />} />
           <Route path="/VechcleInfo" element={<VechcleInfo />} />

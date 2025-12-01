@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Info, Location } from "../Common/Icons";
 import { FormHeading } from "../Common/Heading";
 import { ProgressBar } from "../Common/Helper";
@@ -18,7 +18,7 @@ const ChooseDestinationForm = ({ changetab }) => {
   console.log(isTyped);
   console.log(isDestinationTyped);
   return (
-    <>
+    <form onSubmit={changetab}>
       <FormHeading
         head="Where to"
         subhead="Tell us your pickup and destination"
@@ -72,12 +72,10 @@ const ChooseDestinationForm = ({ changetab }) => {
 
       <button
         type="submit"
-        onClick={changetab}
-        className="cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
-      >
+        className="cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]" >
         Show quote
       </button>
-    </>
+    </form>
   );
 };
 

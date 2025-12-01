@@ -198,7 +198,7 @@ const BlogDetailsPage = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[414px] flex flex-col sticky top-25 h-fit  gap-4">
+        <div className="max-w-[414px] flex flex-col mx-auto sticky top-25 h-fit  gap-4">
           <HowToMakeABookingCard />
           <HowToMakeABookingCard />
         </div>

@@ -8,18 +8,18 @@ import { ProgressBar } from '../Common/Helper';
 const ChooseYourVan = ({ changetab, backtab }) => {
      
   return (
-    <>
+    <form onSubmit={changetab}>
       <FormHeading
         head="Choose your Van"
         subhead="Select your perfect vehicle"
       />
-        <ProgressBar/>
+      <ProgressBar />
       <FormSubHeading
         head="Choose Your Perfect Van"
         subhead="Select the right size for your move"
       />
       <div className="flex flex-col gap-3">
-        <ChooseVanSlelctionBtn/>
+        <ChooseVanSlelctionBtn />
       </div>
 
       <button
@@ -31,12 +31,11 @@ const ChooseYourVan = ({ changetab, backtab }) => {
 
       <button
         type="submit"
-        onClick={changetab}
         className="cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
       >
         Next : Select Date & Time <ArrowRight size={20} />
       </button>
-    </>
+    </form>
   );
 };
 

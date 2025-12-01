@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+
 
 const BookYourService = ({ rounded }) => {
   return (
@@ -10,14 +10,12 @@ const BookYourService = ({ rounded }) => {
         >
           Ready to book your Man & Van Service ?
         </p>
-        <Link to="/blogs/123">
           <button
             data-aos="fade-down"
             className={` ${rounded} cursor-pointer bg-orange py-4 px-8 lg:px-16 text-white mt-6`}
           >
-            Get Instant Quote Now
+            <a href="#">Get Instant Quote Now</a>
           </button>
-        </Link>
       </div>
     </section>
   );

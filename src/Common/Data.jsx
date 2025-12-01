@@ -149,7 +149,7 @@ export const navlist = [
     url: "/",
   },
   { name: "About", url: "/about" },
-  { name: "Service", url: "/servicepage" },
+  { name: "Service", url: "/service" },
   { name: "blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
 ];
@@ -255,7 +255,7 @@ export const quicklinklist = [
 
   {
     name: "Service",
-    url: "/servicepage",
+    url: "/service",
   },
 
   {
@@ -514,3 +514,14 @@ export const additemslist = [
     ],
   },
 ];
+
+export const loadingtime = [
+  "8:00",
+  "8:30",
+  "9:00",
+  "9:30",
+  "10:00",
+  "10:30",
+  "11:00",
+  "11:30",
+]
