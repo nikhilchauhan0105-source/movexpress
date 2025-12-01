@@ -20,12 +20,11 @@ const BlogDetailsPage = () => {
   }, []);
   const [blogsDetails, setblogsDetails] = useState(null);
 
-  let params = useParams();
+  const params = useParams();
 
   useEffect(() => {
     const filterblog = blogcarddetail.find((obj) => obj.slug === params.blogid);
     setblogsDetails(filterblog);
-    console.log(filterblog);
   }, [params.blogid]);
 
   return (

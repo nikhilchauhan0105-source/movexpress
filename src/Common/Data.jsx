@@ -184,7 +184,7 @@ export const blogcarddetail = [
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
     data: {
-      head: "change heading",
+      head: "how-to-track",
     },
   },
   {
@@ -193,7 +193,7 @@ export const blogcarddetail = [
     head: "How To Pack Fragile Items for Moving?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
     data: {
-      head: "again change heading",
+      head: "know-that-change",
     },
   },
   {
@@ -202,7 +202,7 @@ export const blogcarddetail = [
     head: "How To Pack Fragile Items for Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     data: {
-      head: " next change heading",
+      head: " know-that-combies",
     },
   },
   {
@@ -211,7 +211,7 @@ export const blogcarddetail = [
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
     data: {
-      head: " next change heading",
+      head: " know-that-stressful",
     },
   },
   {
