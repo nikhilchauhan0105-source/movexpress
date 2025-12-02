@@ -1,5 +1,3 @@
-
-
 import ChooseVanSlelctionBtn from '../Common/ChooseVanSlelctionBtn';
 import { FormHeading, FormSubHeading } from '../Common/Heading';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -8,7 +6,7 @@ import { ProgressBar } from '../Common/Helper';
 const ChooseYourVan = ({ changetab, backtab }) => {
      
   return (
-    <form onSubmit={changetab}>
+    <>
       <FormHeading
         head="Choose your Van"
         subhead="Select your perfect vehicle"
@@ -30,12 +28,12 @@ const ChooseYourVan = ({ changetab, backtab }) => {
       </button>
 
       <button
-        type="submit"
+        onClick={changetab}
         className="cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
       >
         Next : Select Date & Time <ArrowRight size={20} />
       </button>
-    </form>
+    </>
   );
 };
 

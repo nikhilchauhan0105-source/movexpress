@@ -15,10 +15,8 @@ const ChooseDestinationForm = ({ changetab }) => {
   const storeDestination = (event) => {
     setIsDestinationTyped(event.target.value);
   };
-  console.log(isTyped);
-  console.log(isDestinationTyped);
   return (
-    <form onSubmit={changetab}>
+    <>
       <FormHeading
         head="Where to"
         subhead="Tell us your pickup and destination"
@@ -46,7 +44,7 @@ const ChooseDestinationForm = ({ changetab }) => {
             <input
               className="w-full focus:outline-hidden"
               type="text"
-              onInputCapture={storeDestination}
+              onChange={storeDestination}
               value={isDestinationTyped}
               required
               placeholder="Enter pickup address"
@@ -58,7 +56,7 @@ const ChooseDestinationForm = ({ changetab }) => {
           className="w-full h-[180px] rounded-xl mt-[15px] lg:mt-[34px]"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111497.07331438884!2d75.67313700648043!3d29.15631570834024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391232d8011d0c37%3A0x1d3f0df105af1178!2sHisar%2C%20Haryana!5e0!3m2!1sen!2sin!4v1760597843244!5m2!1sen!2sin"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="text-green flex justify-between gap-2 items-center bg-green-500/10 mt-[12px] p-[12px] rounded-2xl">
           <Info />
@@ -71,11 +69,12 @@ const ChooseDestinationForm = ({ changetab }) => {
       </div>
 
       <button
-        type="submit"
-        className="cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]" >
+        onClick={changetab}
+        className="cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
+      >
         Show quote
       </button>
-    </form>
+    </>
   );
 };
 

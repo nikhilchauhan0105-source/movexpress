@@ -23,7 +23,7 @@ const When = ({ backtab, changetab }) => {
   const [inputActiveprimery, setInputActivePrimery] = useState(false);
 
   return (
-    <form onSubmit={changetab}>
+    <>
       <div>
         <FormHeading
           head="when ?"
@@ -178,12 +178,12 @@ const When = ({ backtab, changetab }) => {
       </button>
 
       <button
-        type="submit"
+        onClick={changetab}
         className="cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
       >
         Next : Select items <ArrowRight size={20} />
       </button>
-    </form>
+    </>
   );
 };
 

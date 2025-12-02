@@ -4,10 +4,10 @@ import { Link, useNavigate } from "react-router";
 import { useContext } from "react";
 import { informationContext, selectedvanContext } from "../context/context";
 
-export const Card = ({ icon, head, subhead, url }) => {
+export const Card = ({ icon, head, subhead, url}) => {
   const navigate = useNavigate();
   return (
-    <div className="group  " onClick={() => navigate("manvanservices")}>
+    <div className="group"  onClick={() => navigate("manvanservices")}>
       <div className="flex justify-between mb-[24px] ">
         <span className="group-hover:translate-x-[20px] duration-300 transition-all">
           {icon}
@@ -146,7 +146,7 @@ export const MakeABookingCard = ({ head, subhead, subheadwidth }) => {
 };
 
 export const FinalSelectedItemsCard = ({ onClick }) => {
-  const { vanvalue } = useContext(selectedvanContext);
+  const { vanvalue } = useContext(informationContext);
   const {
     isTyped,
     isDestinationTyped,

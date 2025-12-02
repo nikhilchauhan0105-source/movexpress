@@ -9,7 +9,6 @@ import {
 import ChooseDestinationForm from "./ChooseDestinationForm";
 import ChooseYourVan from "./ChooseYourVan";
 import { useNavigate, useSearchParams } from "react-router";
-import { selectedvanContext } from "../context/context";
 import { tabnoContext } from "../context/context";
 import When from "./When";
 import WhatsMoving from "./WhatsMoving";
@@ -21,11 +20,9 @@ const Hero = () => {
   const params = searchParams.get("tab");
   const [formStpes, setFormSteps] = useState("pickup-address");
   const [formStpesno, setFormStepsNo] = useState(1);
-  const [vanvalue, setVanValue] = useState("");
+ 
 
-  const handleselectvan = (e) => {
-    setVanValue(e);
-  };
+  
   useEffect(() => {
     if (params) {
       setFormSteps(params);
@@ -43,9 +40,7 @@ const Hero = () => {
   return (
     <>
       <tabnoContext.Provider value={formStpesno}>
-        <selectedvanContext.Provider
-          value={{ vanvalue, setVanValue: handleselectvan }}
-        >
+        
           {formStpes == "final-ouput" ? (
             <FinalSelectedItemsCard
               onClick={() => {
@@ -167,7 +162,6 @@ const Hero = () => {
               </div>
             </div>
           </section>
-        </selectedvanContext.Provider>
       </tabnoContext.Provider>
     </>
   );

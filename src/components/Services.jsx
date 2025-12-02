@@ -18,7 +18,7 @@ const Services = () => {
       </div>
       <div className="max-w-[1294px] flex  flex-wrap justify-center   mt-[56px]  gap-6 lg:gap-7 m-auto">
         {serviceslist.map((i, indx) => (
-          <div
+          <div key={indx}
             data-aos="zoom-in"
             className={` md:max-w-[310px] w-full rounded-2xl hover:shadow-md p-6 bg-white`}
           >
@@ -27,7 +27,7 @@ const Services = () => {
               arrow={i.arrow}
               head={i.head}
               subhead={i.subhead}
-              key={indx}
+            
             />
           </div>
         ))}

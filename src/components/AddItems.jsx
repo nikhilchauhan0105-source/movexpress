@@ -8,7 +8,7 @@ const AddItems = () => {
   const { quantities, setQuantities } = useContext(informationContext);
 
   const [search, setSearch] = useState("");
-  console.log(search);
+
   return (
     <div>
       <div className="flex gap-2 items-center border-1  border-black/20 p-3 rounded-xl ">

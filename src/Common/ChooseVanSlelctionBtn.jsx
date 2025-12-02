@@ -5,7 +5,7 @@ import largevanimage from "../assets/images/large_van.jpg";
 import lutonvanimage from "../assets/images/luton_van.jpg";
 import lutonboxvanimage from "../assets/images/luton_boxVan.jpg";
 import { useContext, useState } from "react";
-import { selectedvanContext } from "../context/context";
+import { informationContext} from "../context/context";
 
 const ChooseVanSlelctionBtn = () => {
   const [smallvan, setSmallVan] = useState(false);
@@ -14,11 +14,11 @@ const ChooseVanSlelctionBtn = () => {
   const [lutonvan, setlutonVan] = useState(false);
   const [boxvan, setBoxVan] = useState(false);
 
-  const { vanvalue, setVanValue } = useContext(selectedvanContext);
+  const { vanvalue, setVanValue } = useContext(informationContext);
 
   return (
     <section>
-      <form className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3">
         <div
           className={`flex  gap-3 border-1  ${
             smallvan ? "bg-purple/10 border-purple " : " hover:border-amber-600"
@@ -26,7 +26,7 @@ const ChooseVanSlelctionBtn = () => {
         >
           <input
             name="criminal"
-            required
+          
             onChange={(e) => {
               setVanValue(e.target.value);
             }}
@@ -81,7 +81,7 @@ const ChooseVanSlelctionBtn = () => {
         >
           <input
             name="criminal"
-            required
+           
             onChange={(e) => {
               setVanValue(e.target.value);
             }}
@@ -136,7 +136,7 @@ const ChooseVanSlelctionBtn = () => {
         >
           <input
             name="criminal"
-            required
+           
             onChange={(e) => {
               setVanValue(e.target.value);
             }}
@@ -191,7 +191,7 @@ const ChooseVanSlelctionBtn = () => {
         >
           <input
             name="criminal"
-            required
+            
             onChange={(e) => {
               setVanValue(e.target.value);
             }}
@@ -246,7 +246,6 @@ const ChooseVanSlelctionBtn = () => {
         >
           <input
             name="criminal"
-            required
             onChange={(e) => {
               setVanValue(e.target.value);
             }}
@@ -294,7 +293,7 @@ const ChooseVanSlelctionBtn = () => {
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </section>
   );
 };

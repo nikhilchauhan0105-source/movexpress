@@ -13,9 +13,8 @@ const Work = () => {
       </div>
       <div className="max-w-[1296px]  m-auto flex justify-center gap-3 lg:gap-6 mt-[58px] flex-wrap ">
         {worklist.map((items, index) => (
-          <div className="md:max-w-[287px] w-full">
+          <div key={index} className="md:max-w-[287px] w-full">
             <Workcard
-              key={index}
               icon={items.icon}
               steps={items.step}
               head={items.head}

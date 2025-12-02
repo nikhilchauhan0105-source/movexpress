@@ -22,7 +22,26 @@ const App = () => {
   const [loadingunloadingTime, setLoadingUnloadingTime] = useState("");
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("");
+   const [vanvalue, setVanValue] = useState("");
 
+   const handleselectvan = (e) => {
+     setVanValue(e);
+   };
+  const details = {
+    pickupaddress: isTyped ,
+    destinationaddress: isDestinationTyped ,
+    vantype:vanvalue,
+    loadingtime: loadingunloadingTime ,
+    startdate: startDate ,
+    startime: startTime ,
+  };
+  const json = JSON.stringify(details);
+  useEffect(() => {
+    console.log(json);
+  }, [json]);
+
+
+  
 
   return (
     <>
@@ -40,6 +59,9 @@ const App = () => {
           setStartDate,
           startTime,
           setStartTime,
+          vanvalue,
+          setVanValue,
+          handleselectvan,
         }}
       >
         <Routes>
@@ -47,7 +69,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blogsPage" element={<BlogsPage />} />
           <Route path="/blogs/:blogid" element={<BlogDetailsPage />} />
-          <Route path="/servicepage/manvanservices"element={<ManVanService />}/>
+          <Route
+            path="/servicepage/manvanservices"
+            element={<ManVanService />}
+          />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/manvanservices" element={<ManVanService />} />
           <Route path="/becomedriver" element={<SignUpAsDriver />} />
