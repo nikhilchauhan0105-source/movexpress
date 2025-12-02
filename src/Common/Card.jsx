@@ -81,15 +81,22 @@ export const Customercard = ({ img, name, role, text, className }) => {
 
 export const BlogsSectioncard = ({ image, head, text, slug }) => {
   return (
-    <div className="max-w-[415px] m-auto ">
-      <div className="max-w-[415px] ">
-        <img className="w-full rounded-2xl" src={image} alt="card images" />
+    <div className="group max-w-[415px] m-auto ">
+      <div className="max-w-[415px] overflow-hidden rounded-2xl">
+        <img
+          className="w-full group-hover:scale-105 transition-all duration-300 "
+          src={image}
+          alt="card images"
+        />
       </div>
       <div className="flex flex-col gap-[16px] my-2.5 md:my-[24px] ">
-        <p className=" text-base md:text-[24px] ">{head}</p>
+        <p className=" text-base max-w-[350px] md:text-[24px] ">{head}</p>
         <p className="text-sm md:text-[18px] max-w-[379px]">{text}</p>
       </div>
-      <Link to={`/blogs/${slug}`} className="flex items-center gap-4">
+      <Link
+        to={`/blogs/${slug}`}
+        className="flex items-center group-hover:gap-6 transition-all duration-150 gap-4"
+      >
         <p className="text-purple font-semibold cursor-pointer">learn more</p>
         <Arrow />
       </Link>
