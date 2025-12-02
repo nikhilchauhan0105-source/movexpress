@@ -1,7 +1,5 @@
 import Navbar from "../Common/Navbar";
-
 import MakeABookingSub from "../Common/MakeABookingSub";
-
 import ReviewBooking from "../Common/ReviewBooking";
 import BookYourService from "../components/BookYourService";
 import Footer from "../components/Footer";
@@ -13,18 +11,21 @@ import { useParams } from "react-router";
 import { blogcarddetail } from "../Common/Data";
 import { MakeABookingCard } from "../Common/Card";
 import { PagesHeading } from "../Common/Heading";
+import { pageparagraph } from "../Common/BlogsDetailsData";
 
 const BlogDetailsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [blogsDetails, setblogsDetails] = useState(null);
+  const [blogsDetails, setblogsDetails] = useState("");
 
   const params = useParams();
 
+  const filterblog = blogcarddetail.find((obj) => obj.slug === params.blogid);
   useEffect(() => {
-    const filterblog = blogcarddetail.find((obj) => obj.slug === params.blogid);
     setblogsDetails(filterblog);
+    console.log(filterblog.slug);
+    console.log(params.blogid);
   }, [params.blogid]);
 
   return (
@@ -39,56 +40,56 @@ const BlogDetailsPage = () => {
       />
       <div className="max-w-[1296px] px-3 pb-20 gap-6 xl:gap-0 flex-col mb-16  flex xl:flex-row justify-between mt-20 m-auto">
         <div className="max-w-[728px] m-auto">
-          <p className="text-textlight leading-[170%]">
-            With MovExpress, booking a Man and van service is simple, quick, and
-            efficient. Follow the few steps below to book your van and hit the
-            road quickly.
-          </p>
+          {"How-To-Pack-Fragile-Items" == params.blogid ? (
+            <p className="leading-[170%] text-black/60">
+              {pageparagraph.maindescription}
+            </p>
+          ) : null}
+          {"How-to-Make-a-Booking" == params.blogid ? (
+            <p className="leading-[170%] text-black/60">
+              {pageparagraph.maindescription}
+            </p>
+          ) : null}
+          {"How-to-Declutter-Before-Moving" == params.blogid ? (
+            <p className="leading-[170%] text-black/60">
+              {pageparagraph.maindescription}
+            </p>
+          ) : null}
+
           <MakeABookingSub
-            head="Enter Your Pickup and Drop-off Location"
-            subhhead="Start by providing the details of your move:"
+            head={pageparagraph.cardwithheading[0].heading}
+            subhhead={pageparagraph.cardwithheading[0].description}
           />
-          <div className="flex flex-wrap gap-2 md:gap-0 justify-between  ">
-            <MakeABookingCard
-              head="Pickup Postcode"
-              subhead="This is the postcode of the place where you want the van picked up."
-              subheadwidth="max-w-[238px]"
-            />
-            <MakeABookingCard
-              head="Drop-off Postcode"
-              subhead="Enter the latitude and longitude of the drop-off location."
-              subheadwidth="max-w-[213px]"
-            />
+          <div className="grid grid-cols-2 gap-2 md:gap-0 justify-between  ">
+            {pageparagraph.cardwithheading[0].list.map((obj, index) => {
+              return (
+                <div key={index}>
+                  <MakeABookingCard
+                    head={obj.title}
+                    subhead={obj.description}
+                  />
+                </div>
+              );
+            })}
           </div>
           <p className="text-neutral my-6 leading-[170%]">
-            Our system will give the estimated travel duration and quote the
-            fare immediately upon input.
+            {pageparagraph.cardwithheading.para}
           </p>
           <MakeABookingSub
-            head="Choose the Right Van Size"
-            subhhead="Choose the van size that is most appropriate for your move. We have four van sizes for customers to choose from:"
+            head={pageparagraph.cardwithheading[1].heading}
+            subhhead={pageparagraph.cardwithheading[1].description}
           />
           <div className="flex justify-between  flex-wrap gap-5 ">
-            <MakeABookingCard
-              head="Small Van"
-              subhead="This is the postcode of the place where you want the van picked up."
-              subheadwidth="max-w-[238px]"
-            />
-            <MakeABookingCard
-              head="Drop-off Postcode"
-              subhead="Enter the latitude and longitude of the drop-off location."
-              subheadwidth="max-w-[213px]"
-            />
-            <MakeABookingCard
-              head="Large Van"
-              subhead="Ideal for transporting big furniture or several oversized pieces (starting from £80)."
-              subheadwidth="max-w-[238px]"
-            />
-            <MakeABookingCard
-              head="Luton Van"
-              subhead="Best for big house moves or office relocations (from £90)."
-              subheadwidth="max-w-[213px]"
-            />
+            {pageparagraph.cardwithheading[1].list.map((obj, index) => {
+              return (
+                <div key={index}>
+                  <MakeABookingCard
+                    head={obj.title}
+                    subhead={obj.description}
+                  />
+                </div>
+              );
+            })}
           </div>
           <p className="text-textlight my-6">
             If you are unsure which van size is most appropriate for your move

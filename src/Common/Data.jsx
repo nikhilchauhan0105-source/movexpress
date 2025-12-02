@@ -179,7 +179,7 @@ export const faqslist = [
 
 export const blogcarddetail = [
   {
-    slug: "how-to-track",
+    slug: "How-To-Pack-Fragile-Items",
     image: "./src/assets/images/pacakge.jpg",
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
@@ -188,7 +188,7 @@ export const blogcarddetail = [
     },
   },
   {
-    slug: "know-that-change",
+    slug: "How-to-Make-a-Booking",
     image: "./src/assets/images/place-order.jpg",
     head: "How to Make a Booking with Us?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
@@ -197,7 +197,7 @@ export const blogcarddetail = [
     },
   },
   {
-    slug: "know-that-combies",
+    slug: "How-to-Declutter-Before-Moving",
     image: "./src/assets/images/decultter.jpg",
     head: "How to Declutter Before Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
