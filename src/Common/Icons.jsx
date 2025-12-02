@@ -631,10 +631,8 @@ export const MenuIcon = () => {
 
 export const Cross = () => {
   return (
-    <svg
+    <svg className="md:w-10 w-8 h-8 md:h-10 "
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
       viewBox="0 0 15 15"
     >
       <path

@@ -66,7 +66,7 @@ const Navbar = () => {
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 transition-all  ease-out rounded-xl bg-purple  ml-auto"
+            className="p-1 py-1.5 md:p-2 transition-all  ease-out rounded-xl bg-purple  ml-auto"
           >
             <Cross />
           </button>
