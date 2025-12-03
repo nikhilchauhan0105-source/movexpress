@@ -11,7 +11,8 @@ import { useParams } from "react-router";
 import { blogcarddetail } from "../Common/Data";
 import { MakeABookingCard } from "../Common/Card";
 import { pageparagraph } from "../Common/BlogsDetailsData";
-import { PagesHeading } from "../common/Heading";
+import { PagesHeading } from "../Common/Heading";
+
 
 const BlogDetailsPage = () => {
   useEffect(() => {
@@ -114,59 +115,58 @@ const BlogDetailsPage = () => {
             {pageparagraph.cardwithheading[2].para}
           </p>
           <MakeABookingSub
-            head="Choose Your Moving Date and Time"
-            subhhead="We offer flexible scheduling options:"
+            head={pageparagraph.cardwithheading[3].heading}
+            subhhead={pageparagraph.cardwithheading[3].description}
           />
-          <div className="flex flex-wrap gap-6">
-            <MakeABookingCard
-              head="Today's Price"
-              subhead="Looking to lease a van right now? Book for today at the displayed rate."
-              subheadwidth="max-w-[238px]"
-            />
-            <MakeABookingCard
-              head="Next day"
-              subhead="If you plan to move the following day, you can get a slightly reduced price."
-              subheadwidth="max-w-[304px]"
-            />
-            <MakeABookingCard
-              head="Custom Date & Time"
-              subhead="Choose the date to move at your convenience."
-              subheadwidth="max-w-[238px]"
-            />
+          <div className="flex justify-between  flex-wrap gap-5 ">
+            {pageparagraph.cardwithheading[3].list.map((obj, index) => {
+              return (
+                <div key={index}>
+                  <MakeABookingCard
+                    head={obj.title}
+                    subhead={obj.description}
+                  />
+                </div>
+              );
+            })}
           </div>
           <p className="text-textlight my-6">
-            You can also decide how many hours you need the van and have enough
-            time to load and unload your items.
+            {pageparagraph.cardwithheading[3].para}
           </p>
           <div className="max-w-[728px]">
             <MakeABookingSub
-              head="Review Your Booking Details"
-              subhhead="When making your booking, you will notice:"
+              head={pageparagraph.cardwithheading[4].heading}
+              subhhead={pageparagraph.cardwithheading[4].description}
             />
-            <div className="flex flex-wrap gap-6 ">
-              <ReviewBooking text="Estimated travel time" />
-              <ReviewBooking text="Load & unload time" />
-              <ReviewBooking text="Total duration of the job" />
-              <ReviewBooking text="Final price" />
+            <div className="grid grid-cols-2 gap-6 ">
+              {pageparagraph.cardwithheading[4].list.map((obj, index) => {
+                return (
+                  <div key={index}>
+                    <ReviewBooking text={obj.title} />
+                  </div>
+                );
+              })}
             </div>
             <p className="text-textlight my-6">
-              As with every step or task, double-check everything to ensure it
-              is in order before moving on to the next phase.
+              {pageparagraph.cardwithheading[4].para}
             </p>
           </div>
           <div className="max-w-[728px]">
             <MakeABookingSub
-              head="Enter Your Contact Details"
-              subhhead="To complete your booking, some personal information is required:"
+              head={pageparagraph.cardwithheading[5].heading}
+              subhhead={pageparagraph.cardwithheading[5].description}
             />
-            <div className="flex flex-wrap gap-6 ">
-              <ReviewBooking text="First name & surname" />
-              <ReviewBooking text="Email address" />
-              <ReviewBooking text="Phone number" />
+            <div className="grid grid-cols-2 gap-6 ">
+              {pageparagraph.cardwithheading[4].list.map((obj, index) => {
+                return (
+                  <div key={index}>
+                    <ReviewBooking text={obj.title} />
+                  </div>
+                );
+              })}
             </div>
             <p className="text-textlight my-6">
-              As with every step or task, double-check everything to ensure it
-              is in order before moving on to the next phase.
+              {pageparagraph.cardwithheading[5].para}
             </p>
           </div>
           <div className="mt-6">

@@ -69,6 +69,63 @@ export const pageparagraph = {
       ],
       para: "If you are unsure which van size is most appropriate for your move based on the volume of your belongings, feel free to consult with our team.",
     },
+    {
+      heading: "Choose Your Moving Date and Time",
+      description: "We offer flexible scheduling options:",
+      list: [
+        {
+          title: "Today's Price",
+          description:
+            "Looking to lease a van right now? Book for today at the displayed rate.",
+        },
+        {
+          title: "Next day",
+          description:
+            "If you plan to move the following day, you can get a slightly reduced price.",
+        },
+        {
+          title: "Custom Date & Time",
+          description: "Choose the date to move at your convenience.",
+        },
+      ],
+      para: "You can also decide how many hours you need the van and have enough time to load and unload your items.",
+    },
+    {
+      heading: "Review Your Booking Details",
+      description: "When making your booking, you will notice:",
+      list: [
+        {
+          title: "Estimated travel time",
+        },
+        {
+          title: "Load & unload time",
+        },
+        {
+          title: "Total duration of the job",
+        },
+        {
+          title: "Final price",
+        },
+      ],
+      para: "As with every step or task, double-check everything to ensure it is in order before moving on to the next phase.",
+    },
+    {
+      heading: "Enter Your Contact Details",
+      description:
+        "To complete your booking, some personal information is required:",
+      list: [
+        {
+          title: "First name & surname",
+        },
+        {
+          title: "Email address",
+        },
+        {
+          title: "Phone number",
+        },
+      ],
+      para: "As with every step or task, double-check everything to ensure it is in order before moving on to the next phase..",
+    },
   ],
 };
 

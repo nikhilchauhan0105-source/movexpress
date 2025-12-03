@@ -41,8 +41,6 @@ const App = () => {
   }, [json]);
 
 
-  
-
   return (
     <>
       <informationContext.Provider

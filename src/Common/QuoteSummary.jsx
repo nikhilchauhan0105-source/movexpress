@@ -14,7 +14,7 @@ export const QuoteSummary = ({ onClick }) => {
             Quote Summary
           </h2>
           <p className="text-obsidian text-sm max-w-md font-inter">
-            Peview Your Quote Details
+            Review your quote details
           </p>
         </div>
         <div className="p-5 mb-4 bg-purple text-white rounded-lg shadow-md/70 w-full flex items-center justify-between">
