@@ -17,7 +17,7 @@ export const QuoteSummary = ({ onClick }) => {
             Peview Your Quote Details
           </p>
         </div>
-        <div className="p-5 mb-4 bg-purple text-white rounded-lg shadow-md w-full flex items-center justify-between">
+        <div className="p-5 mb-4 bg-purple text-white rounded-lg shadow-md/70 w-full flex items-center justify-between">
           <p className="font-inter text-flawed font-medium text-xs mb-1">
             Estimated Total
           </p>
