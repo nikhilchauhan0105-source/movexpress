@@ -54,3 +54,7 @@
  .whatsmovingbtn {
   @apply  border-1 text-xs  transition-all duration-350   text-center rounded-xl py-3 
  }
+
+ .cancel-button-style{
+  @apply px-4 py-2 hover:text-[#505561] text-[#3d3f40] font-semibold rounded-xl font-inter bg-slate-100 text-sm md:text-base cursor-pointer transition-all duration-200 ease-in-out hover:bg-slate-200
+}

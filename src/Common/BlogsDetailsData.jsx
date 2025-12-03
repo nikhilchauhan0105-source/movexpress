@@ -35,8 +35,39 @@ export const pageparagraph = {
           description:
             "Suitable for small furniture and several boxes (from £70).",
         },
+        {
+          title: "Large Van",
+          description:
+            "Ideal for transporting big furniture or several oversized pieces (starting from £80).",
+        },
+        {
+          title: "Luton Van",
+          description:
+            "Best for big house moves or office relocations (from £90).",
+        },
       ],
-      para: "Our system will give the estimated travel duration and quote the fare immediately upon input.",
+      para: "If you are unsure which van size is most appropriate for your move based on the volume of your belongings, feel free to consult with our team.",
+    },
+    {
+      heading: "Select Your Help Option",
+      description:
+        "Determine if you require any assistance to help you move to the next step:",
+      list: [
+        {
+          title: "No Help Needed",
+          description: "You load and unload the van, and nobody helps.",
+        },
+        {
+          title: "Driver + 1 Helper",
+          description:
+            "The driver will be accompanied by an assistant to assist loading and unloading",
+        },
+        {
+          title: "Driver + 2 Assistants",
+          description: "They will help transport your items, taking less time.",
+        },
+      ],
+      para: "If you are unsure which van size is most appropriate for your move based on the volume of your belongings, feel free to consult with our team.",
     },
   ],
 };

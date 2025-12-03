@@ -13,7 +13,7 @@ import BlogsSection from "./BlogsSection";
 
 const Homepage = () => {
   return (
-    <>
+    <section className="">
       <Navbar />
       <Hero />
       <Services />
@@ -25,7 +25,7 @@ const Homepage = () => {
       <BookYourService />
       <Footer />
        <Topbutton/>
-    </>
+    </section>
   );
 };
 

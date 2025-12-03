@@ -10,8 +10,8 @@ import { Calender, Clock } from "../Common/Icons";
 import { useParams } from "react-router";
 import { blogcarddetail } from "../Common/Data";
 import { MakeABookingCard } from "../Common/Card";
-import { PagesHeading } from "../Common/Heading";
 import { pageparagraph } from "../Common/BlogsDetailsData";
+import { PagesHeading } from "../common/Heading";
 
 const BlogDetailsPage = () => {
   useEffect(() => {
@@ -92,35 +92,26 @@ const BlogDetailsPage = () => {
             })}
           </div>
           <p className="text-textlight my-6">
-            If you are unsure which van size is most appropriate for your move
-            based on the volume of your belongings, feel free to consult with
-            our team.
+            {pageparagraph.cardwithheading[1].para}
           </p>
           <MakeABookingSub
-            head="Select Your Help Option"
-            subhhead="Determine if you require any assistance to help you move to the next step:"
+            head={pageparagraph.cardwithheading[2].heading}
+            subhhead={pageparagraph.cardwithheading[2].description}
           />
-          <div className="flex flex-wrap gap-6">
-            <MakeABookingCard
-              head="No Help Needed"
-              subhead="You load and unload the van, and nobody helps."
-              subheadwidth="max-w-[238px]"
-            />
-            <MakeABookingCard
-              head="Driver + 1 Helper"
-              subhead="The driver will be accompanied by an assistant to assist loading and unloading"
-              subheadwidth="max-w-[304px]"
-            />
-            <MakeABookingCard
-              head="Driver + 2 Assistants"
-              subhead="They will help transport your items, taking less time."
-              subheadwidth="max-w-[238px]"
-            />
+          <div className="flex justify-between  flex-wrap gap-5 ">
+            {pageparagraph.cardwithheading[2].list.map((obj, index) => {
+              return (
+                <div key={index}>
+                  <MakeABookingCard
+                    head={obj.title}
+                    subhead={obj.description}
+                  />
+                </div>
+              );
+            })}
           </div>
           <p className="text-textlight my-6">
-            Assistance is especially helpful when transporting massive items,
-            though it can also be required for anything that may not fit into a
-            typical car.
+            {pageparagraph.cardwithheading[2].para}
           </p>
           <MakeABookingSub
             head="Choose Your Moving Date and Time"
