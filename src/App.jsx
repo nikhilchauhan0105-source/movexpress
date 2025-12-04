@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router";
+import { Route, Routes, useNavigate } from "react-router";
 import About from "./components/About";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import BlogsPage from "./pages/BlogsPage";
@@ -11,10 +11,9 @@ import ServicePage from "./pages/ServicePage";
 import SignUpAsDriver from "./pages/SignUpAsDriver";
 import VechcleInfo from "./pages/VehcleInfo";
 import { informationContext } from "./context/context";
-import { getAuth } from "firebase/auth";
-import app, { db } from "./utills/firebase";
+import { db } from "./utills/firebase";
 import { addDoc, collection } from "firebase/firestore";
-const auth = getAuth(app);
+
 
 const App = () => {
   useEffect(() => {
@@ -27,6 +26,8 @@ const App = () => {
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [vanvalue, setVanValue] = useState("");
+  const [formStpes, setFormSteps] = useState("pickup-address");
+  const navigate = useNavigate()
 
   const handleselectvan = (e) => {
     setVanValue(e);
@@ -58,6 +59,8 @@ const App = () => {
       await addDoc(userCollection, details);
       await addDoc(itemsCollection, quantities);
       alert("data sent sucessful");
+      navigate("?tab=pickup-address");
+      setFormSteps("pickup-address");
     } catch (error) {
       return error;
     }
@@ -83,6 +86,8 @@ const App = () => {
           setVanValue,
           handleselectvan,
           HandleConform,
+          formStpes,
+          setFormSteps,
         }}
       >
         <Routes>

@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { informationContext } from "../context/context";
 import { Calendar, Check, CheckCircle, MapPin, Truck } from "lucide-react";
+import { useNavigate } from "react-router";
 
 
-export const QuoteSummary = ({ onClick }) => {
+export const QuoteSummary = ({ onClick}) => {
+  const navigate = useNavigate();
   const [isconformed, setIsConformed] = useState(false)
   const {
     isTyped,
@@ -109,8 +111,8 @@ export const QuoteSummary = ({ onClick }) => {
           <button
             onClick={() => (HandleConform(), setIsConformed(true))}
             className={` ${
-              isconformed ? "bg-amber-600" : "bg-purple"
-            }  w-[157px]  text-white p-2 items-center rounded-xl gap-1 flex`}
+              isconformed ? "bg-amber-600  " : "bg-purple"
+            }  w-[157px] hover:inset-shadow-sm/70 hover:shadow-md/50 hover:inset-shadow-white   text-white p-2 items-center rounded-xl gap-1 flex`}
           >
             <CheckCircle size={16} className="mr-1" />
             Confirm & Book

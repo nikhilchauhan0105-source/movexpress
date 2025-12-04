@@ -12,7 +12,7 @@ const WhatsMoving = ({ backtab, onClick }) => {
   const [camera, setCamera] = useState(false);
 
   return (
-    <div >
+    <div>
       <div>
         <FormHeading
           head="What's moving?"
@@ -89,14 +89,14 @@ const WhatsMoving = ({ backtab, onClick }) => {
       </div>
       <button
         onClick={backtab}
-        className="bg-purple text-white px-4 py-1  md:px-8 md:py-4 rounded-4xl text-sm md:text-lg flex gap-1 items-center mt-4"
+        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white  bg-purple text-white px-4 py-1  md:px-8 md:py-4 rounded-4xl text-sm md:text-lg flex gap-1 items-center mt-4"
       >
         <ArrowLeft /> Back
       </button>
 
       <button
         onClick={onClick}
-        className="w-full mt-3 bg-orange rounded-2xl py-3 text-white "
+        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white w-full mt-3 bg-orange rounded-2xl py-3 text-white "
       >
         show my quote
       </button>

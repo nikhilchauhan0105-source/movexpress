@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   Greenstar,
   Halfstar,
@@ -9,7 +9,7 @@ import {
 import ChooseDestinationForm from "./ChooseDestinationForm";
 import ChooseYourVan from "./ChooseYourVan";
 import { useNavigate, useSearchParams } from "react-router";
-import { tabnoContext } from "../context/context";
+import { informationContext, tabnoContext } from "../context/context";
 import When from "./When";
 import WhatsMoving from "./WhatsMoving";
 import { QuoteSummary } from "../Common/QuoteSummary";
@@ -18,7 +18,7 @@ const Hero = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const params = searchParams.get("tab");
-  const [formStpes, setFormSteps] = useState("pickup-address");
+  const {formStpes, setFormSteps} = useContext(informationContext);
   const [formStpesno, setFormStepsNo] = useState(1);
  
 

@@ -70,7 +70,7 @@ const ChooseDestinationForm = ({ changetab }) => {
 
       <button
         onClick={changetab}
-        className="cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
+        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white cursor-pointer mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
       >
         Show quote
       </button>
