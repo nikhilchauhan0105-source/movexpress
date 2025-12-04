@@ -11,7 +11,7 @@ export const Faqs = ({ question, answer, index }) => {
     <div
       onClick={() => setIscliked(IsClicked === index ? null : index)}
       data-aos="fade-down"
-      className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-4 md:py-[26px]   rounded-2xl "
+      className="max-w-[637px] bg-white w-full border-1  border-black/20 md:px-[32px] p-2 md:p-4 md:py-[26px] rounded-xl  md:rounded-2xl "
     >
       <div className="flex justify-between ">
         <p className="md:text-[24px] ">{question}</p>

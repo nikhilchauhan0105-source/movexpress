@@ -66,14 +66,14 @@ const Hero = () => {
                 </p>
               </div>
               <div className="text-base font-normal">
-                <div className=" max-w-[422px] mt-[42px] flex">
-                  <div className="flex gap-[16px] max-w-[191px]">
+                <div className=" max-w-[422px] mt-[42px] justify-between flex">
+                  <div className="flex items-center gap-2 md:gap-[16px] max-w-[191px]">
                     <Trust />
                     <p className="text-[12px] sm:text-base">
                       Trusted across London
                     </p>
                   </div>
-                  <div className="flex gap-[16px] max-w-[191px]">
+                  <div className="flex  items-center gap-2 md:gap-[16px] max-w-[191px]">
                     <Licensed />
                     <p className="text-[12px] sm:text-base">
                       Licensed & Insured
@@ -103,7 +103,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            <div className="max-w-[644px] w-full p-4 md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-3xl">
+            <div className="max-w-[644px] w-full p-4 md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-xl md:rounded-3xl">
               {formStpes === "pickup-address" && (
                 <ChooseDestinationForm
                   changetab={() => {

@@ -20,9 +20,7 @@ export const Rightarrow = () => {
 
 export const Trust = () => {
   return (
-    <svg
-      width="42"
-      height="42"
+    <svg className="w-[28px]  md:w-[42px] md:h-[42px]"
       viewBox="0 0 42 42"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +39,7 @@ export const Trust = () => {
 export const Licensed = () => {
   return (
     <svg
-      width="42"
-      height="42"
+      className="w-[28px]  md:w-[42px] md:h-[42px]"
       viewBox="0 0 42 42"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

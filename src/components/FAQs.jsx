@@ -4,7 +4,7 @@ import { Heading } from "../Common/Heading";
 
 function FAQs() {
   return (
-    <section className="bg-secondry px-3 py-20 ">
+    <section className="bg-secondry  px-3 py-20 ">
       <Heading
         head="Frequently Asked Questions"
         subhead="We understand that moving can feel overwhelming. That’s why we’ve compiled answers to the most frequently asked questions to help you plan your move with confidence."

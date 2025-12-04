@@ -89,7 +89,7 @@ const WhatsMoving = ({ backtab, onClick }) => {
       </div>
       <button
         onClick={backtab}
-        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white  bg-purple text-white px-4 py-1  md:px-8 md:py-4 rounded-4xl text-sm md:text-lg flex gap-1 items-center mt-4"
+        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white  bg-purple text-white px-4 py-2  md:px-8 md:py-4 rounded-4xl text-sm md:text-lg flex gap-1 items-center mt-4"
       >
         <ArrowLeft /> Back
       </button>
