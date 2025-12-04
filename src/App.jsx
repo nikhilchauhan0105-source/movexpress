@@ -11,6 +11,10 @@ import ServicePage from "./pages/ServicePage";
 import SignUpAsDriver from "./pages/SignUpAsDriver";
 import VechcleInfo from "./pages/VehcleInfo";
 import { informationContext } from "./context/context";
+import { getAuth } from "firebase/auth";
+import app, { db } from "./utills/firebase";
+import { addDoc, collection } from "firebase/firestore";
+const auth = getAuth(app);
 
 const App = () => {
   useEffect(() => {
@@ -22,24 +26,40 @@ const App = () => {
   const [loadingunloadingTime, setLoadingUnloadingTime] = useState("");
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("");
-   const [vanvalue, setVanValue] = useState("");
+  const [vanvalue, setVanValue] = useState("");
 
-   const handleselectvan = (e) => {
-     setVanValue(e);
-   };
-  const details = {
-    pickupaddress: isTyped ,
-    destinationaddress: isDestinationTyped ,
-    vantype:vanvalue,
-    loadingtime: loadingunloadingTime ,
-    startdate: startDate ,
-    startime: startTime ,
+  const handleselectvan = (e) => {
+    setVanValue(e);
   };
-  const json = JSON.stringify(details);
-  useEffect(() => {
-    console.log(json);
-  }, [json]);
+  const details = {
+    pickupaddress: isTyped,
+    destinationaddress: isDestinationTyped,
+    vantype: vanvalue,
+    loadingtime: loadingunloadingTime,
+    startdate: startDate,
+    startime: startTime,
+  };
 
+  const HandleConform = async () => {
+    if (
+      details.pickupaddress === "" ||
+      details.destinationaddress === "" ||
+      details.vantype === "" ||
+      details.loadingtime === "" ||
+      details.startdate === "" ||
+      details.startime === ""
+    ) {
+      alert("fill all inputs");
+      return;
+    }
+    const userCollection = collection(db,"User");
+    try {
+      await addDoc(userCollection, details);
+      alert("data sent sucessful");
+    } catch (error) {
+      return error;
+    }
+  };
 
   return (
     <>
@@ -60,6 +80,7 @@ const App = () => {
           vanvalue,
           setVanValue,
           handleselectvan,
+          HandleConform,
         }}
       >
         <Routes>

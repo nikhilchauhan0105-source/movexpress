@@ -4,8 +4,14 @@ import { Calendar, Check, CheckCircle, MapPin, Truck } from "lucide-react";
 
 
 export const QuoteSummary = ({ onClick }) => {
-  const { isTyped, isDestinationTyped, startDate, startTime, vanvalue } =
-    useContext(informationContext);
+  const {
+    isTyped,
+    isDestinationTyped,
+    startDate,
+    startTime,
+    vanvalue,
+    HandleConform,
+  } = useContext(informationContext);
   return (
     <div className="w-full fixed overflow-hidden z-10 bg-opacity-80 backdrop-blur-md bg-black/60 h-screen top-0 left-0 p-3 sm:p-5 flex items-center justify-center">
       <div className="max-w-xl bg-white overflow-y-scroll shadow-xl rounded-xl p-4 md:p-5 w-full border-slate-200 max-h-[85vh] h-fit">
@@ -99,7 +105,9 @@ export const QuoteSummary = ({ onClick }) => {
           >
             Cancel
           </button>
-          <button className="w-[157px] text-white p-2 items-center rounded-xl gap-1 bg-purple flex">
+          <button 
+          onClick={HandleConform}
+          className="w-[157px] text-white p-2 items-center rounded-xl gap-1 bg-purple flex">
             <CheckCircle size={16} className="mr-1" />
             Confirm & Book
           </button>
