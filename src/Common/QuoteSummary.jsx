@@ -5,7 +5,6 @@ import { useNavigate } from "react-router";
 
 
 export const QuoteSummary = ({ onClick}) => {
-  const navigate = useNavigate();
   const [isconformed, setIsConformed] = useState(false)
   const {
     isTyped,

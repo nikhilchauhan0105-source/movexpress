@@ -27,6 +27,7 @@ const App = () => {
   const [startTime, setStartTime] = useState("");
   const [vanvalue, setVanValue] = useState("");
   const [formStpes, setFormSteps] = useState("pickup-address");
+  const [formStpesno, setFormStepsNo] = useState(1)
   const navigate = useNavigate()
 
   const handleselectvan = (e) => {
@@ -61,6 +62,7 @@ const App = () => {
       alert("data sent sucessful");
       navigate("?tab=pickup-address");
       setFormSteps("pickup-address");
+      setFormStepsNo(1);
     } catch (error) {
       return error;
     }
@@ -88,6 +90,8 @@ const App = () => {
           HandleConform,
           formStpes,
           setFormSteps,
+          formStpesno,
+          setFormStepsNo,
         }}
       >
         <Routes>

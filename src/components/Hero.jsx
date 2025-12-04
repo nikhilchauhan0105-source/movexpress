@@ -19,7 +19,7 @@ const Hero = () => {
   const [searchParams] = useSearchParams();
   const params = searchParams.get("tab");
   const {formStpes, setFormSteps} = useContext(informationContext);
-  const [formStpesno, setFormStepsNo] = useState(1);
+  const {formStpesno, setFormStepsNo} = useContext(informationContext);
  
 
   
