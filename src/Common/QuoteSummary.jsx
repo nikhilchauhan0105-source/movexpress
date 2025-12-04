@@ -4,6 +4,7 @@ import { Calendar, Check, CheckCircle, MapPin, Truck } from "lucide-react";
 
 
 export const QuoteSummary = ({ onClick }) => {
+  const [isconformed, setIsConformed] = useState(false)
   const {
     isTyped,
     isDestinationTyped,
@@ -106,8 +107,8 @@ export const QuoteSummary = ({ onClick }) => {
             Cancel
           </button>
           <button 
-          onClick={HandleConform}
-          className="w-[157px] text-white p-2 items-center rounded-xl gap-1 bg-purple flex">
+          onClick={()=>{HandleConform , setIsConformed(true)}}
+          className={` ${isconformed ? "bg-amber-600" :"bg-purple"}  w-[157px]  text-white p-2 items-center rounded-xl gap-1 flex`}>
             <CheckCircle size={16} className="mr-1" />
             Confirm & Book
           </button>
