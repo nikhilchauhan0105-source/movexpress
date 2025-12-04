@@ -7,7 +7,7 @@ import { informationContext } from "../context/context";
 const AddItems = () => {
   const { quantities, setQuantities } = useContext(informationContext);
 
-  const [search, setSearch] = useState("");
+
 
   return (
     <div>
@@ -16,9 +16,6 @@ const AddItems = () => {
           <Box size={18} className="text-white" />
         </div>
         <input
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
           type="text"
           placeholder="search for items ...."
           className="w-full outline-none"

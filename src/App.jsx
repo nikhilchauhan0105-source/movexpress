@@ -56,7 +56,7 @@ const App = () => {
     const itemsCollection = collection(db,"items");
     try {
       await addDoc(userCollection, details);
-      await addDoc(itemsCollection, quantities);
+      await addDoc(itemsCollection, quantities.ob);
       alert("data sent sucessful");
     } catch (error) {
       return error;

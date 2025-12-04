@@ -27,7 +27,6 @@ const Hero = () => {
     if (params) {
       setFormSteps(params);
     }
-
     if (params === "choose-your-van") {
       setFormStepsNo(2);
     } else if (params === "when-moves") {

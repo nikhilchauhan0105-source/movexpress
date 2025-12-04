@@ -4,12 +4,12 @@ import { getDatabase } from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBp0fybmqJO9LWlaWICFSD42TLfkhyRx64",
-  authDomain: "moveexpres-test.firebaseapp.com",
-  projectId: "moveexpres-test",
-  storageBucket: "moveexpres-test.firebasestorage.app",
-  messagingSenderId: "551212486210",
-  appId: "1:551212486210:web:f10717b77898ef1b6ae7db",
+  apiKey: "AIzaSyD2P7FS0q1_oRcFrRobx04DJ36Exy88Xzs",
+  authDomain: "movexpress-projects.firebaseapp.com",
+  projectId: "movexpress-projects",
+  storageBucket: "movexpress-projects.firebasestorage.app",
+  messagingSenderId: "424349322928",
+  appId: "1:424349322928:web:b30ea9369b2022a0ddf575",
 };
 
 // Initialize Firebase
@@ -22,3 +22,5 @@ export const db = getFirestore(app);
 export const realTimeDB = getDatabase(app);
 
 export default app;
+
+
