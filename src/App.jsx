@@ -53,8 +53,10 @@ const App = () => {
       return;
     }
     const userCollection = collection(db,"User");
+    const itemsCollection = collection(db,"items");
     try {
       await addDoc(userCollection, details);
+      await addDoc(itemsCollection, quantities);
       alert("data sent sucessful");
     } catch (error) {
       return error;

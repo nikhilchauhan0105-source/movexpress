@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { informationContext } from "../context/context";
 import { Calendar, Check, CheckCircle, MapPin, Truck } from "lucide-react";
 
@@ -106,9 +106,12 @@ export const QuoteSummary = ({ onClick }) => {
           >
             Cancel
           </button>
-          <button 
-          onClick={()=>{HandleConform , setIsConformed(true)}}
-          className={` ${isconformed ? "bg-amber-600" :"bg-purple"}  w-[157px]  text-white p-2 items-center rounded-xl gap-1 flex`}>
+          <button
+            onClick={() => (HandleConform(), setIsConformed(true))}
+            className={` ${
+              isconformed ? "bg-amber-600" : "bg-purple"
+            }  w-[157px]  text-white p-2 items-center rounded-xl gap-1 flex`}
+          >
             <CheckCircle size={16} className="mr-1" />
             Confirm & Book
           </button>
