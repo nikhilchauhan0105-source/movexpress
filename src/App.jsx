@@ -13,6 +13,7 @@ import VechcleInfo from "./pages/VehcleInfo";
 import { informationContext } from "./context/context";
 import { db } from "./utills/firebase";
 import { addDoc, collection } from "firebase/firestore";
+import ShowData from "./components/ShowData";
 
 
 const App = () => {
@@ -96,6 +97,7 @@ const App = () => {
       >
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/show-data" element={<ShowData />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogsPage" element={<BlogsPage />} />
           <Route path="/blogs/:blogid" element={<BlogDetailsPage />} />
