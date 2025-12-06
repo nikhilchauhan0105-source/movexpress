@@ -57,7 +57,7 @@ const Hero = () => {
             data-aos="fade-up"
             className="max-w-[1294px]  flex-col pt-[25px] sm:pt-[10px] md:pt-[48px] xl:pt-[68px] items-center lg:items-end relative gap-2 z-2 lg:flex-row flex justify-between m-auto"
           >
-            <div className="max-w-[652px] sm:flex-row flex-col    lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
+            <div className="max-w-[652px] sm:flex-row flex-col lg:items-start lg:flex-col flex text-[32px] sm:text-[45px] md:text-[50px] lg:text-[60px] xl:text-[74px] font-bold">
               <div>
                 <h1>Move Smart. </h1>
                 <h1>Move Easy. </h1>

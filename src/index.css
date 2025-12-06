@@ -58,3 +58,7 @@
  .cancel-button-style{
   @apply px-4 py-2 hover:text-[#505561] text-[#3d3f40] font-semibold rounded-xl font-inter bg-slate-100 text-sm md:text-base cursor-pointer transition-all duration-200 ease-in-out hover:bg-slate-200
 }
+
+.submit-button-style {
+  @apply hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-lg md:rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-2 md:p-[17px]
+}

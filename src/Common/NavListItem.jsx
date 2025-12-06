@@ -3,7 +3,11 @@ const NavListItem = ({ list,setActive}) => {
     <>
       <li>
         <a
-          onClick={(() => setActive(true), () => setIsOpen(false))}href={list.url} >{list.name}
+          className="hover:text-amber-600"
+          onClick={(() => setActive(true), () => setIsOpen(false))}
+          href={list.url}
+        >
+          {list.name}
         </a>
       </li>
     </>

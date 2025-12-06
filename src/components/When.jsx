@@ -177,10 +177,7 @@ const When = ({ backtab, changetab }) => {
         <ArrowLeft /> Back
       </button>
 
-      <button
-        onClick={changetab}
-        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white cursor-pointer flex items-center justify-center gap-2 mt-[22px] bg-orange rounded-2xl w-full text-center border-b-2 text-white border-black/20 p-[17px]"
-      >
+      <button onClick={changetab} className="submit-button-style">
         Next : Select items <ArrowRight size={20} />
       </button>
     </>

@@ -152,6 +152,7 @@ export const navlist = [
   { name: "Service", url: "/service" },
   { name: "blogs", url: "/blogsPage" },
   { name: "FAQs", url: "/FAQs" },
+  { name: "Data list ", url: "/show-data" },
 ];
 
 export const faqslist = [

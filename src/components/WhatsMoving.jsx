@@ -94,10 +94,7 @@ const WhatsMoving = ({ backtab, onClick }) => {
         <ArrowLeft /> Back
       </button>
 
-      <button
-        onClick={onClick}
-        className="hover:shadow-md/50 hover:inset-shadow-sm/80 hover:inset-shadow-white w-full mt-3 bg-orange rounded-2xl py-3 text-white "
-      >
+      <button onClick={onClick} className="submit-button-style ">
         show my quote
       </button>
     </div>
