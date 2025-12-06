@@ -1,10 +1,17 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../utills/firebase";
+import { X } from "lucide-react";
+import { useContext } from "react";
+import { informationContext } from "../context/context";
+import {   useNavigate } from "react-router";
 
 const ShowData = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+const {setFormSteps} =useContext(informationContext)
+  const navigate = useNavigate(); 
+
 
   const fetchData = async () => {
     setLoading(true);
@@ -30,32 +37,74 @@ const ShowData = () => {
   // safe first document
 
   return (
-    <>
+    <section className="bg-gray-700 pt-5 h-screen">
       {loading ? (
         <p>Loading...</p>
       ) : !data ? (
         <p>No data found</p>
       ) : (
-        <div className="bg-gray-500 rounded-2xl p-6 max-w-[1440px]  w-full m-auto  flex flex-col gap-5 text-white  text-2xl">
-          <div className="flex justify-around  ">
-            <p>Loading time</p>
-            <p>Pickup Address</p>
-            <p>Start Date</p>
-            <p>Start Time</p>
-            <p>Van </p>
-          </div>
-          {data.map((obj, index) => (
-            <div className="flex justify-around" key={index}>
-              <p className="w-[250px]"> {obj.loadingtime ?? "---"}</p>
-              <p className="w-[250px]">  {obj.pickupaddress ?? "---"}</p>
-              <p className="w-[250px]">  {obj.startdate ?? "---"}</p>
-              <p className="w-[250px]">  {obj.startime ?? "---"}</p>
-              <p className="w-[250px]">  {obj.vantype ?? "---"}</p>
-            </div>
-          ))}
+        <div className="  overflow-x-auto p-4">
+          <table className="w-full relative text-left border-collapse rounded-lg overflow-hidden">
+            <button
+              onClick={() => {
+                setFormSteps("/");
+                navigate("/");
+              }}
+              className="absolute top-1 right-1 p-1 rounded-md text-white hover:bg-red-500 "
+            >
+              <X size={18} />
+            </button>
+            <thead>
+              <tr className="bg-gray-800 text-white text-sm">
+                <th className="py-3 px-4">Pickup address</th>
+                <th className="py-3 px-4">Destination address</th>
+                <th className="py-3 px-4">Van selected</th>
+                <th className="py-3 px-4">Loading time</th>
+                <th className="py-3 px-4">Start time</th>
+                <th className="py-3 px-4">Start date</th>
+                <th className="py-3 px-4 text-center">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody className="bg-gray-100">
+              {data.map((obj, index) => (
+                <tr
+                  key={index}
+                  className="border-b hover:bg-gray-200 transition"
+                >
+                  <td className="py-3 px-4">{obj.pickupaddress ?? "---"}</td>
+                  <td className="py-3 px-4">
+                    {obj.destinationaddress ?? "---"}
+                  </td>
+                  <td className="py-3 px-4">
+                    {obj.vantan ?? obj.vantype ?? "---"}
+                  </td>
+                  <td className="py-3 px-4">{obj.loadingtime ?? "---"}</td>
+                  <td className="py-3 px-4">{obj.startime ?? "---"}</td>
+                  <td className="py-3 px-4">{obj.startdate ?? "---"}</td>
+
+                  <td className="py-3 px-4 flex justify-center gap-2">
+                    <button
+                      onClick={() => handleUpdate(obj, index)}
+                      className="bg-green-600 hover:bg-green-700 cursor-pointer text-white px-3 py-1 text-sm rounded-md"
+                    >
+                      Update
+                    </button>
+
+                    <button
+                      onClick={() => handleDelete(index)}
+                      className="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-3 py-1 text-sm rounded-md"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
-    </>
+    </section>
   );
 };
 
