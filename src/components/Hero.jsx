@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import {
   Greenstar,
   Halfstar,
@@ -17,7 +17,7 @@ import { QuoteSummary } from "../Common/QuoteSummary";
 const Hero = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const params = searchParams.get("tab");
+  const params = searchParams.get("/");
   const {formStpes, setFormSteps} = useContext(informationContext);
   const {formStpesno, setFormStepsNo} = useContext(informationContext);
  
@@ -34,7 +34,8 @@ const Hero = () => {
     } else if (params === "Whats-moving") {
       setFormStepsNo(4);
     }
-  }, []);
+
+  }, [params]);
 
   return (
     <>
@@ -42,8 +43,8 @@ const Hero = () => {
         {formStpes == "final-ouput" ? (
           <QuoteSummary
             onClick={() => {
-              navigate("?tab=pickup-address");
-              setFormSteps("pickup-address");
+              navigate("/");
+              setFormSteps("/");
               setFormStepsNo((prev) => (prev = 1));
             }}
           />
@@ -104,7 +105,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="max-w-[644px] w-full p-4 md:p-[18px] lg:py-6 mb-1.5 lg:p-6 text-black bg-white rounded-xl md:rounded-3xl">
-              {formStpes === "pickup-address" && (
+              {formStpes === "/" && (
                 <ChooseDestinationForm
                   changetab={() => {
                     navigate("?tab=choose-your-van");

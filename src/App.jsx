@@ -27,7 +27,7 @@ const App = () => {
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [vanvalue, setVanValue] = useState("");
-  const [formStpes, setFormSteps] = useState("pickup-address");
+  const [formStpes, setFormSteps] = useState("/");
   const [formStpesno, setFormStepsNo] = useState(1)
   const navigate = useNavigate()
 
@@ -61,8 +61,8 @@ const App = () => {
       await addDoc(userCollection, details);
       await addDoc(itemsCollection, quantities);
       alert("data sent sucessful");
-      navigate("?tab=pickup-address");
-      setFormSteps("pickup-address");
+      navigate("/");
+      setFormSteps("/");
       setFormStepsNo(1);
     } catch (error) {
       return error;

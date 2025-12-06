@@ -14,7 +14,9 @@ const {setFormSteps} =useContext(informationContext)
 
 
   const fetchData = async () => {
-    setLoading(true);
+    setLoading
+    
+    (true);
     try {
       const collectionRef = collection(db, "User");
       const UserData = await getDocs(collectionRef);
@@ -43,17 +45,17 @@ const {setFormSteps} =useContext(informationContext)
       ) : !data ? (
         <p>No data found</p>
       ) : (
-        <div className="  overflow-x-auto p-4">
-          <table className="w-full relative text-left border-collapse rounded-lg overflow-hidden">
-            <button
-              onClick={() => {
-                setFormSteps("/");
-                navigate("/");
-              }}
-              className="absolute top-1 right-1 p-1 rounded-md text-white hover:bg-red-500 "
-            >
-              <X size={18} />
-            </button>
+        <div className=" relative overflow-x-auto p-4">
+          <button
+            onClick={() => {
+              setFormSteps("/");
+              navigate("/");
+            }}
+            className="absolute top-5 right-5 p-1 rounded-sm text-white hover:bg-red-500 "
+          >
+            <X size={18} />
+          </button>
+          <table className="w-full  text-left border-collapse rounded-lg overflow-hidden">
             <thead>
               <tr className="bg-gray-800 text-white text-sm">
                 <th className="py-3 px-4">Pickup address</th>

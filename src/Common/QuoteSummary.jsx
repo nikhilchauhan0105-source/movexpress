@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { informationContext } from "../context/context";
 import { Calendar, Check, CheckCircle, MapPin, Truck } from "lucide-react";
-import { useNavigate } from "react-router";
 
 
 export const QuoteSummary = ({ onClick}) => {
