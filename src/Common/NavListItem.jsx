@@ -1,14 +1,15 @@
+import { Link } from "react-router";
+
 const NavListItem = ({ list,setActive}) => {
   return (
     <>
       <li>
-        <a
+        <Link to={list.url}
           className="hover:text-amber-600"
           onClick={(() => setActive(true), () => setIsOpen(false))}
-          href={list.url}
         >
           {list.name}
-        </a>
+        </Link>
       </li>
     </>
   );

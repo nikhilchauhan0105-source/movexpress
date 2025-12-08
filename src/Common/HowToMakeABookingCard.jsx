@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Arrow } from "./Icons";
 
 const HowToMakeABookingCard = () => {
@@ -13,12 +14,12 @@ const HowToMakeABookingCard = () => {
         quickly...
       </p>
 
-      <a
+      <Link to="/"
         className="text-purple font-semibold flex items-center group-hover:gap-4 transition-all  gap-2"
-        href=""
+       
       >
         Learn more <Arrow />
-      </a>
+      </Link>
     </div>
   );
 };

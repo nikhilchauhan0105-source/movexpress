@@ -10,13 +10,13 @@ export const Card = ({ icon, head, subhead, url}) => {
         <span className="group-hover:translate-x-[20px] duration-300 transition-all">
           {icon}
         </span>
-        <a href={url}>
+        <Link to={url}>
           <span
             className={`group-hover:rotate-[45deg] duration-300 h-fit transition-all `}
           >
             <Rightarrow />
           </span>
-        </a>
+        </Link>
       </div>
       <h2 className="text-[20px] mb-3 font-semibold ">{head}</h2>
       <h3 className="leading-7 text-black/60">{subhead}</h3>
