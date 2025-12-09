@@ -122,8 +122,8 @@ const Hero = () => {
                     setFormStepsNo((prev) => prev + 1);
                   }}
                   backtab={() => {
-                    navigate("?tab=pickup-address");
-                    setFormSteps("pickup-address");
+                    navigate("/");
+                    setFormSteps("/");
                     setFormStepsNo((prev) => prev - 1);
                   }}
                 />

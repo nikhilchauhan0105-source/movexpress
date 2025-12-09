@@ -16,7 +16,7 @@ const ChooseDestinationForm = ({ changetab }) => {
     setIsDestinationTyped(event.target.value);
   };
   return (
-    <>
+    <form onSubmit={changetab}>
       <FormHeading
         head="Where to"
         subhead="Tell us your pickup and destination"
@@ -68,13 +68,10 @@ const ChooseDestinationForm = ({ changetab }) => {
         </div>
       </div>
 
-      <button
-        onClick={changetab}
-        className="submit-button-style"
-      >
+      <button type="submit" className="submit-button-style">
         Show quote
       </button>
-    </>
+    </form>
   );
 };
 
