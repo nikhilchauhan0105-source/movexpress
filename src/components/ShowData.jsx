@@ -111,6 +111,7 @@ const ShowData = () => {
                   >
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={
                           edits[obj.id]?.pickupaddress ??
@@ -130,6 +131,7 @@ const ShowData = () => {
                     </td>
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={
                           edits[obj.id]?.destinationaddress ??
@@ -149,6 +151,7 @@ const ShowData = () => {
                     </td>
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={edits[obj.id]?.vantype ?? obj.vantype ?? ""}
                         onChange={(e) =>
@@ -164,6 +167,7 @@ const ShowData = () => {
                     </td>
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={
                           edits[obj.id]?.loadingtime ?? obj.loadingtime ?? ""
@@ -181,6 +185,7 @@ const ShowData = () => {
                     </td>
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={edits[obj.id]?.startime ?? obj.startime ?? ""}
                         onChange={(e) =>
@@ -196,6 +201,7 @@ const ShowData = () => {
                     </td>
                     <td className="py-3 px-4">
                       <input
+                        className="p-1"
                         type="text"
                         value={edits[obj.id]?.startdate ?? obj.startdate ?? ""}
                         onChange={(e) =>
