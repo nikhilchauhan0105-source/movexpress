@@ -1,3 +1,8 @@
+import packing from "../assets/images/pacakge.jpg";
+import placeorder from "../assets/images/place-order.jpg"
+import decultter from "../assets/images/decultter.jpg"
+
+
 import {
   AffordablePrice,
   Calendar,
@@ -181,7 +186,7 @@ export const faqslist = [
 export const blogcarddetail = [
   {
     slug: "How-To-Pack-Fragile-Items",
-    image: "./src/assets/images/pacakge.jpg",
+    image: packing,
     head: "How To Pack Fragile Items for Moving?",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
     data: {
@@ -190,7 +195,7 @@ export const blogcarddetail = [
   },
   {
     slug: "How-to-Make-a-Booking",
-    image: "./src/assets/images/place-order.jpg",
+    image: placeorder,
     head: "How to Make a Booking with Us?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
     data: {
@@ -199,7 +204,7 @@ export const blogcarddetail = [
   },
   {
     slug: "How-to-Declutter-Before-Moving",
-    image: "./src/assets/images/decultter.jpg",
+    image: decultter,
     head: "How to Declutter Before Moving?",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     data: {
@@ -208,7 +213,7 @@ export const blogcarddetail = [
   },
   {
     slug: "know-that-stressful",
-    image: "./src/assets/images/pacakge.jpg",
+    image: packing,
     head: "Checklist to Follow While Packing for Your Next Move",
     text: "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires....",
     data: {
@@ -217,7 +222,7 @@ export const blogcarddetail = [
   },
   {
     slug: "know-that-booking",
-    image: "./src/assets/images/place-order.jpg",
+    image: placeorder,
     head: "How Much Are House Removal Costs in 2025?",
     text: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
     data: {
@@ -226,7 +231,7 @@ export const blogcarddetail = [
   },
   {
     slug: "know-that-excitement",
-    image: "./src/assets/images/decultter.jpg",
+    image: decultter,
     head: "The Benefits of Hiring a Moving Company",
     text: "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     data: {
@@ -235,7 +240,7 @@ export const blogcarddetail = [
   },
   {
     slug: "know-that-delicate",
-    image: "./src/assets/images/pacakge.jpg",
+    image: placeorder,
     head: "How to Choose a Moving Company?",
     text: "Moving can be nerve-wracking, and selecting the right company is crucial, considering it involves the person's home or business. Spending considerable time ....",
     data: {
