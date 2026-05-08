@@ -84,6 +84,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="h-[1px] bg-white/10 w-full"></div>
+      <div className="flex flex-col items-center gap-1 absolute top-4 right-4">
+        <div className="w-10 h-10 rounded-full bg-white"></div>
+        <button
+          onClick={() => {
+            sessionStorage.removeItem("isAdmin");
+            setIsAdmin(false);
+          }}
+          className="bg-[#F6C8F6] text-purple text-xs cursor-pointer  right-4 p-1  rounded-md "
+        >
+          logout
+        </button>
+      </div>
     </nav>
   );
 };

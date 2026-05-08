@@ -28,6 +28,7 @@ import {
   Vanservice,
 } from "./Icons";
 
+
 export const serviceslist = [
   {
     icon: <Vanservice />,
