@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router";
+import { Navigate, Route, Routes, useNavigate } from "react-router";
 import About from "./components/About";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import BlogsPage from "./pages/BlogsPage";
@@ -14,9 +14,12 @@ import { informationContext } from "./context/context";
 import { db } from "./utills/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import ShowData from "./components/ShowData";
-
+import AdminLogin from "./components/AdminLogin";
 
 const App = () => {
+const [isAdmin, setIsAdmin] = useState(() => {
+  return sessionStorage.getItem("isAdmin") === "true";
+});
   useEffect(() => {
     Aos.init({ duration: 400 });
   }, []);
@@ -28,8 +31,8 @@ const App = () => {
   const [startTime, setStartTime] = useState("");
   const [vanvalue, setVanValue] = useState("");
   const [formStpes, setFormSteps] = useState("/");
-  const [formStpesno, setFormStepsNo] = useState(1)
-  const navigate = useNavigate()
+  const [formStpesno, setFormStepsNo] = useState(1);
+  const navigate = useNavigate();
 
   const handleselectvan = (e) => {
     setVanValue(e);
@@ -55,8 +58,8 @@ const App = () => {
       alert("fill all inputs");
       return;
     }
-    const userCollection = collection(db,"User");
-    const itemsCollection = collection(db,"items");
+    const userCollection = collection(db, "User");
+    const itemsCollection = collection(db, "items");
     try {
       await addDoc(userCollection, details);
       await addDoc(itemsCollection, quantities);
@@ -95,9 +98,24 @@ const App = () => {
           setFormStepsNo,
         }}
       >
+        
+       
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/show-data" element={<ShowData />} />
+          <Route
+            path="/admin-login"
+            element={<AdminLogin setIsAdmin={setIsAdmin} />}
+          />
+          <Route
+            path="/show-data"
+            element={
+              isAdmin ? (
+                <ShowData />
+              ) : (
+                <Navigate to="/" replace /> // Redirects to Home if not admin
+              )
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route path="/blogsPage" element={<BlogsPage />} />
           <Route path="/blogs/:blogid" element={<BlogDetailsPage />} />

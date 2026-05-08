@@ -34,6 +34,7 @@ const ShowData = () => {
       setData(dataArr);
       console.log(dataArr);
     } catch (error) {
+      console.error(error);
       alert("Something went wrong");
     } finally {
       setLoading(false);
